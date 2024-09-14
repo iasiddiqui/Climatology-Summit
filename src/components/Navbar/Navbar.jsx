@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import "./Navbar.css";
-import { useState } from "react"; // Corrected import
+import { useState } from "react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,47 +23,83 @@ const Navbar = () => {
       </div>
       <ul className={isMenuOpen ? "active" : ""}>
         <li>
-          <Link className="nav" to="/">
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? "nav active-link" : "nav")}
+          >
             Home
-          </Link>
+          </NavLink>
         </li>
         <li className="dropdown">
-          <Link className="nav" to="">
-            Upcomming Events
+          <NavLink
+            to="/upcoming-event"
+            className={({ isActive }) => (isActive ? "nav active-link" : "nav")}
+          >
+            Upcoming Events
             <ArrowDropDownIcon />
-          </Link>
+          </NavLink>
           <ul className="dropdown-content">
             <li>
-              <Link className="dropdown-nav" to="">Climate Change and Public Health Conference</Link>
+              <NavLink className="dropdown-nav" to="">
+                Climate Change and Public Health Conference
+              </NavLink>
             </li>
             <li>
-              <Link className="dropdown-nav" to="">
+              <NavLink className="dropdown-nav" to="">
                 Green Technologies and Renewable Energy Conference
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link className="dropdown-nav" to="">Ocean Health and Climate Dynamics Conference</Link>
+              <NavLink className="dropdown-nav" to="">
+                Ocean Health and Climate Dynamics Conference
+              </NavLink>
             </li>
             <li>
-              <Link className="dropdown-nav" to="">Climate Change and Biodiversity Conference</Link>
+              <NavLink className="dropdown-nav" to="">
+                Climate Change and Biodiversity Conference
+              </NavLink>
             </li>
           </ul>
         </li>
-
         <li>
-          <Link className="nav" to="">Venue</Link>
+          <NavLink
+            to="/venue"
+            className={({ isActive }) => (isActive ? "nav active-link" : "nav")}
+          >
+            Venue
+          </NavLink>
         </li>
         <li>
-          <Link className="nav" to="">Awards</Link>
+          <NavLink
+            to="/awards"
+            className={({ isActive }) => (isActive ? "nav active-link" : "nav")}
+          >
+            Awards
+          </NavLink>
         </li>
         <li>
-          <Link to="">Speaker Guidelines</Link>
+          <NavLink
+            to="/speaker-guidline"
+            className={({ isActive }) => (isActive ? "nav active-link" : "nav")}
+          >
+            Speaker Guidelines
+          </NavLink>
         </li>
         <li>
-          <Link className="nav" to="">Contact</Link>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => (isActive ? "nav active-link" : "nav")}
+          >
+            Contact
+          </NavLink>
         </li>
         <li className="register-li">
-          <Link className="ragister-link" to="">Register</Link>
+          <NavLink
+            to="/register"
+            className={({ isActive }) => (isActive ? "register-link active-link" : "register-link")}
+          >
+            Register
+          </NavLink>
         </li>
       </ul>
     </nav>

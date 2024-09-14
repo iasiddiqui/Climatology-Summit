@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./home.css";
 import Navbar from "../Navbar/navbar.jsx";
+import UpcomingConference from "./UpcomingConference/UpcomingConference";
 
 const Home = () => {
   return (
@@ -47,6 +48,7 @@ const Home = () => {
       </div>
 
       {/*----------- Upcoming Conferences------- */}
+      <UpcomingConference />
     </div>
   );
 };
