@@ -3,6 +3,9 @@ import "./home.css";
 import Navbar from "../Navbar/navbar.jsx";
 import UpcomingConference from "./UpcomingConference/UpcomingConference";
 import ClimateChange from "./ClimateChange/ClimateChange";
+import MediaPartners from "./MediaPartners/MediaPartners";
+import Faqs from "./Faqs/Faqs";
+import Footer from "./Footer/Footer";
 
 const Home = () => {
   return (
@@ -54,6 +57,17 @@ const Home = () => {
 
       {/* ---------Climate Change--------- */}
       <ClimateChange/>
+
+      {/*-------- Media Partners---------------- */}
+
+      <MediaPartners/>
+
+      {/*--------- FAQ'S---------------- */}
+      <Faqs/>
+
+      {/* --------Footer------------ */}
+      <Footer/>
+
     </div>
   );
 };

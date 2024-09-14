@@ -1,0 +1,36 @@
+
+.faqs-main {
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+  }
+  
+  .faqs-h1 {
+    margin-bottom: 1rem;
+    margin-left: 4rem;
+  }
+  
+  .faqs-list {
+    margin-top: 1rem;
+    margin-left: 3rem;
+  }
+  
+  .faq-item {
+    border-bottom: 1px solid #ccc;
+    padding: 1rem 0;
+    margin-right: 10rem;
+  }
+  
+  .faq-question {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-answer {
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+    /* padding-right: 7rem; */
+    text-align: justify;
+    color: #555;
+  }
+  

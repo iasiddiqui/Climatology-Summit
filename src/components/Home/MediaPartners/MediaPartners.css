@@ -1,0 +1,20 @@
+.media-partner {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .media-partner-images {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.media-partner-img {
+    width: 10rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: auto;
+    object-fit: cover;
+  }
+  

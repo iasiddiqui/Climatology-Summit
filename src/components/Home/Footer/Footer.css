@@ -1,0 +1,157 @@
+
+.footer {
+    background-color: #000000;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.footer-img {
+    max-width: 20rem;
+    height: auto;
+}
+
+.footer-p {
+    max-width: 30rem;
+    text-align: justify;
+    margin-left: 1rem;
+}
+
+.footer-link,
+.contact-info {
+    width: 100%;
+    max-width: 20rem;
+    
+}
+
+.footer-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.footer-link-h3 {
+    margin-bottom: 0.5rem;
+}
+
+.footer-link-list {
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-link-list a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.footer-link-list li {
+    margin: 0.5rem 0;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.footer-link-button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+}
+
+.footer-dropdown {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #e0f47d;
+    border: 1px solid #ddd;
+    position: absolute;
+    top: 100%; /* Position below the button */
+    left: 0; /* Align with the button */
+    width: 100%; /* Match button width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+    z-index: 1000;
+
+}
+
+.footer-dropdown li {
+    margin: 0;
+}
+
+.footer-dropdown a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-dropdown a:hover {
+    background-color: #f1f1f1;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+}
+
+.contact-h3 {
+    margin-bottom: 0.5rem;
+    margin-right: 10rem;
+    justify-content: center;
+}
+
+.policy {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.policy-h3 {
+    margin-bottom: 0.5rem;
+}
+
+.policy-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.policy-list li {
+    margin: 0.5rem 0;
+}
+
+.policy-list a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.policy-list a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+}

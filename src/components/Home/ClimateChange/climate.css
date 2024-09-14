@@ -1,7 +1,7 @@
 .Climate-Change-main {
     justify-content: center;
-    height: 100%;
-    width: 100%;
+    /* height: 100%;
+    width: 100%; */
     padding: 1rem;
     background-color: rgb(240, 236, 236);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -9,12 +9,12 @@
 
 .Climate-Change-h1 {
     color: black;
-    margin-left: 3rem;
+    margin-left: 11rem;
 }
 
 .Climate-Change-p {
     color: black;
-    margin-left: 3rem;
+    margin-left: 11rem;
     margin-right: 13rem;
     margin-bottom: 1rem;
     line-height: 1.5;
@@ -22,7 +22,7 @@
 
 .Climate-Change-content {
     display: flex;
-    margin-left: 3rem;
+    margin-left: 11rem;
     margin-right: 13rem;
 }
 
@@ -71,7 +71,7 @@
 }
 
 .target-audience-h1 {
-    margin-left: 3rem;
+    margin-left: 11rem;
     margin-bottom: 1rem;
     line-height: 1.5;
 }
@@ -81,7 +81,7 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    margin-left: 3rem;
+    margin-left: 11rem;
     margin-right: 3rem;
 }
 
@@ -108,7 +108,7 @@
 
 .target-audience-img-item {
     width: 20rem;
-    height: auto;
+    height: 20rem;
     object-fit: cover;
 }
 
