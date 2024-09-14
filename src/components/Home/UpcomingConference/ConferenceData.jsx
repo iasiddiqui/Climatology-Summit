@@ -15,7 +15,7 @@ export const conferences = [
     id: 2,
     imageUrl:
       "https://climatologysummit.com/wp-content/uploads/2024/09/istockphoto-1284341413-612x612-1.webp",
-    title: "Green Technologies",
+    title: "Green Technologies ",
     date: "August 25-26, 2025",
     location: "Frankfurt, Germany",
     link: "",

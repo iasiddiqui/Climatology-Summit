@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./home.css";
 import Navbar from "../Navbar/navbar.jsx";
 import UpcomingConference from "./UpcomingConference/UpcomingConference";
+import ClimateChange from "./ClimateChange/ClimateChange";
 
 const Home = () => {
   return (
@@ -48,7 +49,11 @@ const Home = () => {
       </div>
 
       {/*----------- Upcoming Conferences------- */}
+
       <UpcomingConference />
+
+      {/* ---------Climate Change--------- */}
+      <ClimateChange/>
     </div>
   );
 };

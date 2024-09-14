@@ -99,6 +99,8 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    border-bottom: 1px solid #ddd;
+    padding: 0.5rem 1rem;
     margin: 0;
     padding: 0;
 }
@@ -109,14 +111,17 @@ body {
     color: white;
     text-decoration: none;
 }
-
-.dropdown-content li:hover {
-    background-color: #ffffff;
+.dropdown-content li:last-child {
+    border-bottom: none;
 }
+
+/* .dropdown-content li:hover {
+    background-color: #ffffff;
+} */
 
 .dropdown-content li:hover a {
     color: black;
-    background-color: #fff;
+    background-color: #ded7d754;
 }
 
 .navbar ul li:hover .dropdown-content {

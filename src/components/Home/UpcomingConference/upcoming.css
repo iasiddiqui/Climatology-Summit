@@ -1,5 +1,8 @@
 .upcoming-conference-h1 {
+    font-size: 2rem;
     text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
 }
 
 .upcoming-conference-container {
@@ -11,7 +14,7 @@
     width: 100%;
     height: 100%;
     gap: 1rem;
-    flex-wrap: wrap; /* Allows items to wrap onto the next line */
+    flex-wrap: wrap;
 }
 
 .upcoming-conference-details {
@@ -23,8 +26,12 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    box-shadow: 5px 5px 10px 4px rgba(0, 0, 0, 0.3);
     overflow: hidden;
+}
+
+.upcoming-conference-details:hover {
+    box-shadow: 5px 5px 10px 4px rgba(0, 0, 0, 0.3);
+
 }
 
 .upcoming-conference-img {
@@ -45,7 +52,7 @@
 }
 
 .upcoming-conference-link:hover {
-    text-shadow: 0px 1px 1px rgba(105, 105, 113, 0.74);
+    color: #000dff;
 }
 
 .upcoming-conference-p {
@@ -56,13 +63,13 @@
     margin: 0;
 }
 
-.upcoming-conference-p > span {
+.upcoming-conference-p>span {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-.upcoming-conference-p > span:first-child {
+.upcoming-conference-p>span:first-child {
     margin-bottom: 0.5rem;
 }
 
@@ -83,15 +90,16 @@
 }
 
 /* Media queries for responsiveness */
+
 @media (max-width: 768px) {
     .upcoming-conference-container {
-        flex-direction: row; 
-        align-items: center; 
+        flex-direction: row;
+        align-items: center;
     }
 
-    
+
 
     .upcoming-conference-button {
-        width: 70%; 
+        width: 70%;
     }
 }
