@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
-import { Facebook, Twitter, Instagram, LinkedIn } from "@mui/icons-material";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const Footer = () => {
   const [dropdownOpen, setDropdownOpen] = React.useState(false);
@@ -29,7 +29,7 @@ const Footer = () => {
             <li><Link to="/">Home</Link></li>
             <li>
               <button onClick={toggleDropdown} className="footer-link-button">
-                Upcoming Events
+                Upcoming Events <KeyboardArrowDownIcon className={`dropdown-icon ${dropdownOpen ? 'open' : ''}`} />
               </button>
               {dropdownOpen && (
                 <ul className="footer-dropdown">
@@ -57,7 +57,6 @@ const Footer = () => {
         </div>
       </div>
       <div className="policy">
-        <h3 className="policy-h3">Policies</h3>
         <ul className="policy-list">
           <li><Link to="/cancellation-policy">Cancellation Policy</Link></li>
           <li><Link to="/terms-and-conditions">Terms and Conditions</Link></li>
