@@ -5,6 +5,8 @@ import Footer from "../Home/Footer/Footer.jsx";
 
 import GetInTouch from "../GetInTouch/GetInTouch.jsx";
 import ContactUs from "../ContactUsForm/ContactUs.jsx";
+// import { AwardfaqData } from "./Faqs/data.jsx";
+import AwardFaqs from "./Faqs/AwardFaq.jsx";
 
 const Awards = () => {
   return (
@@ -103,6 +105,8 @@ const Awards = () => {
       </div>
       <GetInTouch />
       <ContactUs />
+      <AwardFaqs/>
+      
       <Footer />
     </div>
   );
