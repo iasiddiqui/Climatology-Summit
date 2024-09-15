@@ -2,9 +2,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "../Navbar/navbar.jsx";
 import "./Award.css";
 import Footer from "../Home/Footer/Footer.jsx";
-import PinDropIcon from "@mui/icons-material/PinDrop";
-import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
-import EmailIcon from "@mui/icons-material/Email";
+
+import GetInTouch from "../GetInTouch/GetInTouch.jsx";
+import ContactUs from "../ContactUsForm/ContactUs.jsx";
 
 const Awards = () => {
   return (
@@ -101,44 +101,8 @@ const Awards = () => {
           world of academia, research, and innovation.
         </p>
       </div>
-
-      <div className="contact-section">
-  <div className="container">
-    <h2 className="contact-title">Get In Touch</h2>
-    <p className="contact-description">
-      To learn more about our conferences and events, please get in touch
-      with us. Join our extensive network of scientists, professional
-      experts, and research scholars to stay informed and connected.
-    </p>
-    <div className="contact-info">
-      <div className="info-card">
-        <div className="info-text">
-          <PinDropIcon className="contact-icon" />
-          <h3>Address</h3>
-          <p>16192 Coastal Highway Lewes, Delaware, USA 19958</p>
-        </div>
-      </div>
-      <div className="info-card">
-        <div className="info-text">
-          <PhoneInTalkIcon className="contact-icon" />
-          <h3>Phone number</h3>
-          <p>
-            +1 630 768 1199 <br />
-            +1 630 259 0521
-          </p>
-        </div>
-      </div>
-      <div className="info-card">
-        <div className="info-text">
-          <EmailIcon className="contact-icon" />
-          <h3>E-mail address</h3>
-          <p>environmentalscience@stripeconferences.com</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
+      <GetInTouch />
+      <ContactUs />
       <Footer />
     </div>
   );
