@@ -1,8 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "../Navbar/navbar.jsx";
 import "./Upcomingevent.css";
-import Footer from "../Home/Footer/Footer.jsx";
 import ContactUs from "../ContactUsForm/ContactUs.jsx";
+import Footer from "../Home/Footer/Footer.jsx";
+import GetInTouch from "../GetInTouch/GetInTouch.jsx";
 
 const UpcomingEvent = () => {
   return (
@@ -23,7 +24,9 @@ const UpcomingEvent = () => {
       <div>
         <h1>coming soon</h1>
       </div>
+      <GetInTouch />
       <ContactUs />
+
       <Footer />
     </div>
   );

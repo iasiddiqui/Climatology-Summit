@@ -6,6 +6,10 @@ import SpeakerGuidline from "./components/SpeakerGuidlines/SpeakerGuidline";
 import UpcomingEvent from "./components/UpcomingEvents/UpcomingEvent";
 import Venue from "./components/Venue/Venue";
 import Register from "./components/Register/Register";
+import HealthConference from "./components/HealthConference/HealthConference";
+import EnergyConference from "./components/EnergyConference/EnergyConference";
+import DynamicsConference from "./components/DynamicsConference/DynamicsConference";
+import BiodiversityConference from "./components/BiodiversityConference/BiodiversityConference";
 
 const App = () => (
   <BrowserRouter>
@@ -18,6 +22,10 @@ const App = () => (
       <Route path="/upcoming-event" element={<UpcomingEvent/>} />
       <Route path="/venue" element={<Venue/>} />
       <Route path="/register" element={<Register/>} />
+      <Route path="/climate-change-conference" element={<HealthConference/>} />
+      <Route path="/green-technologies-conference" element={<EnergyConference/>} />
+      <Route path="/ocean-health-conference" element={<DynamicsConference/>} />
+      <Route path="/biodiversity-conference" element={<BiodiversityConference/>} />
     </Routes>
   </BrowserRouter>
 );

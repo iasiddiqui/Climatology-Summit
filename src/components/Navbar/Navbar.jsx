@@ -40,22 +40,22 @@ const Navbar = () => {
           </NavLink>
           <ul className="dropdown-content">
             <li>
-              <NavLink className="dropdown-nav" to="">
+              <NavLink className="dropdown-nav" to="/climate-change-conference">
                 Climate Change and Public Health Conference
               </NavLink>
             </li>
             <li>
-              <NavLink className="dropdown-nav" to="">
+              <NavLink className="dropdown-nav" to="/green-technologies-conference">
                 Green Technologies and Renewable Energy Conference
               </NavLink>
             </li>
             <li>
-              <NavLink className="dropdown-nav" to="">
+              <NavLink className="dropdown-nav" to="/ocean-health-conference">
                 Ocean Health and Climate Dynamics Conference
               </NavLink>
             </li>
             <li>
-              <NavLink className="dropdown-nav" to="">
+              <NavLink className="dropdown-nav" to="/biodiversity-conference">
                 Climate Change and Biodiversity Conference
               </NavLink>
             </li>
