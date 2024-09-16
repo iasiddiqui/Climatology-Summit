@@ -1,5 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "../Navbar/navbar.jsx";
+import "./Upcomingevent.css";
+import Footer from "../Home/Footer/Footer.jsx";
+import ContactUs from "../ContactUsForm/ContactUs.jsx";
 
 const UpcomingEvent = () => {
   return (
@@ -12,15 +15,18 @@ const UpcomingEvent = () => {
           alt="Hero"
         />
         <div className="overlay">
-          <h1 className="home-h1">Upcoming Event</h1>
-          <h4 className="home-h4">Act Now, Save Tomorrow</h4>
+          <h1 className="home-h1-event">
+            Climate Change and Environmental Science Speakers
+          </h1>
         </div>
       </div>
       <div>
         <h1>coming soon</h1>
       </div>
+      <ContactUs />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default UpcomingEvent
+export default UpcomingEvent;

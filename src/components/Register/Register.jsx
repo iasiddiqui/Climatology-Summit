@@ -12,7 +12,6 @@ const Register = () => {
         />
         <div className="overlay">
           <h1 className="home-h1">Register</h1>
-          <h4 className="home-h4">Act Now, Save Tomorrow</h4>
         </div>
       </div>
       <div>

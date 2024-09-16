@@ -56,6 +56,7 @@ const Home = () => {
       <UpcomingConference />
 
       {/* ---------Climate Change--------- */}
+      
       <ClimateChange/>
 
       {/*-------- Media Partners---------------- */}
@@ -63,9 +64,11 @@ const Home = () => {
       <MediaPartners/>
 
       {/*--------- FAQ'S---------------- */}
+
       <Faqs/>
 
       {/* --------Footer------------ */}
+
       <Footer/>
 
     </div>

@@ -1,0 +1,37 @@
+html,
+body,
+.speaker-guidline-main {
+  width: 100%;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.speaker-guidline-content {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: justify;
+}
+.speaker-guidline-h2-heading{
+  text-align: center;
+  color: rgb(11, 11, 124);
+  font-size: 2rem;
+}
+
+.speaker-guidline-content1 {
+  margin-bottom: 20px;
+}
+
+.speaker-guidline-h2-content {
+  font-size: 1.8rem;
+  color: rgb(11, 11, 124);
+}
+
+.speaker-guidline-li {
+  margin-bottom: 10px;
+}

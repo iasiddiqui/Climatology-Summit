@@ -1,25 +1,56 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "../Navbar/navbar.jsx";
+// import './GetInTouch.css';
+import PinDropIcon from "@mui/icons-material/PinDrop";
+import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
+import EmailIcon from "@mui/icons-material/Email";
+import contactData from "../GetInTouch/ContactData.jsx";
+import ContactUs from "../ContactUsForm/ContactUs.jsx";
+import Footer from "../Home/Footer/Footer.jsx";
+
+
+const iconMap = {
+  PinDropIcon: PinDropIcon,
+  PhoneInTalkIcon: PhoneInTalkIcon,
+  EmailIcon: EmailIcon,
+};
 const Contact = () => {
   return (
-    <div>
+    <>
       <Navbar />
-      <div className="hero-section">
-        <img
-          className="hero-picture"
-          src="https://img.freepik.com/free-photo/digital-art-with-planet-earth_23-2151064529.jpg?t=st=1726221129~exp=1726224729~hmac=0873f43a7584025bcf333e051cc4f55792f889164a6552bdc0c142ada654dde8&w=1060"
-          alt="Hero"
-        />
-        <div className="overlay">
-          <h1 className="home-h1">contact</h1>
-          <h4 className="home-h4">Act Now, Save Tomorrow</h4>
+
+      <div>
+        <div className="contact-section">
+          <div className="container">
+            <h2 className="contact-title">Contact Us</h2>
+            <p className="contact-description">
+              To learn more about our conferences and events, please get in
+              touch with us. Join our extensive network of scientists,
+              professional experts, and research scholars to stay informed and
+              connected.
+            </p>
+            <div className="contact-info-contact">
+              {contactData.map(({ id, icon, title, content }) => {
+                const IconComponent = iconMap[icon];
+                return (
+                  <div key={id} className="info-card">
+                    <div className="info-text">
+                      <IconComponent className="contact-icon" />
+                      <h3>{title}</h3>
+                      <p>{content}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
-      <div>
-        <h1>coming soon</h1>
-      </div>
-    </div>
-  )
-}
 
-export default Contact
+      <ContactUs />
+    <Footer/>
+    </>
+  );
+};
+
+export default Contact;

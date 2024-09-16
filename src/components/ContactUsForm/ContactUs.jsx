@@ -60,7 +60,8 @@ const ContactUs = () => {
           </label>
           <label>
             Your Message (optional):
-            <textarea className="textarea"
+            <textarea
+              className="textarea"
               name="message"
               value={formData.message}
               onChange={handleChange}
@@ -72,11 +73,12 @@ const ContactUs = () => {
       <div className="contact-map">
         <iframe
           title="Google Map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2412.800136609497!2d4.890935416031877!3d52.37308497978442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6099e8fb53e8d%3A0x1e8a51936ebc51c9!2sAmsterdam!5e0!3m2!1sen!2snl!4v1631571874087!5m2!1sen!2snl"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d38981.2623804173!2d4.904096!3d52.364456!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c63fb5949a7755%3A0x6600fd4cb7c0af8d!2sAmsterdam%2C%20Netherlands!5e0!3m2!1sen!2sus!4v1726461383155!5m2!1sen!2sus"
           width="400"
           height="300"
           allowFullScreen=""
           loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
     </div>

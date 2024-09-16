@@ -5,7 +5,6 @@ import Footer from "../Home/Footer/Footer.jsx";
 
 import GetInTouch from "../GetInTouch/GetInTouch.jsx";
 import ContactUs from "../ContactUsForm/ContactUs.jsx";
-// import { AwardfaqData } from "./Faqs/data.jsx";
 import AwardFaqs from "./Faqs/AwardFaq.jsx";
 
 const Awards = () => {
@@ -15,7 +14,7 @@ const Awards = () => {
       <div className="hero-section">
         <img
           className="hero-picture"
-          src="https://img.freepik.com/free-photo/digital-art-with-planet-earth_23-2151064529.jpg?t=st=1726221129~exp=1726224729~hmac=0873f43a7584025bcf333e051cc4f55792f889164a6552bdc0c142ada654dde8&w=1060"
+          src="https://img.freepik.com/free-photo/close-up-microphone_107420-63821.jpg?t=st=1726469583~exp=1726473183~hmac=32a61b0302a9fcf62ac011618bc4ae3f2bcd9f6148cbae69afd554795d698e12&w=900"
           alt="Hero"
         />
         <div className="overlay">

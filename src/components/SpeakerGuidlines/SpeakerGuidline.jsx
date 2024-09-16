@@ -1,9 +1,13 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React from "react";
+import "./speaker.css";
 import Navbar from "../Navbar/navbar.jsx";
+import { speakerGuidelinesData } from "./SpeakerGuidlineData.jsx";
+import SpeakerFaqs from "./SpeakerFaqs";
+import Footer from "../Home/Footer/Footer";
 
 const SpeakerGuidline = () => {
   return (
-    <div>
+    <>
       <Navbar />
       <div className="hero-section">
         <img
@@ -12,15 +16,29 @@ const SpeakerGuidline = () => {
           alt="Hero"
         />
         <div className="overlay">
-          <h1 className="home-h1">Speaker Guidline</h1>
-          <h4 className="home-h4">Act Now, Save Tomorrow</h4>
+          <h1 className="home-h1">Speaker Guidelines</h1>
         </div>
       </div>
-      <div>
-        <h1>coming soon</h1>
+      <div className="speaker-guidline-content">
+        <h2 className="speaker-guidline-h2-heading">Conference Guidelines</h2>
+        {speakerGuidelinesData.map((section, index) => (
+          <div className="speaker-guidline-content1" key={index}>
+            <h2 className="speaker-guidline-h2-content">{section.title}</h2>
+            <ul>
+              {section.content.map((item, idx) => (
+                <li className="speaker-guidline-li" key={idx}>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
-    </div>
-  )
-}
+      <SpeakerFaqs />
 
-export default SpeakerGuidline
+      <Footer />
+    </>
+  );
+};
+
+export default SpeakerGuidline;
