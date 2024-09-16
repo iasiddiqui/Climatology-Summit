@@ -2,22 +2,22 @@
 export const mediaPartnersData = [
   {
     id: 1,
-    imageUrl: "https://climatologysummit.com/wp-content/uploads/2024/07/Untitled-1-2.webp",
+    imageUrl: "public/pictures/media partner 1.jpg",
     altText: "Media Partner 1",
   },
   {
     id: 2,
-    imageUrl: "https://climatologysummit.com/wp-content/uploads/2024/07/tradefest-_2_-1-1.webp",
+    imageUrl: "public/pictures/media partner 2.jpg",
     altText: "Media Partner 2",
   },
   {
     id: 3,
-    imageUrl: "https://climatologysummit.com/wp-content/uploads/2024/07/events-in-ammeric-1.webp",
+    imageUrl: "public/pictures/media partner 3.jpg",
     altText: "Media Partner 3",
   },
   {
     id: 4,
-    imageUrl: "https://climatologysummit.com/wp-content/uploads/2024/07/inomics-1-1.webp",
+    imageUrl: "public/pictures/media partner 5.jpg",
     altText: "Media Partner 4 ",
   },
   {

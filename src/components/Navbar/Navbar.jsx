@@ -14,7 +14,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="logo">
         <img
-          src="https://climatologysummit.com/wp-content/uploads/2024/07/Climate-e1721998462429.png"
+          src="public\pictures\ClimateLogo.jpg"
           alt="Event Logo"
         />
       </div>

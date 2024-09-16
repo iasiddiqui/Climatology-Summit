@@ -12,7 +12,7 @@ const SpeakerGuidline = () => {
       <div className="hero-section">
         <img
           className="hero-picture"
-          src="https://img.freepik.com/free-photo/digital-art-with-planet-earth_23-2151064529.jpg?t=st=1726221129~exp=1726224729~hmac=0873f43a7584025bcf333e051cc4f55792f889164a6552bdc0c142ada654dde8&w=1060"
+          src="https://img.freepik.com/free-photo/close-up-people-studying-language-together_23-2149300725.jpg?t=st=1726478016~exp=1726481616~hmac=4c49ee9355a58586e799b29db605ee7ca34161d7855d7c16d31d89c2b9cf4827&w=900"
           alt="Hero"
         />
         <div className="overlay">

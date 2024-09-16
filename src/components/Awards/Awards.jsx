@@ -14,7 +14,7 @@ const Awards = () => {
       <div className="hero-section">
         <img
           className="hero-picture"
-          src="https://img.freepik.com/free-photo/female-speaker-giving-presentation-hall-university-workshop-audience-conference-hall_155003-27432.jpg?t=st=1726469876~exp=1726473476~hmac=07228b379792079c5ca6a7512988b8062f8b9e5c505283c780fbaec875038633&w=900"
+          src="public\pictures\awards.jpg"
           alt="Hero"
         />
         <div className="overlay">

@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="footer-left">
           <img
             className="footer-img"
-            src="https://climatologysummit.com/wp-content/uploads/2024/07/123-1.png"
+            src="public\pictures\logo footer.png"
             alt="Footer Logo"
           />
           <p className="footer-p">
