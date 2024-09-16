@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "../Navbar/navbar.jsx";
+import Footer from "../Home/Footer/Footer.jsx";
 const Register = () => {
   return (
     <div>
@@ -17,6 +18,7 @@ const Register = () => {
       <div>
         <h1>coming soon</h1>
       </div>
+      <Footer/>
     </div>
   );
 };
