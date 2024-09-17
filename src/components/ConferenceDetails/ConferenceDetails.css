@@ -1,0 +1,107 @@
+.conference {
+    position: relative;
+}
+
+.conference-img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    z-index: 0;
+    filter: brightness(0.5);
+}
+
+.conference-hero-p {
+    font-size: 1.4rem;
+}
+
+.conference-box {
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    padding: 1rem;
+    color: black;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.704);
+    /* Make the box semi-transparent */
+    text-align: center;
+    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.conference-hero-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.conference-hero-box-span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.conference-hero-box-deadline {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.conference-hero-box-button {
+    gap: 1rem;
+}
+
+.conference-button {
+    color: rgb(255, 255, 255);
+    padding: 0.5rem;
+    width: 10rem;
+    height: 2.5rem;
+    background-color: #000000;
+    gap: 1rem;
+    margin: 0.4rem;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+
+}
+
+.conference-button:hover {
+    background-color: rgba(255, 255, 255, 0);
+    color: #000000;
+    border: 1px solid black;
+}
+
+
+.blinking-icon {
+    animation: blink 3s infinite;
+    color: #ff0000;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+.conference-icon{
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 50%;
+
+}
+
+/* .blinking {
+    animation: blink 3s infinite;
+    transition: ease-in;
+    color: #60643e;
+} */
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+}
