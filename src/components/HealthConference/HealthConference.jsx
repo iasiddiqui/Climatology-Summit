@@ -3,6 +3,7 @@ import Navbar from "../Navbar/navbar";
 import "./HealthConference.css";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import NotificationsIcon from '@mui/icons-material/Notifications';
 
 const HealthConference = () => {
   return (
@@ -36,6 +37,9 @@ const HealthConference = () => {
             <span className="health-conference-hero-box-span1">
               July 21-22, 2025
             </span>
+          </div>
+          <div className="health-conference-hero-box-status">
+            <span className=""><NotificationsIcon/> Abstract Submission Opened</span>
           </div>
           <div className="health-conference-hero-box-button">
             <button className="health-conference-button">Register Now</button>
