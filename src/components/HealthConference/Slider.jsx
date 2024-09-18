@@ -7,12 +7,14 @@ import "./slider.css";
 function SimpleSlider() {
   const settings = {
     dots: false,
+    arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true, 
     autoplaySpeed: 3000, 
+  
   };
 
   return (
