@@ -1,0 +1,90 @@
+.scientific-sessions-container {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.scientific-sessions-h1 {
+    margin-bottom: 1rem;
+}
+
+.scientific-sessions-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 0;
+    justify-items: center;
+}
+
+.scientific-sessions-item {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    transition: max-height 0.3s ease;
+}
+
+
+
+.scientific-sessions-item:nth-child(even) {
+    border-right: 1px solid #ccc;
+}
+
+/* .scientific-sessions-item:last-child {
+    border-right: none; 
+  } */
+
+.scientific-sessions-question,
+.scientific-sessions-answer {
+    margin-bottom: 0;
+}
+
+.scientific-sessions-question {
+    display: flex;
+    align-items: center;
+    color: #000;
+    cursor: pointer;
+}
+
+.scientific-sessions-answer {
+    margin-top: 0.5rem;
+    text-align: justify;
+    color: #555;
+}
+
+.link {
+    text-decoration: none;
+    color: #000000;
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+.link:hover {
+    color: #9e9e9f;
+}
+
+.underline {
+    text-decoration: none;
+}
+
+.scientific-sessions-answer br {
+    margin: 0.5rem 0;
+}
+.scientific-sessions-button{
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    border: none;
+    font-size: 1rem;
+    transition: font-size 1s ease;
+}
+.scientific-sessions-button:hover{
+    font-size: 1.1rem;
+    transition: font-size 0.5s ease;
+}
