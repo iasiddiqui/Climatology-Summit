@@ -1,20 +1,30 @@
 .media-partner {
-    text-align: center;
-    padding: 2rem;
-  }
-  
-  .media-partner-images {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
+  text-align: center;
+  padding: 2rem;
+  overflow: hidden;
+  position: relative; 
+}
+
+.media-partner-images {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: nowrap; 
+  animation: scroll-left 20s linear infinite; 
 }
 
 .media-partner-img {
-    width: 10rem;
-    border: 1px solid black;
-    border-radius: 5px;
-    height: auto;
-    object-fit: cover;
+  width: 10rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: auto;
+  object-fit: cover;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
   }
-  
+  100% {
+    transform: translateX(-100%);
+  }
+}
