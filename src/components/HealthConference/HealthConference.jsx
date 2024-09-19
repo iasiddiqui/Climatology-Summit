@@ -10,12 +10,14 @@ import ContactUs from "../ContactUsForm/ContactUs";
 import Footer from "../Home/Footer/Footer";
 import HealthConferenceFaq from "./HealthConferenceFaq";
 import VenueAttraction from "../VenueAttraction/VenueAttraction";
+import AboutConference from "../AboutConference/AboutConference";
 
 const HealthConference = () => {
   return (
     <>
       <Navbar />
       <HealthConferenceDetails />
+      <AboutConference />
       <ScientificSessions />
       <VenueAttraction />
       <RegistrationSection />

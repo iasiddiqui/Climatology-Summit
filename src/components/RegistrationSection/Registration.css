@@ -30,10 +30,8 @@
     justify-content: center;
     align-items: flex-start;
     gap: 20px;
-    /* Space between the boxes */
     flex-wrap: nowrap;
     margin-top: 30px;
-    flex-direction: row;
 }
 
 .registeration-card {
@@ -52,20 +50,9 @@
 .registeration-card:hover {
     background-color: #ffffff;
     box-shadow: 0px 0px 10px black;
-    /* border: 1px solid white; */
     border: 1px solid black;
     color: rgb(0, 0, 0);
-    /* transition:  background-color 3s; */
-    transition:   box-shadow 1s;
-
-}
-
-.registeration-card:hover .contact-icon  {
-    color: rgb(0, 0, 0);
-}
-.registeration-card:hover .registration-btn{
-    background-color: #ffffff00;
-    color: none;
+    transition: box-shadow 1s;
 }
 
 .registeration-icon {
@@ -82,7 +69,8 @@
 .registeration-text p {
     font-size: 1rem;
 }
-.registration-btn{
+
+.registration-btn {
     color: black;
     background-color: white;
     border: 1px solid black;
@@ -90,18 +78,15 @@
     font-size: 1rem;
     padding: 0.3rem;
     cursor: pointer;
-    transition: font-size 1s;
-    
-    
+    transition: font-size 0.5s;
 }
-.registration-btn:hover{
+
+.registration-btn:hover {
     font-size: 1.3rem;
-    /* transition: font-size 3s; */
-    
 }
 
 @media screen and (max-width: 1024px) {
-    .registeration-info {
+    .registeration-info-contact {
         flex-wrap: wrap;
     }
 
@@ -112,13 +97,23 @@
 }
 
 @media screen and (max-width: 768px) {
-    .registeration-info {
+    .registeration-info-contact {
         flex-direction: column;
         align-items: center;
+
     }
 
     .registeration-card {
-        width: 100%;
+        width: 80%;
         margin-bottom: 20px;
+    }
+
+    .registeration-title {
+        font-size: 2rem;
+    }
+
+    .registeration-description {
+        font-size: 1.1rem;
+        width: 100%;
     }
 }
