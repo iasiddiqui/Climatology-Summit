@@ -1,7 +1,7 @@
 import React from "react";
 import "./HealthConference.css";
 import Navbar from "../Navbar/navbar";
-import ConferenceDetails from "../ConferenceDetails/ConferenceDetails";
+import HealthConferenceDetails from "../ConferenceDetails/ConferenceDetails";
 import ScientificSessions from "../ScientificSession/ScientificSessions";
 import SimpleSlider from "./Slider";
 import AttachFileIcon from "@mui/icons-material/AttachFile";
@@ -27,7 +27,7 @@ const HealthConference = () => {
   return (
     <>
       <Navbar />
-      <ConferenceDetails />
+      <HealthConferenceDetails />
       <ScientificSessions />
       <div className="venue-attraction-conatiner">
         <div className="venue-attraction">

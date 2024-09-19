@@ -1,11 +1,10 @@
 import React from "react";
-import "./ConferenceDetails.css";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import ConferenceData from "./ConferenceData";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import EnergyHeroData from "./EnergyHeroData";
 
-const HealthConferenceDetails = () => {
+const EnergyConferenceHero = () => {
   return (
     <>
       <div className="conference">
@@ -17,34 +16,34 @@ const HealthConferenceDetails = () => {
         <div className="conference-box">
           <div className="conference-hero">
             <h1 className="conference-hero-h1">
-              {ConferenceData.title}
+              {EnergyHeroData.title}
             </h1>
             <p className="conference-hero-p">
-              Theme: {ConferenceData.theme}
+              Theme: {EnergyHeroData.theme}
             </p>
           </div>
           <div className="conference-hero-box">
-            <CalendarMonthIcon  className="conference-icon"/>
+            <CalendarMonthIcon className="conference-icon" />
             <span className="conference-hero-box-span">Dates:</span>
             <span className="conference-hero-box-span1">
-              {ConferenceData.date}
+              {EnergyHeroData.date}
             </span>
           </div>
           <div className="conference-hero-box">
-            <LocationOnIcon className="conference-icon"/>
+            <LocationOnIcon className="conference-icon" />
             <span className="conference-hero-box-span">Venue:</span>
             <span className="conference-hero-box-span1">
-              {ConferenceData.location}
+              {EnergyHeroData.location}
             </span>
           </div>
           <div className="conference-hero-box">
             <NotificationsIcon className="blinking-icon" />
             <span className="blinking">
-              {ConferenceData.deadline}
+              {EnergyHeroData.deadline}
             </span>
           </div>
           <div className="conference-hero-box-button">
-            {ConferenceData.buttons.map((button, index) => (
+            {EnergyHeroData.buttons.map((button, index) => (
               <button key={index} className="conference-button">
                 {button.text}
               </button>
@@ -56,4 +55,4 @@ const HealthConferenceDetails = () => {
   );
 };
 
-export default HealthConferenceDetails;
+export default EnergyConferenceHero;
