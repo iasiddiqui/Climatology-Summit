@@ -20,6 +20,8 @@ import GetInTouch from "../GetInTouch/GetInTouch";
 import RegistrationSection from "../RegistrationSection/RegistrationSection";
 import MediaPartners from "../Home/MediaPartners/MediaPartners";
 import ContactUs from "../ContactUsForm/ContactUs";
+import Footer from "../Home/Footer/Footer";
+import HealthConferenceFaq from "./HealthConferenceFaq";
 
 const HealthConference = () => {
   return (
@@ -83,6 +85,8 @@ const HealthConference = () => {
       <GetInTouch />
     <MediaPartners />
     <ContactUs />
+    <HealthConferenceFaq/>
+    <Footer />
     
   
     </>
