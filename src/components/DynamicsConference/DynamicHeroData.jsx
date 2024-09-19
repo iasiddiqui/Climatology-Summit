@@ -1,8 +1,8 @@
-const EnergyHeroData = {
-    title: "International Conference on Green Technologies and Renewable Energy Innovations",
-    theme: "Driving the Future: Green Technologies and Renewable Energy Innovations.",
-    date: "August 25-26, 2025",
-    location: "Frankfurt, Germany",
+const DynamicHeroData = {
+    title: "International Conference on <br>Ocean Health and Climate Dynamics",
+    theme: "Navigating the Nexus: Ocean Health, Climate Dynamics, and Sustainable Solutions",
+    date: "November 17-18, 2025",
+    location: "UAE, Dubai",
     open:"Abstract Submission Open",
     deadline:"Mid Term Registration Closes: August 30, 2024",
     buttons: [
@@ -13,5 +13,5 @@ const EnergyHeroData = {
     ],
   };
   
-  export default EnergyHeroData;
+  export default DynamicHeroData;
   

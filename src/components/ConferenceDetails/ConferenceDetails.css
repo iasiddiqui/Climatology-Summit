@@ -4,7 +4,7 @@
 
 .conference-img {
     width: 100%;
-    height: 80vh;
+    height: 90vh;
     object-fit: cover;
     z-index: 0;
     filter: brightness(0.5);
@@ -19,7 +19,7 @@
     top: 57%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50%;
+    width: 60%;
     padding: 1rem;
     color: black;
     border: 3px solid rgb(255, 255, 255);
@@ -104,4 +104,43 @@
         opacity: 0;
     }
 
+}
+@media (max-width: 1200px) {
+    .conference-box {
+        width: 80% ;
+    }
+}
+
+@media (max-width: 900px) {
+    .conference-box {
+        width: 90%;
+    }
+    .conference-hero-box {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    /* .conference-img {
+        height: 40vh;
+    } */
+    .conference-hero-h1{
+        font-size: 1rem;
+    }
+    .conference-hero-p {
+        font-size: 0.5rem;
+    }
+    .conference-box {
+        width: 95%;
+        padding: 0.5rem;
+    }
+    .conference-hero-box {
+        font-size: 1rem;
+    }
+    .conference-button {
+        width: 8rem;
+        height: 3rem;
+        font-size: 0.9rem;
+    }
 }

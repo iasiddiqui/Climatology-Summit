@@ -1,0 +1,48 @@
+.venue-attraction-container {
+    display: flex;
+    gap: 1.5rem;
+    padding: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #b8b6b6;
+}
+
+.venue-attraction {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1; 
+}
+
+.venue-attraction-h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.venue-attraction-span {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.venue-attraction-list {
+    list-style-type: none;
+    padding: 0;
+    column-count: 2; 
+    column-gap: 1rem;
+    margin: 0;
+}
+
+.venue-attraction-list li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.venue-attraction-simple-slider {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

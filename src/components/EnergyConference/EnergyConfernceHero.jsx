@@ -39,6 +39,12 @@ const EnergyConferenceHero = () => {
           <div className="conference-hero-box">
             <NotificationsIcon className="blinking-icon" />
             <span className="blinking">
+              {EnergyHeroData.open}
+            </span>
+          </div>
+          <div className="conference-hero-box">
+            <NotificationsIcon className="blinking-icon" />
+            <span className="blinking">
               {EnergyHeroData.deadline}
             </span>
           </div>
