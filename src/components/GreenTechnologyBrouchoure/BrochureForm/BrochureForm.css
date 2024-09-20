@@ -25,18 +25,24 @@
 
 .brochure-form label {
     display: block;
+    width: 100%; /* Ensure label takes 100% width */
     margin-bottom: 0.5rem; /* Increased space between label and input */
     font-weight: bold;
     font-size: 1.2rem; /* Increase label size */
 }
 
 .brochure-form input,
-.brochure-form .textarea {
-    width: 100%;
+.brochure-form .textarea,
+.brochure-form .react-tel-input input { 
+    width: 100%; /* Ensure input takes 100% width */
     height: 2rem;
     margin-bottom: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+.brochure-form .react-tel-input {
+    width: 100%; /* Ensure PhoneInput container takes 100% width */
 }
 
 .brochure-form .textarea {
@@ -58,7 +64,6 @@
     background-color: rgb(240, 236, 236);
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
 }
-
 
 @media screen and (max-width: 1024px) {
     .brochure-form {

@@ -1,0 +1,32 @@
+.abstract-h1{
+    color: #ffff;
+    font-size: 3rem;
+    white-space: nowrap;
+}
+.abstract-h3{
+    color: #fff;
+    font-size: 1.5rem;
+}
+.abstract-hero{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+   
+}
+.abstract-hero-span{
+    color: #fff;
+    text-decoration: underline;
+    font-size: 2rem;
+    margin-right: 10%;
+}
+.abstract-hero-btn{
+    color: black;
+    background-color: #fff;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}

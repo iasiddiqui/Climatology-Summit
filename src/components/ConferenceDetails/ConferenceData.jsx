@@ -1,4 +1,4 @@
-// ConferenceData.js
+
 const ConferenceData = {
     title: "International Conference on Climate Change and Public Health",
     theme: "Current Trends and Research on Climate Change and Public Health",
@@ -6,9 +6,9 @@ const ConferenceData = {
     location: "Vancouver, Canada",
     deadline:"Abstract Submission Opened",
     buttons: [
-      { text: "Register Now", link: "" },
-      { text: "Abstract Submission", link: "" },
-      { text: "Brochure Download", link: "" },
+      { text: "Register Now", link: "/register" },
+      { text: "Abstract Submission", link: "/climate-change-abstract-submission" },
+      { text: "Brochure Download", link: "/green-technologies-brochure" },
       { text: "Tentative Program", link: "" },
     ],
   };

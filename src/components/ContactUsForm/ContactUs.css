@@ -38,17 +38,32 @@
 }
 
 .contact-form input,
-.contact-form .textarea {
+.contact-form .textarea,
+.phone-input-container input {
   width: 100%;
-  padding: 0.3rem;
+  padding: 0.5rem; 
   margin-bottom: 0.3rem;
   border: 1px solid #ccc;
   border-radius: 4px;
+  box-sizing: border-box; 
 }
 
 .contact-form .textarea {
   min-height: 5rem;
+  resize: none;
 }
+.contact-form .phone-input-container {
+  width: 100%;
+}
+
+.phone-input-container input {
+  width: 100% !important; 
+  height: 40px !important; 
+}
+.phone-input-container .flag-dropdown {
+  width: auto;
+  height: 40px !important; }
+
 
 .contact-form button {
   align-self: center;
@@ -73,7 +88,8 @@
 
 .contact-map {
   flex: 0 0 auto;
-  width: 25rem;
+  width: 30%;
+  height: 100%;
   border: 1px solid black;
   border-radius: 5px;
 }

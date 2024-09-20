@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import "./ContactUs.css";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -18,11 +20,17 @@ const ContactUs = () => {
     });
   };
 
+  const handlePhoneChange = (value) => {
+    setFormData({
+      ...formData,
+      phoneNumber: value,
+    });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
   };
-
   return (
     <div className="contact-container">
       <div className="contact-form">
@@ -48,15 +56,17 @@ const ContactUs = () => {
               required
             />
           </label>
-          <label>
-            Phone Number:
-            <input
-              type="tel"
-              name="phoneNumber"
-              value={formData.phoneNumber}
-              onChange={handleChange}
-            />
-          </label>
+          <PhoneInput
+            country={"in"}
+            value={formData.phoneNumber}
+            onChange={handlePhoneChange}
+            containerClass="phone-input-container" // Apply this class for styling
+            inputProps={{
+              name: "phoneNumber",
+              required: true,
+            }}
+          />
+
           <label>
             Your Message (optional):
             <textarea
@@ -73,7 +83,7 @@ const ContactUs = () => {
         <iframe
           title="Google Map"
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d38981.2623804173!2d4.904096!3d52.364456!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c63fb5949a7755%3A0x6600fd4cb7c0af8d!2sAmsterdam%2C%20Netherlands!5e0!3m2!1sen!2sus!4v1726461383155!5m2!1sen!2sus"
-          width="400"
+          width="100%"
           height="300"
           allowFullScreen=""
           loading="lazy"
