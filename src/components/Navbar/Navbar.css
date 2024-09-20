@@ -110,7 +110,11 @@ body {
     padding: 10px 15px;
     color: white;
     text-decoration: none;
+    align-items: center;
+    display: flex;
+    align-items: center;
 }
+
 .dropdown-content li:last-child {
     border-bottom: none;
 }

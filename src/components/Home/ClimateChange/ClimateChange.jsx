@@ -14,7 +14,7 @@ const ClimateChange = () => {
       <div className="Climate-Change-content">
         <img
           className="Climate-Change-img"
-          src="public\pictures\content-2.jpg"
+          src="public\pictures\green_earth.png"
           alt="Climate Change"
         />
         <div className="Climate-Change-content-p">
@@ -74,7 +74,7 @@ const ClimateChange = () => {
           <div className="target-audience-img">
             <img
               className="target-audience-img-item"
-              src="public\pictures\tree- content.jpg"
+              src="public\pictures\green_earth.png"
               alt="Target Audience"
             />
           </div>

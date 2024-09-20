@@ -40,15 +40,61 @@
     z-index: 2;
 }
 
+
+/* Container for video */
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; 
+}
+
+/* Video styling */
+.video-bg video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8; 
+    filter: brightness(0.5);
+}
+
+/* Content styling, ensures it is above the video */
+.video-content{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 2rem auto;
+    z-index: 2;
+}
+.content-1 {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 2rem auto;
+    z-index: 2;
+}
+
 .home-h1 {
     font-size: 4rem;
     color: #ffffff;
     text-shadow: 3px 5px 5px rgba(34, 35, 34, 0.74);
+    white-space: nowrap;
+    margin-bottom: 0;
 }
 
 .home-h4 {
+    margin-top: 0;
     color: white;
+    text-shadow: 3px 5px 5px rgba(34, 35, 34, 0.74);
     font-size: 1.5rem;
+    
 }
 
 .content-1 {
@@ -66,13 +112,13 @@
 
 .content1-h2 {
     font-size: 2rem;
-    color: #333;
+    color: #ffffff;
     margin-bottom: 1rem;
 }
 
 .content1-p {
     font-size: 1rem;
-    color: #666;
+    color: #ffffff;
     text-align: justify;
 }
 
@@ -80,13 +126,36 @@
     flex-shrink: 0;
     padding: 0.5rem;
 }
+@keyframes image-move {
+    0% {
+      transform: scale(1); 
+    }
+    50% {
+      transform: scale(1.05); 
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes image-rotate {
+    0% {
+      transform: rotate(0deg); /* Start at 0 degrees */
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg); /* Complete one full rotation */
+    }
+  }
 
 .content1-pic img {
-    width: 15rem; 
-    height: 15rem; 
+    width: 20rem; 
+    height: 20rem; 
     object-fit: cover; 
-    border-radius: 10px;
-    box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.3);
+    animation: image-move 5s infinite ease-in-out;
+    animation: image-rotate 100s infinite linear;
+   
 }
 
 @media screen and (max-width: 1024px) {
@@ -122,6 +191,7 @@
 @media screen and (max-width: 768px) {
     .home-h1 {
         font-size: 2.5rem;
+        white-space: inherit;
     }
 
     .home-h4 {
@@ -136,7 +206,5 @@
         font-size: 0.9rem;
     }
 
-    .content1-pic img {
-        display: none;
-    }
+ 
 }
