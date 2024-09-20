@@ -47,6 +47,7 @@ body {
     text-decoration: none;
     padding: 5px 10px;
     display: flex;
+    align-items: center; 
 }
 
 .active-link {
@@ -182,7 +183,6 @@ body {
 
     .logo img {
         width: 6rem;
-        /* Adjust the size of the logo on smaller screens */
         margin-left: 2rem;
         margin-top: 0.5rem;
     }

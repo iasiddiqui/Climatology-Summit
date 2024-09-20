@@ -9,12 +9,14 @@ import RegistrationSection from "../RegistrationSection/RegistrationSection";
 import MediaPartners from "../Home/MediaPartners/MediaPartners";
 import ContactUs from "../ContactUsForm/ContactUs";
 import EnergyFaq from "./EnergyFaq";
+import AboutConference from "../AboutConference/AboutConference";
 
 const EnergyConference = () => {
   return (
     <div>
       <Navbar />
       <EnergyConferenceHero />
+      <AboutConference />
       <ScientificSessions />
       <VenueAttraction />
       <RegistrationSection />

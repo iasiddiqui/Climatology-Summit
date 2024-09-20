@@ -10,6 +10,7 @@ import HealthConference from "./components/HealthConference/HealthConference";
 import EnergyConference from "./components/EnergyConference/EnergyConference";
 import DynamicsConference from "./components/DynamicsConference/DynamicsConference";
 import BiodiversityConference from "./components/BiodiversityConference/BiodiversityConference";
+import GreenTechnologyBrochure from "./components/GreenTechnologyBrouchoure/GreenTechnologyBrochure";
 
 const App = () => (
   <BrowserRouter>
@@ -26,6 +27,7 @@ const App = () => (
       <Route path="/green-technologies-conference" element={<EnergyConference/>} />
       <Route path="/ocean-health-conference" element={<DynamicsConference/>} />
       <Route path="/biodiversity-conference" element={<BiodiversityConference/>} />
+      <Route path="green-technologies-brochure" element={<GreenTechnologyBrochure/>} />
     </Routes>
   </BrowserRouter>
 );

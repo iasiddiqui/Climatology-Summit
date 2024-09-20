@@ -31,7 +31,7 @@ const AboutConference = () => {
             <div className="card-content">
               <CloudDownload />
               <h3>Brochure Download</h3>
-              <Link to="/">
+              <Link to="/green-technologies-brochure">
                 <button>Download Here</button>
               </Link>
             </div>
@@ -53,7 +53,7 @@ const AboutConference = () => {
             <div className="card-content">
               <Bookmark />
               <h3>Speaker Guidelines</h3>
-              <Link to="/">
+              <Link to="/speaker-guidline">
                 <button>Download Here</button>
               </Link>
             </div>
