@@ -30,3 +30,35 @@
     align-items: center;
     justify-content: center;
 }
+.presentation-forum{
+    width:40%;
+    background-color: #c1bdbd;
+    margin-left: 3rem;
+}
+.presentation-forum-list {
+    list-style-type: none;
+    padding: 0; 
+    margin: 0; 
+}
+
+.presentation-forum-li {
+    font-size: 1.5rem;
+    margin-bottom: 10px; 
+    margin-left: 1rem;
+}
+
+.presentation-forum-h2{
+    margin-left: 1rem;
+    font-size: 3rem;
+}
+.presentation-forum-list{
+    font-size: 1.5rem;
+}
+.presentation-forum-a{
+    /* margin-left: 1rem; */
+    font-size: 2rem;
+}
+.presentation-forum-link{
+    margin-left: 3rem;
+    bottom: 1px solid black;
+}
