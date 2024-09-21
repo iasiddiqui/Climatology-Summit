@@ -1,6 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./register.css";
 import Navbar from "../Navbar/navbar.jsx";
 import Footer from "../Home/Footer/Footer.jsx";
+import PersonalDetails from "./PersonalDetails/PersonalDetails.jsx";
+import FurtherInformation from "./PersonalDetails/FurtherInformation.jsx";
+import Accommodation from "./Accommodation.jsx";
+import PaymentMethod from "./PaymentMethod.jsx";
+import RegistrationType from "./RegistrationType.jsx";
 const Register = () => {
   return (
     <>
@@ -18,7 +24,11 @@ const Register = () => {
         </div>
       </div>
       <div>
-        <h1>coming soon</h1>
+        <PersonalDetails />
+        <FurtherInformation />
+        <Accommodation />
+        <RegistrationType />
+        <PaymentMethod />
       </div>
       <Footer/>
     

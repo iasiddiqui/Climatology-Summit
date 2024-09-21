@@ -62,7 +62,7 @@
 
 .abstract-form button:hover {
     background-color: rgb(240, 236, 236);
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.3);
 }
 .abstract-form select {
     width: 100%; 
@@ -72,6 +72,7 @@
     border-radius: 4px;
     padding: 0.25rem; 
 }
+
 
 
 

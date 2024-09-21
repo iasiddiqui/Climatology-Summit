@@ -27,10 +27,11 @@
     flex-direction: column;
     text-align: center;
     overflow: hidden;
+    transition: box-shadow 0.4s ease;
 }
 
 .upcoming-conference-details:hover {
-    box-shadow: 5px 5px 10px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 30px  rgba(0, 0, 0, 0.3);
 
 }
 
@@ -42,13 +43,15 @@
 }
 
 .upcoming-conference-img:hover {
-    box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     border: 1px solid black;
+    
 }
 
 .upcoming-conference-link {
     text-decoration: none;
     color: rgb(0, 0, 0);
+    transition: color 1s ease;
 }
 
 .upcoming-conference-link:hover {
@@ -74,8 +77,10 @@
 }
 
 .upcoming-conference-button {
+    
     background-color: white;
     border: 1px solid black;
+    color: black;
     border-radius: 10px;
     width: 50%;
     padding: 0.5rem;
@@ -86,7 +91,7 @@
 }
 
 .upcoming-conference-button:hover {
-    box-shadow: 5px 5px 10px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 10px  rgba(0, 0, 0, 0.3);
 }
 
 /* Media queries for responsiveness */

@@ -62,3 +62,16 @@
     margin-left: 3rem;
     bottom: 1px solid black;
 }
+.abstract-hero-btn{
+    color:black;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    transition: background-color 1s ;
+
+}
+.abstract-hero-btn:hover{
+    background-color: #ffffff00;
+    color: white;
+    border: 1px solid #fff;
+}
