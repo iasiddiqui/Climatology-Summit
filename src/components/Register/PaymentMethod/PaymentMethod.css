@@ -1,0 +1,116 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: sans-serif;
+  }
+  
+  .registration-types {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .registration-types label {
+    display: block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .registration-types label:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .registration-types label input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  .registration-table {
+    margin-bottom: 20px;
+  }
+  
+  .registration-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .registration-table th,
+  .registration-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+  }
+  
+  .registration-table th {
+    background-color: #f0f0f0;
+  }
+  
+  .registration-table input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .sponsor-registration,
+  .accommodation-registration {
+    margin-bottom: 20px;
+  }
+  
+  .sponsor-registration table,
+  .accommodation-registration table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .sponsor-registration th,
+  .sponsor-registration td,
+  .accommodation-registration th,
+  .accommodation-registration td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+  }
+  
+  .sponsor-registration th,
+  .accommodation-registration th {
+    background-color: #f0f0f0;
+  }
+  
+  .sponsor-registration input[type="checkbox"],
+  .accommodation-registration input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .participants,
+  .checkin-date {
+    margin-bottom: 10px;
+  }
+  
+  .participants label,
+  .checkin-date label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .registration-details {
+    margin-bottom: 20px;
+  }
+  
+  .payment-method {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .payment-method button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .payment-method img {
+    height: 30px;
+  }
