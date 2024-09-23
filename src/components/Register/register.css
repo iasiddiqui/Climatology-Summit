@@ -1,7 +1,7 @@
 /* register.css */
 
 .register-container {
-  max-width: 800px;
+  max-width: 80%;
   margin: auto;
   padding: 20px;
   background-color: #f9f9f9;
@@ -31,7 +31,7 @@
 .register-input,
 .register-select,
 .register-textarea {
-  width: 100%;
+  width: 80%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -46,6 +46,9 @@
   display: flex;
   justify-content: space-between;
   gap: 10px;
+}
+.register-row .register-field {
+  flex: 1;
 }
 
 .register-summary {

@@ -115,15 +115,7 @@ function PaymentInfo() {
           />
           Spot Registrations on July 14, 2024
         </label>
-        <label>
-          <input
-            type="radio"
-            value="Student Registration"
-            checked={registrationType === "Student Registration"}
-            onChange={handleRegistrationTypeChange}
-          />
-          Student Registration
-        </label>
+      
       </div>
 
       <div className="registration-table">
@@ -184,14 +176,7 @@ function PaymentInfo() {
                 />{" "}
                 {registrationPrices.academia.student[0]}
               </td>
-              <td>
-                <input
-                  type="checkbox"
-                  onChange={() => handleCheckboxChange(0, "business")}
-                  checked={selectedOptions.business.includes(0)}
-                />{" "}
-                {registrationPrices.business.student[0]}
-              </td>
+              <td></td>
             </tr>
           </tbody>
         </table>
