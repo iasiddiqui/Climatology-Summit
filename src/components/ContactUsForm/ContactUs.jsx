@@ -84,7 +84,7 @@ const ContactUs = () => {
           title="Google Map"
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d38981.2623804173!2d4.904096!3d52.364456!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c63fb5949a7755%3A0x6600fd4cb7c0af8d!2sAmsterdam%2C%20Netherlands!5e0!3m2!1sen!2sus!4v1726461383155!5m2!1sen!2sus"
           width="100%"
-          height="300"
+          height="400"
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"

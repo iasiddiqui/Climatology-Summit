@@ -1,22 +1,35 @@
 import { NavLink } from "react-router-dom";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import "./Navbar.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className="logo">
-        <img
-          src="public\pictures\ClimateLogo.jpg"
-          alt="Event Logo"
-        />
+        <img src="public/pictures/ClimateLogo.jpg" alt="Event Logo" />
       </div>
       <div className="menu-icon" onClick={toggleMenu}>
         &#9776;
@@ -45,7 +58,10 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink className="dropdown-nav" to="/green-technologies-conference">
+              <NavLink
+                className="dropdown-nav"
+                to="/green-technologies-conference"
+              >
                 Green Technologies and Renewable Energy Conference
               </NavLink>
             </li>
@@ -96,7 +112,9 @@ const Navbar = () => {
         <li className="register-li">
           <NavLink
             to="/register"
-            className={({ isActive }) => (isActive ? "register-link active-link" : "register-link")}
+            className={({ isActive }) =>
+              isActive ? "register-link active-link" : "register-link"
+            }
           >
             Register
           </NavLink>

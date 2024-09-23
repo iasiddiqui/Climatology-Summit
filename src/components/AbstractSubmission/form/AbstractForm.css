@@ -1,6 +1,10 @@
+body {
+    background-color: #f2fafc;
+}
+
 .abstract-container {
     display: flex;
-    justify-content: left;
+    justify-content: flex-start;
     align-items: flex-start;
     padding: 5rem;
     flex-wrap: wrap;
@@ -9,9 +13,8 @@
 .abstract-form {
     flex: 0 0 auto;
     width: 50%;
-    height: auto;
     padding: 1rem;
-    background-color: rgb(252, 250, 250);
+    background-color: rgb(250, 252, 252);
     border-radius: 5px;
     border: 2px solid rgba(62, 59, 59, 0.532);
 }
@@ -20,59 +23,132 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: auto;
 }
 
 .abstract-form label {
     display: block;
-    width: 100%; 
-    margin-bottom: 0.5rem; 
+    width: 100%;
+    margin-bottom: 0.5rem;
     font-weight: bold;
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
 }
 
 .abstract-form input,
-.abstract-form .textarea,
-.abstract-form .react-tel-input input { 
-    width: 100%; 
+.abstract-form select,
+.abstract-form textarea,
+.abstract-form .react-tel-input input {
+    width: 100%;
     height: 2rem;
     margin-bottom: 1rem;
+    padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
 }
 
-.abstract-form .react-tel-input {
-    width: 100%; 
-}
-
-.abstract-form .textarea {
+.abstract-form textarea {
+    height: auto;
     min-height: 6rem;
 }
 
-.abstract-form button {
+.abstract-form select {
+    padding: 0.25rem;
+}
+
+.abstract-form-btn {
     align-self: center;
     padding: 10px 20px;
-    width: auto;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
     border: 1px solid black;
     border-radius: 10px;
     cursor: pointer;
+    transition: all ease-in 0.3s;
 }
 
-.abstract-form button:hover {
+.abstract-form-btn:hover {
     background-color: rgb(240, 236, 236);
     box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.3);
 }
-.abstract-form select {
-    width: 100%; 
-    height: 2rem; 
-    margin-bottom: 1rem; 
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 0.25rem; 
+
+/* .presentation-forum styles */
+.presentation-forum {
+    width: 35%;
+    background-color: #e7e4e4;
+    margin-left: 3rem;
+    padding: 1.5em;
+    border-radius: 10px;
 }
 
+.presentation-forum-h2 {
+    font-size: 2rem;
+    margin-top: -0.3rem;
+}
 
+.presentation-forum-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
 
+.presentation-forum-li {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(189, 186, 186);
+}
 
+.presentation-forum-a {
+    font-size: 2rem;
+}
+
+.presentation-forum-link {
+    border: 2px solid #fff;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 1040px){
+    .abstract-form{
+        width: 40%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .abstract-container {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .abstract-form,
+    .presentation-forum {
+        width: 90%;
+        margin-left: 0;
+        margin-bottom: 2rem;
+    }
+
+    .abstract-form input,
+    .abstract-form select,
+    .abstract-form textarea {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .abstract-form {
+        padding: 0.5rem;
+    }
+
+    .presentation-forum-h2 {
+        font-size: 1.5rem;
+    }
+
+    .presentation-forum-li {
+        font-size: 1.2rem;
+    }
+
+    .abstract-form label {
+        font-size: 1rem;
+    }
+}

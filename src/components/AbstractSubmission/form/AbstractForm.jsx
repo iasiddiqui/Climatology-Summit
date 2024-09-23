@@ -154,7 +154,7 @@ const AbstractForm = () => {
             onChange={handleFileChange}
             accept=".pdf, .doc, .docx"
           />
-          <button type="submit">SUBMIT</button>
+          <button className="abstract-form-btn" type="submit">SUBMIT</button>
         </form>
       </div>
 

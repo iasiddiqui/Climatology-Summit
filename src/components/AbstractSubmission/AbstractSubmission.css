@@ -1,26 +1,31 @@
-.abstract-h1{
-    color: #ffff;
+.abstract-h1 {
+    color: #fff;
     font-size: 3rem;
     white-space: nowrap;
 }
-.abstract-h3{
+
+.abstract-h3 {
     color: #fff;
     font-size: 1.5rem;
 }
-.abstract-hero{
+
+.abstract-hero {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-   
+    flex-wrap: wrap;
+    /* Ensures elements wrap on smaller screens */
 }
-.abstract-hero-span{
+
+.abstract-hero-span {
     color: #fff;
     text-decoration: underline;
     font-size: 2rem;
     margin-right: 10%;
 }
-.abstract-hero-btn{
+
+.abstract-hero-btn {
     color: black;
     background-color: #fff;
     border: none;
@@ -29,49 +34,67 @@
     border-radius: 10px;
     align-items: center;
     justify-content: center;
-}
-.presentation-forum{
-    width:40%;
-    background-color: #c1bdbd;
-    margin-left: 3rem;
-}
-.presentation-forum-list {
-    list-style-type: none;
-    padding: 0; 
-    margin: 0; 
+    transition: background-color 1s;
 }
 
-.presentation-forum-li {
-    font-size: 1.5rem;
-    margin-bottom: 10px; 
-    margin-left: 1rem;
-}
-
-.presentation-forum-h2{
-    margin-left: 1rem;
-    font-size: 3rem;
-}
-.presentation-forum-list{
-    font-size: 1.5rem;
-}
-.presentation-forum-a{
-    /* margin-left: 1rem; */
-    font-size: 2rem;
-}
-.presentation-forum-link{
-    margin-left: 3rem;
-    bottom: 1px solid black;
-}
-.abstract-hero-btn{
-    color:black;
-    background-color: #fff;
-    border-radius: 10px;
-    border: 1px solid #fff;
-    transition: background-color 1s ;
-
-}
-.abstract-hero-btn:hover{
+.abstract-hero-btn:hover {
     background-color: #ffffff00;
     color: white;
     border: 1px solid #fff;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .abstract-h1 {
+        font-size: 2.2rem;
+        margin-top: 4rem;
+    }
+
+    .abstract-h3 {
+        font-size: 1.2rem;
+    }
+
+    .abstract-hero {
+        flex-direction: column;
+    }
+
+    .abstract-hero-span {
+        font-size: 1.5rem;
+        margin-right: 0;
+        /* Center the span on smaller screens */
+        margin-bottom: 1rem;
+    }
+
+    .abstract-hero-btn {
+        font-size: 1.2rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media(max-width: 427px) {
+    .abstract-h1 {
+        font-size: 1rem;
+        margin-top: 4rem;
+        white-space: inherit;
+    }
+
+    .abstract-h3 {
+        font-size: 0.6rem;
+    }
+
+    .abstract-hero {
+        flex-direction: column;
+    }
+
+    .abstract-hero-span {
+        font-size: 1rem;
+        margin-right: 0;
+        /* Center the span on smaller screens */
+        /* margin-bottom: 1rem; */
+    }
+
+    .abstract-hero-btn {
+        font-size: 0.7rem;
+        padding: 0.2rem
+    }
 }

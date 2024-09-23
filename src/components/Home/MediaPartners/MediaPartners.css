@@ -7,7 +7,7 @@
 
 .media-partner-images {
   display: flex;
-  gap: 1rem;
+  gap: 5rem;
   flex-wrap: nowrap; 
   animation: scroll-left 20s linear infinite; 
 }

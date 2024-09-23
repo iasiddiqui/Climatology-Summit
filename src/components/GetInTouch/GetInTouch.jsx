@@ -1,9 +1,9 @@
-import React from 'react';
-import './GetInTouch.css';
+import React from "react";
+import "./GetInTouch.css";
 import PinDropIcon from "@mui/icons-material/PinDrop";
 import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
 import EmailIcon from "@mui/icons-material/Email";
-import contactData from './ContactData';
+import contactData from "./ContactData";
 
 const iconMap = {
   PinDropIcon: PinDropIcon,
@@ -13,7 +13,7 @@ const iconMap = {
 
 const GetInTouch = () => {
   return (
-    <div>
+    <div className="contact-main">
       <div className="contact-section">
         <div className="container">
           <h2 className="contact-title">Get In Touch</h2>

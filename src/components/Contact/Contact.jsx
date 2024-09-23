@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "../Navbar/navbar.jsx";
-// import './GetInTouch.css';
+import "./contact.css"
 import PinDropIcon from "@mui/icons-material/PinDrop";
 import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
 import EmailIcon from "@mui/icons-material/Email";
@@ -22,20 +22,20 @@ const Contact = () => {
       <div>
         <div className="contact-section">
           <div className="container">
-            <h2 className="contact-title">Contact Us</h2>
-            <p className="contact-description">
+            <h2 className="contact-page-title">Contact Us</h2>
+            <p className="contact-page-description">
               To learn more about our conferences and events, please get in
               touch with us. Join our extensive network of scientists,
               professional experts, and research scholars to stay informed and
               connected.
             </p>
-            <div className="contact-info-contact">
+            <div className="contact-page-info-contact">
               {contactData.map(({ id, icon, title, content }) => {
                 const IconComponent = iconMap[icon];
                 return (
-                  <div key={id} className="info-card">
+                  <div key={id} className="contact-info-card">
                     <div className="info-text">
-                      <IconComponent className="contact-icon" />
+                      <IconComponent className="contact-page-icon" />
                       <h3>{title}</h3>
                       <p>{content}</p>
                     </div>

@@ -2,6 +2,10 @@ import React from "react";
 import "./AbstractSubmission.css";
 import Navbar from "../Navbar/navbar";
 import AbstractForm from "./form/AbstractForm";
+import GetInTouch from "../GetInTouch/GetInTouch";
+import ContactUs from "../ContactUsForm/ContactUs";
+import Footer from "../Home/Footer/Footer";
+
 
 const AbstractSubmission = () => {
   return (
@@ -29,6 +33,9 @@ const AbstractSubmission = () => {
           </div>
         </div>
         <AbstractForm />
+        <GetInTouch />
+        <ContactUs />
+        <Footer />
 
     </>
   );

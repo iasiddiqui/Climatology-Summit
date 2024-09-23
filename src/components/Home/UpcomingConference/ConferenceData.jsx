@@ -13,7 +13,7 @@ export const conferences = [
   {
     id: 2,
     imageUrl: "public/pictures/upcoming img 2.jpg",
-    title: "Green Technologies ",
+    title: "Green Technologies Conference ",
     date: "August 25-26, 2025",
     location: "Frankfurt, Germany",
     link: "",
