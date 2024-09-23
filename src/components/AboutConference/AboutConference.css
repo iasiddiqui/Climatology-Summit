@@ -17,7 +17,7 @@
 .card {
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 5px;
   text-align: center;
   width: 100%;
 }

@@ -1,6 +1,4 @@
-import MicIcon from '@mui/icons-material/Mic';
-import SchoolIcon from '@mui/icons-material/School';
-import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
+
 
 const RegistrationSectionData = [
   {

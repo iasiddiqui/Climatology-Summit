@@ -56,20 +56,15 @@
     word-wrap: break-word;
     overflow: hidden;
     /* border: 1px solid white; */
-    transition: all ease-in 0.5s;
+    transition: all ease-in 1s;
 }
 
 .info-card:hover  {
-    background-color: #154a57c3;
-    /* border: 1px solid white; */
-    border: none;
-    color: white;
-    box-shadow: inset 0px 0px 10px white;
+
+    width: 105%;
 }
 
-.info-card:hover .contact-icon  {
-    color: white;
-}
+
 
 .contact-icon {
     font-size: 3rem !important;
