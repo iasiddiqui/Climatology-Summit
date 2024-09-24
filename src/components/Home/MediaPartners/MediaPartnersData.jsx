@@ -1,4 +1,3 @@
-// MediaPartnersData.js
 export const mediaPartnersData = [
   {
     id: 1,
