@@ -4,6 +4,7 @@
 .body {
     height: 100vh;
     width: 100vw;
+    color: black;
     background-color: black;
     /* font-family: 'Comfortaa', sans-serif; */
     font-family: "Roboto Slab", serif;
@@ -99,7 +100,6 @@
 
 .home-h1 {
     font-size: 4rem;
-    color: #ffffff;
     text-shadow: 3px 5px 5px rgba(34, 35, 34, 0.74);
     white-space: nowrap;
     margin-bottom: 0;
@@ -110,7 +110,6 @@
 
 .home-h4 {
     margin-top: 0;
-    color: white;
     text-shadow: 3px 5px 5px rgba(34, 35, 34, 0.74);
     font-size: 1.5rem;
     font-family: "Roboto Slab", serif;
@@ -134,14 +133,12 @@
 
 .content1-h2 {
     font-size: 2rem;
-    color: #ffffff;
     margin-bottom: 1rem;
     
 }
 
 .content1-p {
     font-size: 1rem;
-    color: #ffffff;
     text-align: justify;
 }
 
@@ -150,43 +147,13 @@
     padding: 0.5rem;
 }
 
-@keyframes image-move {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.05);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes image-rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    50% {
-        transform: rotate(180deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-        /* Complete one full rotation */
-    }
-}
 
 .content1-pic img {
-    margin-left: 2rem;
+    margin-left: 8rem;
     margin-top: 3rem;
-    width: 20rem;
-    height: 20rem;
+    width: 30rem;
+    height: 30rem;
     object-fit: cover;
-    animation: image-move 5s infinite ease-in-out;
-    animation: image-rotate 100s infinite linear;
 
 }
 

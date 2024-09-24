@@ -5,8 +5,7 @@ body {
 
 .logo {
     position: absolute;
-    z-index: 101;
-    /* Ensure it's on top of the navbar */
+    z-index: 101;   
 }
 
 .logo img {
@@ -23,13 +22,19 @@ body {
     top: 0;
     z-index: 100;
     width: 100%;
-    background-color: #ffffff;
-    border-bottom: 1px solid black;
-    box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: 1px solid transparent; 
+    box-shadow: none; 
     color: black;
-    padding: 0;
-    margin-top: 0;
+    transition: background-color 0.3s ease, border-bottom 0.3s ease; /* Smooth transition */
 }
+
+.scrolled {
+    background-color: #ffffff; 
+    border-bottom: 1px solid black; 
+    box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.3); 
+}
+
 
 .navbar ul {
     list-style: none;
@@ -142,6 +147,7 @@ body {
         display: none;
         flex-direction: column;
         cursor: pointer;
+        background-color: #fff;
     }
 
     .navbar ul.active {
