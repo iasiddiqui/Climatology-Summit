@@ -2,6 +2,18 @@ body {
     margin: 0;
     padding: 0;
 }
+.nav-up-color {
+    position: fixed; 
+    top: 0; 
+    left: 50%; 
+    transform: translateX(-50%);
+    width: 100%; 
+    align-items: center;
+    background-color: #9cdb3b; 
+    height: 1rem; 
+    z-index: 0; 
+}
+
 
 .logo {
     position: absolute;
@@ -19,7 +31,7 @@ body {
 
 .navbar {
     position: fixed;
-    top: 0;
+    top: 0rem;
     z-index: 100;
     width: 100%;
     background-color: rgba(255, 255, 255, 0);
@@ -31,6 +43,7 @@ body {
 
 .scrolled {
     background-color: #ffffff; 
+    color: black;
     border-bottom: 1px solid black; 
     box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.3); 
 }
@@ -48,17 +61,24 @@ body {
 }
 
 .navbar ul li a {
-    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);    
     text-decoration: none;
     padding: 5px 10px;
+    padding-top: 0;
     display: flex;
     align-items: center; 
 }
 
 .active-link {
-    color: #000dff !important;
+    color: #ffffff !important;
     font-weight: bold;
-    /* border-bottom: 2px solid #000dff; */
+    /* border-bottom: 2px solid #9cdb3b; */
+    background-color: #9cdb3b;
+    height: 2rem;
+    top: 0;
+    left: 0;
+    border-bottom-right-radius:90% ;
+    border-bottom-left-radius:90% ;
 }
 
 .navbar ul li:hover {
@@ -67,13 +87,13 @@ body {
 }
 
 .navbar ul li a:hover {
-    color: #000dff;
+    color: #9cdb3b;
 }
 
 .menu-icon {
     display: none;
     font-size: 24px;
-    color: rgb(0, 0, 0);
+    color: #9cdb3b;
     cursor: pointer;
     padding: 10px;
 }
