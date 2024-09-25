@@ -43,33 +43,22 @@ const ClimateChange = () => {
         />
 
         <div className="Climate-Change-content-p">
-          <div className="Climate-Change-content-item">
-            <KeyboardDoubleArrowRightIcon />
-            <motion.p ref={ref} initial={{ opacity: 0 }} animate={controls}>
-              Present your research, receive feedback from your peers, and get
-              published in prestigious academic journals.
-            </motion.p>
-          </div>
-          <div className="Climate-Change-content-item">
-            <KeyboardDoubleArrowRightIcon />
-            <motion.p ref={ref} initial={{ opacity: 0 }} animate={controls}>
-              Take the next step in your academic career by identifying new
-              research opportunities and partners.
-            </motion.p>
-          </div>
-          <div className="Climate-Change-content-item">
-            <KeyboardDoubleArrowRightIcon />
-            <motion.p ref={ref} initial={{ opacity: 0 }} animate={controls}>
-              Join the network of academics and help define the future of the
-              field.
-            </motion.p>
-          </div>
-          <div className="Climate-Change-content-item">
-            <KeyboardDoubleArrowRightIcon />
-            <motion.p ref={ref} initial={{ opacity: 0 }} animate={controls}>
-              Discover the beauty of Amsterdam and indulge in local cuisines.
-            </motion.p>
-          </div>
+          {/* Content items with icons */}
+          {[ // Create an array of content to iterate over
+            "Present your research, receive feedback from your peers, and get published in prestigious academic journals.",
+            "Take the next step in your academic career by identifying new research opportunities and partners.",
+            "Join the network of academics and help define the future of the field.",
+            "Discover the beauty of Amsterdam and indulge in local cuisines."
+          ].map((text, index) => (
+            <div className="Climate-Change-content-item" key={index}>
+              <motion.div ref={ref} initial={{ opacity: 0 }} animate={controls}>
+                <KeyboardDoubleArrowRightIcon />
+              </motion.div>
+              <motion.p ref={ref} initial={{ opacity: 0 }} animate={controls}>
+                {text}
+              </motion.p>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -79,7 +68,9 @@ const ClimateChange = () => {
         <div className="target-audience-content">
           <div className="target-audience-text">
             <div className="target-audience-item">
-              <KeyboardDoubleArrowRightIcon />
+              <motion.div ref={ref} initial={{ opacity: 0 }} animate={controls}>
+                <KeyboardDoubleArrowRightIcon />
+              </motion.div>
               <motion.p ref={ref} initial={{ opacity: 0 }} animate={controls}>
                 Researchers, Climate Scientists, Students, and Industrialists as
                 well as representatives of climate organizations, research
@@ -87,9 +78,9 @@ const ClimateChange = () => {
               </motion.p>
             </div>
             <div className="Climate-Change-content-item">
-              <div className="icon-container">
+              <motion.div ref={ref} initial={{ opacity: 0 }} animate={controls}>
                 <KeyboardDoubleArrowRightIcon />
-              </div>
+              </motion.div>
               <motion.p ref={ref} initial={{ opacity: 0 }} animate={controls}>
                 Present your research, receive feedback from your peers, and get
                 published in prestigious academic journals.

@@ -171,24 +171,22 @@ body{
 }
 .register-button button{
     font-size: 1.5rem;
-    background-color: #3d7a0000;
-
-    color: #fff;
+    background-color: #3d7a00;
+    color: #ffffff;
     border-radius: 10px;
     padding: 0.4rem;
-    width: 10rem;
+    width: 8rem;
     height: auto;
     border: none;
     cursor: pointer;
     /* margin-top: 1rem; */
-    color: #3d7a00;
-    border: 1px solid #3d7a00;
     text-align: center;
     transition: background-color 1s ease, color 1s ease; 
 }
 .register-button button:hover{
-    background-color: #3d7a00;
-    color: #ffffff;
+    border: 1px solid #3d7a00;
+    background-color: #3d7a0000;
+    color: #3d7a00;
 }
 
 
