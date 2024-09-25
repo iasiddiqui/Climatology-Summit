@@ -111,16 +111,7 @@ const Navbar = () => {
             Contact
           </NavLink>
         </li>
-        <li className="register-li">
-          <NavLink
-            to="/register"
-            className={({ isActive }) =>
-              isActive ? "register-link active-link" : "register-link"
-            }
-          >
-            Register
-          </NavLink>
-        </li>
+        
       </ul>
     </nav>
     </>

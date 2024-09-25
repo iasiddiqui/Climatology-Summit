@@ -7,7 +7,7 @@ import MediaPartners from "./MediaPartners/MediaPartners";
 import Faqs from "./Faqs/Faqs";
 import Footer from "./Footer/Footer";
 import ContentHero from "./ContentOfHero/ContentHero";
-
+import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <div className="home-main">
@@ -25,7 +25,11 @@ const Home = () => {
           <div className="content-1-details">
             <h1 className="home-h1">Climatology Summit</h1>
             <h4 className="home-h4">Act Now, Save Tomorrow</h4>
-            
+          </div>
+          <div className="register-button">
+            <Link to="/register">
+              <button>Register</button>
+            </Link>
           </div>
           <div className="content1-pic">
             {/* <img
@@ -38,7 +42,6 @@ const Home = () => {
         </div>
       </div>
       <div className="rectangle"></div>
-
 
       {/* --------Content  Hero---------- */}
       <ContentHero />
