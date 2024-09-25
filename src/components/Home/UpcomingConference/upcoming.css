@@ -6,6 +6,7 @@ body {
 
 .upcoming-conference-h1 {
     font-size: 2rem;
+    color: #3d7a00;
     text-align: center;
     text-decoration: underline;
     font-family: "Roboto Slab", serif;
@@ -66,7 +67,7 @@ body {
 }
 
 .upcoming-conference-link:hover {
-    color: #000dff;
+    color: #9cdb3b
 }
 
 .upcoming-conference-p {
