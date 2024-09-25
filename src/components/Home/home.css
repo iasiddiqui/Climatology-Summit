@@ -170,7 +170,7 @@ body{
     transform: translateX(-50%);
 }
 .register-button button{
-    font-size: 2rem;
+    font-size: 1.5rem;
     background-color: #3d7a0000;
 
     color: #fff;

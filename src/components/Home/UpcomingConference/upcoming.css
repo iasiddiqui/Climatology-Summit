@@ -4,6 +4,7 @@ body {
     font-style: normal;
 }
 
+
 .upcoming-conference-h1 {
     font-size: 2rem;
     color: #3d7a00;
@@ -28,7 +29,7 @@ body {
 }
 
 .upcoming-conference-details {
-    border: 1px solid black;
+    border: 1px solid #9cdb3b;
     background-color: #fff;
     padding: 1rem;
     width: 230px;
@@ -43,7 +44,7 @@ body {
 }
 
 .upcoming-conference-details:hover {
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 30px #9bdb3b3a;
 
 }
 
@@ -91,7 +92,7 @@ body {
 .upcoming-conference-button {
 
     background-color: white;
-    border: 1px solid black;
+    border: 1px solid #9cdb3b;
     color: black;
     border-radius: 10px;
     width: 50%;
@@ -103,7 +104,7 @@ body {
 }
 
 .upcoming-conference-button:hover {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 10px #3d7a008f;
 }
 
 /* Media queries for responsiveness */
