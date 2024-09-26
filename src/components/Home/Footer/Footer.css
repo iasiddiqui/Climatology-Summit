@@ -1,5 +1,6 @@
 .footer {
   background-color: #000000;
+  width: 100%;
   color: white;
   padding: 2rem;
   display: flex;
@@ -15,6 +16,7 @@
 }
 
 .footer-img {
+  width: 100%;
   max-width: 100%;
   height: auto;
 }

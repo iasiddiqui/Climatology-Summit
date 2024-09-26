@@ -5,8 +5,6 @@ body {
 .nav-up-color {
     position: fixed; 
     top: 0; 
-    left: 50%; 
-    transform: translateX(-50%);
     width: 100%; 
     align-items: center;
     background-color: #9cdb3b; 
@@ -56,9 +54,9 @@ body {
     align-items: center;
 }
 
-.navbar ul li {
+/* .navbar ul li {
     position: relative;
-}
+} */
 
 .navbar ul li a {
     color: rgb(0, 0, 0);    
@@ -239,5 +237,8 @@ body {
         width: 6rem;
         margin-left: 2rem;
         margin-top: 0.5rem;
+    }
+    .nav-register-button {
+        display: none;
     }
 }
