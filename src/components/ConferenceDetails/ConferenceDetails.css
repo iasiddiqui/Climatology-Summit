@@ -7,7 +7,7 @@
     height: 90vh;
     object-fit: cover;
     z-index: 0;
-    filter: brightness(0.5);
+  
 }
 
 .conference-hero-p {
@@ -22,11 +22,11 @@
     width: 60%;
     padding: 1rem;
     color: black;
-    border: 3px solid rgb(255, 255, 255);
+    /* border: 3px solid rgb(255, 255, 255); */
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.704);
+    background-color: rgba(255, 255, 255, 0.539);
     text-align: center;
-    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 5px 5px 15px rgba(91, 91, 91, 0.5);
 }
 
 .conference-hero-box {
@@ -58,19 +58,20 @@
     padding: 0.5rem;
     width: 10rem;
     height: 2.5rem;
-    background-color: #000000;
+    background-color:#3d7a00;
     gap: 1rem;
     margin: 0.4rem;
     cursor: pointer;
     border-radius: 5px;
+    font-weight: bold;
     border: none;
 
 }
 
 .conference-button:hover {
     background-color: rgba(255, 255, 255, 0);
-    color: #000000;
-    border: 1px solid black;
+    color: #3d7a00;
+    border: 1px solid#3d7a00;
 }
 
 

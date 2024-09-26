@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import "./speaker.css";
 import Navbar from "../Navbar/navbar.jsx";
 import { speakerGuidelinesData } from "./SpeakerGuidlineData.jsx";
@@ -6,6 +7,38 @@ import SpeakerFaqs from "./SpeakerFaqs";
 import Footer from "../Home/Footer/Footer";
 
 const SpeakerGuidline = () => {
+  const [showSections, setShowSections] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowSections(true);
+    }, 100); // Delay before showing the sections
+
+    return () => clearTimeout(timer); // Cleanup on unmount
+  }, []);
+
+  const headingVariants = {
+    hidden: { y: -50, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+
+  const contentVariants = {
+    hidden: { x: -50, opacity: 0 },
+    visible: (index) => ({
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+        delay: index * 0.3, // Stagger content appearance
+      },
+    }),
+  };
+
   return (
     <>
       <Navbar />
@@ -16,26 +49,46 @@ const SpeakerGuidline = () => {
           alt="Hero"
         />
         <div className="overlay">
-          <h1 className="home-h1">Speaker Guidelines</h1>
+          <h1 className="hero-h1">Speaker Guidelines</h1>
         </div>
       </div>
       <div className="speaker-guidline-content">
-        <h2 className="speaker-guidline-h2-heading">Conference Guidelines</h2>
+        <motion.h2
+          className="speaker-guidline-h2-heading"
+          variants={headingVariants}
+          initial="hidden"
+          animate={showSections ? "visible" : "hidden"}
+        >
+          Conference Guidelines
+        </motion.h2>
         {speakerGuidelinesData.map((section, index) => (
           <div className="speaker-guidline-content1" key={index}>
-            <h2 className="speaker-guidline-h2-content">{section.title}</h2>
+            <motion.h2
+              className="speaker-guidline-h2-content"
+              variants={headingVariants}
+              initial="hidden"
+              animate={showSections ? "visible" : "hidden"}
+            >
+              {section.title}
+            </motion.h2>
             <ul>
               {section.content.map((item, idx) => (
-                <li className="speaker-guidline-li" key={idx}>
+                <motion.li
+                  className="speaker-guidline-li"
+                  key={idx}
+                  variants={contentVariants}
+                  initial="hidden"
+                  animate={showSections ? "visible" : "hidden"}
+                  custom={idx} // Pass the index for stagger effect
+                >
                   {item}
-                </li>
+                </motion.li>
               ))}
             </ul>
           </div>
         ))}
       </div>
       <SpeakerFaqs />
-
       <Footer />
     </>
   );

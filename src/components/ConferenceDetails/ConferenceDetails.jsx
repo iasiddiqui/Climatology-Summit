@@ -4,7 +4,7 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import ConferenceData from "./ConferenceData";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import { Link } from "react-router-dom"; // Import Link
+import { Link } from "react-router-dom"; 
 
 const HealthConferenceDetails = () => {
   return (
@@ -12,7 +12,7 @@ const HealthConferenceDetails = () => {
       <div className="conference">
         <img
           className="conference-img"
-          src="/pictures/Climate change.jpg"
+          src="public\pictures\HealthConferenceHero.avif"
           alt="Climate Change"
         />
         <div className="conference-box">
@@ -21,7 +21,7 @@ const HealthConferenceDetails = () => {
               {ConferenceData.title}
             </h1>
             <p className="conference-hero-p">
-              Theme: {ConferenceData.theme}
+              <strong>Theme: </strong>{ConferenceData.theme}
             </p>
           </div>
           <div className="conference-hero-box">

@@ -30,8 +30,8 @@ const GetInTouch = () => {
   };
 
   return (
-    <div className="contact-main" ref={ref}>
-      <div className="contact-section">
+    <div className="get-in-main" ref={ref}>
+      <div className="get-in-section">
         <div className="container">
           <h2 className="get-in-title">Get In Touch</h2>
           <p className="get-in-description">
@@ -39,7 +39,7 @@ const GetInTouch = () => {
             with us. Join our extensive network of scientists, professional
             experts, and research scholars to stay informed and connected.
           </p>
-          <div className="contact-info-contact">
+          <div className="get-in-info-contact">
             {contactData.map(({ id, icon, title, content }) => {
               const IconComponent = iconMap[icon];
               return (
