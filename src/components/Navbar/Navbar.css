@@ -163,10 +163,10 @@ body {
 .nav-links-container {
     display: flex; 
     align-items: center; 
-    margin-left: 20rem;
+    margin-left: 18rem;
 }
 .nav-register-button {
-    margin-left: 5rem; 
+    margin-left: 4.5rem; 
     align-items: center;
     justify-content: center;
 }

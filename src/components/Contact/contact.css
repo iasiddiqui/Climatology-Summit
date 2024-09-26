@@ -9,7 +9,7 @@
 .contact-section {
     width: 100%;
     /* background-color: #c0c3bf; */
-    color: #ffffff;
+    color: #000;
     padding: 50px 0;
     text-align: center;
 }
@@ -20,12 +20,12 @@
     padding: 0 15px;
 }
 
-.contact-title {
+.contact-pag-title {
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
-.contact-description {
+.contact-pag-description {
     font-size: 1.3rem;
     margin-bottom: 40px;
     width: 80%;
@@ -59,10 +59,7 @@
     transition: all ease-in 1s;
 }
 
-.info-card:hover  {
 
-    width: 105%;
-}
 
 
 

@@ -1,7 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 /* .conferenece-award-nomination{
     width: 70%;
     
 } */
+
+body{
+    font-family: "Roboto Slab";
+}
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.26);
+    z-index: 1;
+}
+
+.hero-picture {
+    filter: blur(5px);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+.hero-h1{
+    color: #9cdb3b;
+    font-size: 4rem;
+    text-shadow: 0px 5px 4px#000000;
+    font-family: "Roboto Slab";
+}
+
+
 .award-nomination {
     width: 80%;
     margin: 0 auto;
@@ -15,8 +64,19 @@
 }
 
 .award-nomination-h1 {
-    font-size: 3rem;
+    font-size: 2rem;
+    text-decoration: underline #9cdb3b;
 }
+.award-nomination-p{
+    font-size: 1rem;
+    color: #576542;
+}
+
+
+
+
+
+
 
 
 

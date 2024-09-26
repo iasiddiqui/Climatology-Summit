@@ -1,27 +1,64 @@
+import { motion } from "framer-motion";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "../Navbar/navbar.jsx";
 import "./Award.css";
 import Footer from "../Home/Footer/Footer.jsx";
-
 import GetInTouch from "../GetInTouch/GetInTouch.jsx";
 import ContactUs from "../ContactUsForm/ContactUs.jsx";
 import AwardFaqs from "./Faqs/AwardFaq.jsx";
 
 const Awards = () => {
+  // Define animation variants
+  const pageVariant = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
-    <div className="conferenece-award-nomination">
+    <motion.div
+      className="conference-award-nomination"
+      initial="hidden"
+      animate="visible"
+      variants={pageVariant}
+    >
       <Navbar />
+
+      {/* Hero Section */}
       <div className="hero-section">
-        <img
+        <motion.img
           className="hero-picture"
-          src="public\pictures\awards.jpg"
+          src="public/pictures/awards.jpg"
           alt="Hero"
+          initial="hidden"
+          animate="visible"
+          variants={pageVariant}
         />
         <div className="overlay">
-          <h1 className="home-h1">Awards Nomination</h1>
+          <motion.h1
+            className="hero-h1"
+            initial="hidden"
+            animate="visible"
+            variants={pageVariant}
+          >
+            Awards Nomination
+          </motion.h1>
         </div>
       </div>
-      <div className="award-nomination">
+
+      {/* Award Nomination Section */}
+      <motion.div
+        className="award-nomination"
+        initial="hidden"
+        animate="visible"
+        variants={pageVariant}
+      >
         <h1 className="award-nomination-h1">Conference Awards Nomination</h1>
         <p className="award-nomination-p">
           We are delighted to present an overview our{" "}
@@ -101,13 +138,13 @@ const Awards = () => {
           to maintaining standards and making a remarkable difference in the
           world of academia, research, and innovation.
         </p>
-      </div>
+      </motion.div>
+
       <GetInTouch />
       <ContactUs />
-      <AwardFaqs/>
-      
+      <AwardFaqs />
       <Footer />
-    </div>
+    </motion.div>
   );
 };
 

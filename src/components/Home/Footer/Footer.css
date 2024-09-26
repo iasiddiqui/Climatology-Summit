@@ -122,6 +122,7 @@
   padding-bottom: 0.5rem;
   width: 100%;
   border-bottom: 2px solid #ccc;
+  white-space: nowrap;
 }
 
 .policy {
