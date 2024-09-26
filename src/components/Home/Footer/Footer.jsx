@@ -22,10 +22,10 @@ const Footer = () => {
             alt="Footer Logo"
           />
           <p className="footer-p">
-            Ecosystem that brings Scholars, people in the scientific study & research, 
-            knowledge groups of society, students, learners, and more to a common ground 
-            – to share their knowledge on scientific progress that benefits humanity and 
-            existence itself.
+            Ecosystem that brings Scholars, people in the scientific study &
+            research, knowledge groups of society, students, learners, and more
+            to a common ground – to share their knowledge on scientific progress
+            that benefits humanity and existence itself.
           </p>
         </div>
 
@@ -39,7 +39,7 @@ const Footer = () => {
               <div className="dropdown-container">
                 {/* Link for navigation */}
                 <Link to="/upcoming-event">Upcoming Events</Link>
-      
+
                 <span className="dropdown-span" onClick={toggleDropdown}>
                   {dropdownOpen ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
                 </span>
@@ -48,16 +48,24 @@ const Footer = () => {
               {dropdownOpen && (
                 <ul className="footer-dropdown">
                   <li>
-                    <Link to="/event1">Climate Change and Public Health Conference</Link>
+                    <Link to="/event1">
+                      Climate Change and Public Health Conference
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/event2">Green Technologies and Renewable Energy Conference</Link>
+                    <Link to="/event2">
+                      Green Technologies and Renewable Energy Conference
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/event3">Ocean Health and Climate Dynamics Conference</Link>
+                    <Link to="/event3">
+                      Ocean Health and Climate Dynamics Conference
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/event4">Climate Change and Biodiversity Conference</Link>
+                    <Link to="/event4">
+                      Climate Change and Biodiversity Conference
+                    </Link>
                   </li>
                 </ul>
               )}
@@ -90,22 +98,22 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="policy">
-        <ul className="policy-list">
-          <li>
-            <Link to="/cancellation-policy">Cancellation Policy</Link>
-          </li>
-          <li>
-            <Link to="/terms-and-conditions">Terms and Conditions</Link>
-          </li>
-          <li>
-            <Link to="/privacy-policy">Privacy Policy</Link>
-          </li>
-        </ul>
-      </div>
+      
 
       <div className="footer-bottom">
-        <p>Copyright 2024 &copy; Climatology Summit <strong>(Stripe Conferences)</strong></p>
+        <p>
+          Copyright 2024 &copy; Climatology Summit{" "}
+          <strong>(Stripe Conferences)</strong>{" "}
+          <span className="foooter-span">
+            <Link to="/cancellation-policy"> | Cancellation Policy</Link>
+          </span>
+          <span className="foooter-span">
+          <Link to="/terms-and-conditions"> | Terms and Conditions</Link>
+          </span>
+          <span className="foooter-span">
+          <Link to="/privacy-policy"> | Privacy Policy</Link>
+          </span>
+        </p>
       </div>
     </footer>
   );
