@@ -13,55 +13,61 @@ import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import PetsIcon from "@mui/icons-material/Pets";
 import RoomServiceIcon from "@mui/icons-material/RoomService";
 import MeetingRoomIcon from "@mui/icons-material/MeetingRoom";
+import { motion } from "framer-motion"; 
 
 const VenueAttraction = () => {
   return (
     <div className="venue-attraction-container">
       <div className="venue-attraction">
-        <h2 className="venue-attraction-h2">Venue Attraction</h2>
-        <span className="venue-attraction-span">
+        {/* Header with animation */}
+        <motion.h2 
+          className="venue-attraction-h2" 
+          initial={{ y: -50, opacity: 0 }} 
+          whileInView={{ y: 0, opacity: 1 }} 
+          transition={{ duration: 0.5 }} 
+          viewport={{ once: true }} 
+        >
+          Venue Attraction
+        </motion.h2>
+        
+        <motion.span 
+          className="venue-attraction-span" 
+          initial={{ y: -50, opacity: 0 }} 
+          whileInView={{ y: 0, opacity: 1 }} 
+          transition={{ duration: 0.5, delay: 0.3 }} 
+          viewport={{ once: true }} 
+        >
           Hotel Services & Amenities
-        </span>
+        </motion.span>
+
         <ul className="venue-attraction-list">
-          <li>
-            <AttachFileIcon />
-            Connecting Rooms
-          </li>
-          <li>
-            <RestaurantIcon /> Breakfast
-          </li>
-          <li>
-            <WifiIcon /> Free WiFi
-          </li>
-          <li>
-            <RoomServiceOutlinedIcon /> Concierge
-          </li>
-          <li>
-            <SmokeFreeOutlinedIcon /> Non-smoking Rooms
-          </li>
-          <li>
-            <KeyOutlinedIcon /> Digital Key
-          </li>
-          <li>
-            <RestaurantMenuOutlinedIcon /> On-site Restaurant
-          </li>
-          <li>
-            <FitnessCenterOutlinedIcon /> Fitness Center
-          </li>
-          <li>
-            <EmailOutlinedIcon /> Express Mail
-          </li>
-          <li>
-            <PetsIcon /> Pet-friendly Rooms
-          </li>
-          <li>
-            <RoomServiceIcon /> Room Service
-          </li>
-          <li>
-            <MeetingRoomIcon /> Meeting Rooms
-          </li>
+          {[
+            { icon: <AttachFileIcon />, text: "Connecting Rooms" },
+            { icon: <RestaurantIcon />, text: "Breakfast" },
+            { icon: <WifiIcon />, text: "Free WiFi" },
+            { icon: <RoomServiceOutlinedIcon />, text: "Concierge" },
+            { icon: <SmokeFreeOutlinedIcon />, text: "Non-smoking Rooms" },
+            { icon: <KeyOutlinedIcon />, text: "Digital Key" },
+            { icon: <RestaurantMenuOutlinedIcon />, text: "On-site Restaurant" },
+            { icon: <FitnessCenterOutlinedIcon />, text: "Fitness Center" },
+            { icon: <EmailOutlinedIcon />, text: "Express Mail" },
+            { icon: <PetsIcon />, text: "Pet-friendly Rooms" },
+            { icon: <RoomServiceIcon />, text: "Room Service" },
+            { icon: <MeetingRoomIcon />, text: "Meeting Rooms" },
+          ].map((item, index) => (
+            <motion.li 
+              key={index} 
+              initial={{ x: -50, opacity: 0 }} 
+              whileInView={{ x: 0, opacity: 1 }} 
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }} 
+            >
+              {item.icon} {item.text}
+            </motion.li>
+          ))}
         </ul>
       </div>
+      
       <div className="venue-attraction-simple-slider">
         <SimpleSlider />
       </div>

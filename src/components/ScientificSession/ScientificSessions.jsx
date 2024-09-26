@@ -7,22 +7,18 @@ import RemoveIcon from "@mui/icons-material/Remove";
 const ScientificSessions = () => {
   const [openFaq, setOpenFaq] = useState([]);
 
-  // Open default questions on page load
   useEffect(() => {
-    // Open the first two questions by default
     setOpenFaq([0, 1]);
   }, []);
 
   const toggleFaq = (index) => {
     setOpenFaq((prevOpenFaq) => {
       if (prevOpenFaq.includes(index)) {
-        // Remove the index from the open list
         return prevOpenFaq.filter((i) => i !== index);
       } else {
-        // Add the index to the open list (maintain a maximum of 2 open questions)
         const newOpenFaq = [...prevOpenFaq, index];
         if (newOpenFaq.length > 2) {
-          newOpenFaq.shift(); // Remove the oldest question
+          newOpenFaq.shift();
         }
         return newOpenFaq;
       }
@@ -30,8 +26,7 @@ const ScientificSessions = () => {
   };
 
   const handleViewAllClick = () => {
-    // Redirect to the "View All Scientific Sessions" page
-    window.location.href = "/"; // Change the URL as needed
+    window.location.href = "/";
   };
 
   return (
@@ -66,7 +61,10 @@ const ScientificSessions = () => {
         ))}
       </div>
 
-      <button className="scientific-sessions-button" onClick={handleViewAllClick}>
+      <button
+        className="scientific-sessions-button"
+        onClick={handleViewAllClick}
+      >
         View All Scientific Sessions
       </button>
     </div>

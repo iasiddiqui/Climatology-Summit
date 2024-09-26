@@ -1,8 +1,14 @@
-import React from 'react';
-import './AboutConference.css';
-import { CalendarMonth, Place, CloudDownload, Bookmark } from '@mui/icons-material';
-import { Link } from 'react-router-dom'; // Import Link from React Router
-import aboutConferenceData from './AboutConferenceData';
+import React from "react";
+import "./AboutConference.css";
+import {
+  CalendarMonth,
+  Place,
+  CloudDownload,
+  Bookmark,
+} from "@mui/icons-material";
+import { Link } from "react-router-dom";
+import aboutConferenceData from "./AboutConferenceData";
+import { motion } from "framer-motion";
 
 const AboutConference = () => {
   const { conferenceDetails, aboutConference } = aboutConferenceData;
@@ -11,23 +17,45 @@ const AboutConference = () => {
     <div className="conference-page">
       <section className="details-section">
         <div className="details-cards">
-          <div className="card conference-details">
-            <img src="public/pictures/upcoming img 1.jpg" alt="Conference Details" />
+          <motion.div
+            className="card conference-details"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.5 }} 
+            viewport={{ once: true }} 
+          >
+            <img
+              src="public/pictures/upcoming img 1.jpg"
+              alt="Conference Details"
+            />
             <div className="card-content">
               <h3>Conference Details</h3>
               <div className="info">
                 <CalendarMonth />
-                <p className='about-conference-date'>Dates: <strong>{conferenceDetails.date}</strong></p>
+                <p className="about-conference-date">
+                  Dates: <strong>{conferenceDetails.date}</strong>
+                </p>
               </div>
               <div className="info">
                 <Place />
-                <p className='about-conference-date'>Venue: <strong>{conferenceDetails.venue}</strong></p>
+                <p className="about-conference-date">
+                  Venue: <strong>{conferenceDetails.venue}</strong>
+                </p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="card brochure-download">
-            <img src="public/pictures/upcoming img 2.jpg" alt="Brochure Download" />
+          <motion.div
+            className="card brochure-download"
+            initial={{ opacity: 0, y: 20 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.5, delay: 0.2 }} 
+            viewport={{ once: true }} 
+          >
+            <img
+              src="public/pictures/upcoming img 2.jpg"
+              alt="Brochure Download"
+            />
             <div className="card-content">
               <CloudDownload />
               <h3>Brochure Download</h3>
@@ -35,10 +63,19 @@ const AboutConference = () => {
                 <button>Download Here</button>
               </Link>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="card program-download">
-            <img src="public/pictures/upcoming img 3.jpg" alt="Tentative Program" />
+          <motion.div
+            className="card program-download"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            <img
+              src="public/pictures/upcoming img 3.jpg"
+              alt="Tentative Program"
+            />
             <div className="card-content">
               <Bookmark />
               <h3>Tentative Program</h3>
@@ -46,10 +83,19 @@ const AboutConference = () => {
                 <button>Download Here</button>
               </a>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="card speaker-guidelines">
-            <img src="public/pictures/upcoming img 4.jpg" alt="Speaker Guidelines" />
+          <motion.div
+            className="card speaker-guidelines"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <img
+              src="public/pictures/upcoming img 4.jpg"
+              alt="Speaker Guidelines"
+            />
             <div className="card-content">
               <Bookmark />
               <h3>Speaker Guidelines</h3>
@@ -57,15 +103,19 @@ const AboutConference = () => {
                 <button>Download Here</button>
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="about-conference">
-          <h2 className='about-conference-h2'>{aboutConference.title}</h2>
-          <p className='about-conference-p'>
-            {aboutConference.description}
-          </p>
-        </div>
+        <motion.div
+          className="about-conference"
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="about-conference-h2">{aboutConference.title}</h2>
+          <p className="about-conference-p">{aboutConference.description}</p>
+        </motion.div>
       </section>
     </div>
   );

@@ -3,13 +3,13 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import DynamicHeroData from "./DynamicHeroData";
-
+import { Link } from "react-router-dom"; 
 const DynamicConferenceHero = () => {
   return (
     <div className="conference">
       <img
         className="conference-img"
-        src="/pictures/Climate change.jpg"
+        src="public/pictures/Ocean Health and Climate Dynamics.avif"
         alt="Climate Change"
       />
       <div className="conference-box">
@@ -43,11 +43,23 @@ const DynamicConferenceHero = () => {
             {DynamicHeroData.deadline}
           </span>
         </div>
+        
+      
         <div className="conference-hero-box-button">
           {DynamicHeroData.buttons.map((button, index) => (
-            <button key={index} className="conference-button">
-              {button.text}
-            </button>
+            button.link ? (
+           
+              <Link key={index} to={button.link}>
+                <button className="conference-button">
+                  {button.text}
+                </button>
+              </Link>
+            ) : (
+     
+              <button key={index} className="conference-button" disabled>
+                {button.text}
+              </button>
+            )
           ))}
         </div>
       </div>

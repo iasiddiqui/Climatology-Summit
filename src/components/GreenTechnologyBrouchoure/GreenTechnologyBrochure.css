@@ -1,5 +1,7 @@
 .brochure-h1{
     font-size: 3rem;
-    color: #fff;
+    color: #3d7a00;
     white-space: nowrap;
+    text-shadow: 0px 5px 4px#ffffffa8;
+    /* font-family: "Roboto Slab"; */
 }

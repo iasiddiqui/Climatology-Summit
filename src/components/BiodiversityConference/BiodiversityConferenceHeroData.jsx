@@ -6,9 +6,9 @@ const BioDiversityHeroData = {
     open:"Abstract Submission Open",
     deadline:"MMid Term Registration Closes: August 30, 2024",
     buttons: [
-      { text: "Register Now", link: "" },
-      { text: "Abstract Submission", link: "" },
-      { text: "Brochure Download", link: "" },
+      { text: "Register Now", link: "/register" },
+      { text: "Abstract Submission", link: "/climate-change-abstract-submission" },
+      { text: "Brochure Download", link: "/green-technologies-brochure" },
       { text: "Tentative Program", link: "" },
     ],
   };

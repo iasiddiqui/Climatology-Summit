@@ -3,6 +3,7 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import EnergyHeroData from "./EnergyHeroData";
+import { Link } from "react-router-dom"; 
 
 const EnergyConferenceHero = () => {
   return (
@@ -10,7 +11,7 @@ const EnergyConferenceHero = () => {
       <div className="conference">
         <img
           className="conference-img"
-          src="/pictures/Climate change.jpg"
+          src="public/pictures/Energy Innovations.avif"
           alt="Climate Change"
         />
         <div className="conference-box">
@@ -48,11 +49,31 @@ const EnergyConferenceHero = () => {
               {EnergyHeroData.deadline}
             </span>
           </div>
+
+        
           <div className="conference-hero-box-button">
             {EnergyHeroData.buttons.map((button, index) => (
-              <button key={index} className="conference-button">
-                {button.text}
-              </button>
+              button.link ? (
+                
+                button.link.startsWith("/") ? (
+                  <Link key={index} to={button.link}>
+                    <button className="conference-button">
+                      {button.text}
+                    </button>
+                  </Link>
+                ) : (
+            
+                  <a key={index} href={button.link} target="_blank" rel="noopener noreferrer">
+                    <button className="conference-button">
+                      {button.text}
+                    </button>
+                  </a>
+                )
+              ) : (
+                <button key={index} className="conference-button" disabled>
+                  {button.text}
+                </button>
+              )
             ))}
           </div>
         </div>

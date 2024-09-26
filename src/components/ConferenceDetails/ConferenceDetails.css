@@ -78,20 +78,8 @@
 .blinking-icon {
     animation: blink 3s infinite;
     color: #ff0000;
-    border: 1px solid white;
-    border-radius: 50%;
-}
-.conference-icon{
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 50%;
-
 }
 
-/* .blinking {
-    animation: blink 3s infinite;
-    transition: ease-in;
-    color: #60643e;
-} */
 
 @keyframes blink {
 

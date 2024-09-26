@@ -16,8 +16,13 @@ export const mediaPartnersData = [
   },
   {
     id: 4,
-    imageUrl: "public/pictures/media partner 5.jpg",
+    imageUrl: "public/pictures/media partner 4.jpg",
     altText: "Media Partner 4 ",
+  },
+  {
+    id: 5,
+    imageUrl: "public/pictures/media partner 5.jpg",
+    altText: "Media Partner 5 ",
   },
   // {
   //   id: 5,

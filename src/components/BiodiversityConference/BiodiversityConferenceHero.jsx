@@ -3,13 +3,14 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import BioDiversityHeroData from "./BiodiversityConferenceHeroData";
+import { Link } from "react-router-dom"; // Import Link for internal routing
 
 const BioDiversityHero = () => {
   return (
     <div className="conference">
       <img
         className="conference-img"
-        src="/pictures/Climate change.jpg"
+        src="public/pictures/BioDiversity.jpg"
         alt="Climate Change"
       />
       <div className="conference-box">
@@ -45,11 +46,21 @@ const BioDiversityHero = () => {
           <NotificationsIcon className="blinking-icon" />
           <span className="blinking">{BioDiversityHeroData.deadline}</span>
         </div>
+
+        {/* Correctly handling the buttons as links */}
         <div className="conference-hero-box-button">
           {BioDiversityHeroData.buttons.map((button, index) => (
-            <button key={index} className="conference-button">
-              {button.text}
-            </button>
+            button.link ? (
+              <Link key={index} to={button.link}>
+                <button className="conference-button">
+                  {button.text}
+                </button>
+              </Link>
+            ) : (
+              <button key={index} className="conference-button" disabled>
+                {button.text}
+              </button>
+            )
           ))}
         </div>
       </div>

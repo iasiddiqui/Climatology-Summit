@@ -2,14 +2,14 @@
   text-align: center;
   padding: 2rem;
   overflow: hidden;
-  position: relative; 
+  position: relative;
 }
 
 .media-partner-images {
   display: flex;
   gap: 5rem;
-  flex-wrap: nowrap; 
-  animation: scroll-left 20s linear infinite; 
+  flex-wrap: nowrap;
+  animation: scroll-left 20s linear infinite; /* Adjust duration as needed */
 }
 
 .media-partner-img {
@@ -22,7 +22,7 @@
 
 @keyframes scroll-left {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
   100% {
     transform: translateX(-100%);
