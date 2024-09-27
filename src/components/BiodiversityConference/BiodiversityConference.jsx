@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../Navbar/navbar";
+import Navbar from "../Navbar/Navbar";
 import BioDiversityHero from "./BiodiversityConferenceHero";
 import BioDiversiScientific from "./BiodiversityScientific";
 import VenueAttraction from "../VenueAttraction/VenueAttraction";

@@ -1,6 +1,6 @@
 import React from "react";
 import "./DynamicsConference.css"
-import Navbar from "../Navbar/navbar";
+import Navbar from "../Navbar/Navbar";
 import DynamicConferenceHero from "./DynamicConferecneHero";
 import DynamicsScientificConference from "./DynamicScientific/DynamicScientificSession";
 import VenueAttraction from "../VenueAttraction/VenueAttraction";

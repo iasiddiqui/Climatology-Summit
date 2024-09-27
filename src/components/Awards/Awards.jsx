@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Navbar from "../Navbar/navbar.jsx";
+import Navbar from "../Navbar/Navbar";
 import "./Award.css";
 import Footer from "../Home/Footer/Footer.jsx";
 import GetInTouch from "../GetInTouch/GetInTouch.jsx";

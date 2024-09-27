@@ -1,6 +1,6 @@
 import React from "react";
 import "./HealthConference.css";
-import Navbar from "../Navbar/navbar";
+import Navbar from "../Navbar/Navbar";
 import HealthConferenceDetails from "../ConferenceDetails/ConferenceDetails";
 import ScientificSessions from "../ScientificSession/ScientificSessions";
 import GetInTouch from "../GetInTouch/GetInTouch";

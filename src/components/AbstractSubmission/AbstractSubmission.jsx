@@ -1,6 +1,6 @@
 import React from "react";
 import "./AbstractSubmission.css";
-import Navbar from "../Navbar/navbar";
+import Navbar from "../Navbar/Navbar";
 import AbstractForm from "./form/AbstractForm";
 import GetInTouch from "../GetInTouch/GetInTouch";
 import ContactUs from "../ContactUsForm/ContactUs";

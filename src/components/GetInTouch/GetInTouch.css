@@ -69,7 +69,7 @@
 }
 
 .get-in-info-card:hover {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 /* .contact-info-card:hover .contact-icon {
@@ -79,7 +79,7 @@
 .contact-icon {
     font-size: 3rem !important;
     color: #1a202c;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
 }
 
 .info-text h3 {

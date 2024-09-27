@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import Navbar from "../Navbar/navbar.jsx";
+import Navbar from "../Navbar/Navbar";
 import "./contact.css";
 import PinDropIcon from "@mui/icons-material/PinDrop";
 import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";

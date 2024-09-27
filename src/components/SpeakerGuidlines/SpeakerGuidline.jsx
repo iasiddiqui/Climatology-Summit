@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "./speaker.css";
-import Navbar from "../Navbar/navbar.jsx";
+import Navbar from "../Navbar/Navbar";
 import { speakerGuidelinesData } from "./SpeakerGuidlineData.jsx";
 import SpeakerFaqs from "./SpeakerFaqs";
 import Footer from "../Home/Footer/Footer";
