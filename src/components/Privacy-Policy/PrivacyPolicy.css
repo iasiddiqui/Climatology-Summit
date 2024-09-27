@@ -15,9 +15,15 @@
 .privacy-policy-link{
     color: #3d7a00;
 }
+.privacy-policy-link:hover{
+    color: #62c004;
+}
 .privacy-policy-li{
     margin-bottom: 1rem;
 }
 .privacy-policy-stripe-link{
     color: #3d7a00;
+}
+.privacy-policy-stripe-link:hover{
+    color: #62c004;
 }
