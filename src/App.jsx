@@ -12,6 +12,9 @@ import DynamicsConference from "./components/DynamicsConference/DynamicsConferen
 import BiodiversityConference from "./components/BiodiversityConference/BiodiversityConference";
 import GreenTechnologyBrochure from "./components/GreenTechnologyBrouchoure/GreenTechnologyBrochure";
 import AbstractSubmission from "./components/AbstractSubmission/AbstractSubmission";
+import PrivacyPolicy from "./components/Privacy-Policy/PrivacyPolicy";
+import TermsAndConditions from "./components/TermsAndConditions/TermsAndConditions";
+import CancellationPolicy from "./components/Cancellation-Policy/CancellationPolicy";
 
 const App = () => (
   <BrowserRouter>
@@ -30,6 +33,9 @@ const App = () => (
       <Route path="/biodiversity-conference" element={<BiodiversityConference/>} />
       <Route path="/green-technologies-brochure" element={<GreenTechnologyBrochure/>} />
       <Route path="/climate-change-abstract-submission" element={<AbstractSubmission/>} />
+      <Route path= "/privacy-policy" element={<PrivacyPolicy />}/>
+      <Route path= "/terms-and-conditions" element={<TermsAndConditions />}/>
+      <Route path= "/cancellation-policy" element={<CancellationPolicy />}/>
     </Routes>
   </BrowserRouter>
 );

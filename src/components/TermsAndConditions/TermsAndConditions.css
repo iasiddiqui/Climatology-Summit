@@ -1,0 +1,47 @@
+.terms-container {
+    color: #576542;
+    padding: 3rem;
+    width: 80%;
+    text-align: justify;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.terms-h1 {
+    text-align: center;
+}
+
+.terms-link-h1 {
+    text-align: center;
+}
+
+.terms-link {
+    color: #3d7a00;
+}
+
+.terms-p {
+    text-align: center;
+}
+
+.terms-li {
+    margin-bottom: 1rem;
+}
+
+
+.terms-h2 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.terms-para {
+    margin-bottom: 20px;
+}
+
+/* .spaced-br {
+    display: block;
+    margin-bottom:10px !important;
+} */
+.terms-span{
+    margin-left: 1.5rem;
+    margin-top: 10rem;
+}

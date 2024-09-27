@@ -1,0 +1,18 @@
+.cacellation-container{
+    padding: 3rem;
+    width: 80%;
+    margin: 0 auto;
+
+}
+.cacellation-up{
+    text-align: center;
+}
+.cacellation-h1{
+    white-space: inherit;
+    font-size: 2rem;
+}
+.cacellation-link{
+    white-space: inherit;
+    font-size: 2rem;
+    color: #3d7a00;
+}
