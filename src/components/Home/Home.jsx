@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { motion } from "framer-motion";
+import '@fontsource/poppins'; 
 import "./home.css";
 import Navbar from "../Navbar/Navbar";
 import UpcomingConference from "./UpcomingConference/UpcomingConference";

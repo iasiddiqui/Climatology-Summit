@@ -89,7 +89,12 @@ const Footer = () => {
           <p className="contact-info-p">
             +1 630 768 1199
             <br />
-            support@stripeconferences.com
+            <a
+              className="contact-info-email"
+              href="mailto:support@stripeconferences.com"
+            >
+              support@stripeconferences.com{" "}
+            </a>
             <br />
             16192 Coastal Highway Lewes, Delaware, USA 19958
           </p>

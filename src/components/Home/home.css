@@ -7,6 +7,10 @@ body {
 }
 
 /* Container for the video section */
+* {
+    font-family: 'Poppins', sans-serif;
+  }
+  
 .home-main {
     position: relative;
     height: 100vh;
