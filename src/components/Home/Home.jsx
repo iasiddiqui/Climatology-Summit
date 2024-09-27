@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./home.css";
-import Navbar from "../Navbar/navbar";
+import Navbar from "../Navbar/Navbar";
 import UpcomingConference from "./UpcomingConference/UpcomingConference";
 import ClimateChange from "./ClimateChange/ClimateChange";
 import MediaPartners from "./MediaPartners/MediaPartners";
