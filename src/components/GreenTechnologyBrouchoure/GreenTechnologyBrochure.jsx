@@ -5,7 +5,7 @@ import BrochureForm from "./BrochureForm/BrochureForm";
 import GetInTouch from "../GetInTouch/GetInTouch";
 import ContactUs from "../ContactUsForm/ContactUs";
 import Footer from "../Home/Footer/Footer";
-import Navbar from "../Navbar/Navbar.jsx";
+import Navbar from "../Navbar/Navbar";
 
 const GreenTechnologyBrochure = () => {
   return (
