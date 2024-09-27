@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="footer-left">
           <img
             className="footer-img"
-            src="public\pictures\logo footer.png"
+            src="public/pictures/logo footer.png"
             alt="Footer Logo"
           />
           <p className="footer-p">
@@ -37,9 +37,7 @@ const Footer = () => {
             </li>
             <li>
               <div className="dropdown-container">
-                {/* Link for navigation */}
                 <Link to="/upcoming-event">Upcoming Events</Link>
-
                 <span className="dropdown-span" onClick={toggleDropdown}>
                   {dropdownOpen ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
                 </span>
@@ -98,8 +96,6 @@ const Footer = () => {
         </div>
       </div>
 
-      
-
       <div className="footer-bottom">
         <p>
           Copyright 2024 &copy; Climatology Summit{" "}
@@ -108,10 +104,10 @@ const Footer = () => {
             <Link to="/cancellation-policy"> | Cancellation Policy</Link>
           </span>
           <span className="foooter-span">
-          <Link to="/terms-and-conditions"> | Terms and Conditions</Link>
+            <Link to="/terms-and-conditions"> | Terms and Conditions</Link>
           </span>
           <span className="foooter-span">
-          <Link to="/privacy-policy"> | Privacy Policy</Link>
+            <Link to="/privacy-policy"> | Privacy Policy</Link>
           </span>
         </p>
       </div>

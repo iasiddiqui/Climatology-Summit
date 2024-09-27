@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Navbar from "../Navbar/navbar.jsx";
+import Navbar from "../Navbar/Navbar";
 import Footer from "../Home/Footer/Footer.jsx";
 
 const Venue = () => {
