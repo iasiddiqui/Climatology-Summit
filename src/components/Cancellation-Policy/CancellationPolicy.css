@@ -1,6 +1,9 @@
 .cacellation-container{
+    color: #576542;
     padding: 3rem;
     width: 80%;
+    text-align: justify;
+    justify-content: center;
     margin: 0 auto;
 
 }
@@ -15,4 +18,7 @@
     white-space: inherit;
     font-size: 2rem;
     color: #3d7a00;
+}
+.cacellation-content{
+    font-size: 1rem;
 }

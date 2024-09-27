@@ -1,0 +1,23 @@
+.privacy-policy-container{
+    color: #576542;
+    padding: 3rem;
+    width: 80%;
+    text-align: justify;
+    justify-content: center;
+    margin: 0 auto;
+}
+.privacy-policy-up{
+    text-align: center;
+}
+.privacy-policy-h1{
+    font-size: 2rem;
+}
+.privacy-policy-link{
+    color: #3d7a00;
+}
+.privacy-policy-li{
+    margin-bottom: 1rem;
+}
+.privacy-policy-stripe-link{
+    color: #3d7a00;
+}
