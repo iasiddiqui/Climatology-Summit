@@ -11,7 +11,7 @@ const EnergyConferenceHero = () => {
       <div className="conference">
         <img
           className="conference-img"
-          src="public/pictures/Energy Innovations.avif"
+          src="pictures/Energy Innovations.avif"
           alt="Climate Change"
         />
         <div className="conference-box">

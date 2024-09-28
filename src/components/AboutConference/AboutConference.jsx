@@ -25,7 +25,7 @@ const AboutConference = () => {
             viewport={{ once: true }} 
           >
             <img
-              src="public/pictures/upcoming img 1.jpg"
+              src="pictures/upcoming img 1.jpg"
               alt="Conference Details"
             />
             <div className="card-content">
@@ -53,7 +53,7 @@ const AboutConference = () => {
             viewport={{ once: true }} 
           >
             <img
-              src="public/pictures/upcoming img 2.jpg"
+              src="pictures/upcoming img 2.jpg"
               alt="Brochure Download"
             />
             <div className="card-content">
@@ -73,7 +73,7 @@ const AboutConference = () => {
             viewport={{ once: true }}
           >
             <img
-              src="public/pictures/upcoming img 3.jpg"
+              src="pictures/upcoming img 3.jpg"
               alt="Tentative Program"
             />
             <div className="card-content">
@@ -93,7 +93,7 @@ const AboutConference = () => {
             viewport={{ once: true }}
           >
             <img
-              src="public/pictures/upcoming img 4.jpg"
+              src="pictures/upcoming img 4.jpg"
               alt="Speaker Guidelines"
             />
             <div className="card-content">

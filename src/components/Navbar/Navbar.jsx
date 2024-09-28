@@ -32,7 +32,7 @@ const Navbar = () => {
       <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
         <div className="nav-up-color"></div>
         <div className="logo">
-          <img src="public/pictures/ClimateLogo.png" alt="Event Logo" />
+          <img src="pictures/ClimateLogo.png" alt="Event Logo" />
         </div>
         <div className="menu-icon" onClick={toggleMenu}>
           &#9776;

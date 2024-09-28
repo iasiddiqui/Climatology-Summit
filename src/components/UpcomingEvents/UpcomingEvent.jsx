@@ -12,7 +12,7 @@ const UpcomingEvent = () => {
       <div className="hero-section">
         <img
           className="hero-picture"
-          src="public\pictures\Spekaer Guidline heroo.jpg"
+          src="pictures\Spekaer Guidline heroo.jpg"
           alt="Hero"
         />
         <div className="overlay">

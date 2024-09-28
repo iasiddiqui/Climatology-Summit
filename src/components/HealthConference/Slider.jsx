@@ -21,16 +21,16 @@ function SimpleSlider() {
     <div className="slider-container">
       <Slider {...settings}>
         <div>
-          <img src="public\pictures\slider1.avif" alt="Slide 1" />
+          <img src="pictures\slider1.avif" alt="Slide 1" />
         </div>
         <div>
-          <img src="public\pictures\slider 2.avif" alt="Slide 2" />
+          <img src="pictures\slider 2.avif" alt="Slide 2" />
         </div>
         <div>
-          <img src="public\pictures\slider3.avif" alt="Slide 3" />
+          <img src="pictures\slider3.avif" alt="Slide 3" />
         </div>
         <div>
-          <img src="public\pictures\slider4.avif" alt="Slide 4" />
+          <img src="pictures\slider4.avif" alt="Slide 4" />
         </div>
       </Slider>
     </div>

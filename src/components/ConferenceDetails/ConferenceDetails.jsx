@@ -12,7 +12,7 @@ const HealthConferenceDetails = () => {
       <div className="conference">
         <img
           className="conference-img"
-          src="public\pictures\HealthConferenceHero.avif"
+          src="pictures\HealthConferenceHero.avif"
           alt="Climate Change"
         />
         <div className="conference-box">

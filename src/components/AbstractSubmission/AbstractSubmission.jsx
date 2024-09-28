@@ -14,7 +14,7 @@ const AbstractSubmission = () => {
       <div className="hero-section">
         <img
           className="hero-picture"
-          src="public\pictures\awards.jpg"
+          src="pictures\awards.jpg"
           alt="Hero"
         />
   
