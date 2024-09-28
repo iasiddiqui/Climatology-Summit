@@ -21,44 +21,44 @@ function Register() {
   const [checkinDate, setCheckinDate] = useState("");
   const [paymentType, setPaymentType] = useState("");
 
-  const handleRegistrationTypeChange = (event) => {
-    setRegistrationType(event.target.value);
-    const priceMap = {
-      "speaker-academia": 799,
-      "speaker-business": 699,
-    };
-    setRegistrationPrice(priceMap[event.target.value] || 0);
-  };
+  // const handleRegistrationTypeChange = (event) => {
+  //   setRegistrationType(event.target.value);
+  //   const priceMap = {
+  //     "speaker-academia": 799,
+  //     "speaker-business": 699,
+  //   };
+  //   setRegistrationPrice(priceMap[event.target.value] || 0);
+  // };
 
-  const handleAccomodationTypeChange = (event) => {
-    setAccomodationType(event.target.value);
-    const priceMap = {
-      "single-2": 400,
-      "single-3": 650,
-    };
-    setAccomodationPrice(priceMap[event.target.value] || 0);
-  };
+  // const handleAccomodationTypeChange = (event) => {
+  //   setAccomodationType(event.target.value);
+  //   const priceMap = {
+  //     "single-2": 400,
+  //     "single-3": 650,
+  //   };
+  //   setAccomodationPrice(priceMap[event.target.value] || 0);
+  // };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log({
-      title,
-      firstName,
-      lastName,
-      email,
-      phoneNumber,
-      country,
-      fullAddress,
-      abstractCategory,
-      registrationType,
-      registrationPrice,
-      numberOfParticipants,
-      accomodationType,
-      accomodationPrice,
-      checkinDate,
-      paymentType,
-    });
-  };
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   console.log({
+  //     title,
+  //     firstName,
+  //     lastName,
+  //     email,
+  //     phoneNumber,
+  //     country,
+  //     fullAddress,
+  //     abstractCategory,
+  //     registrationType,
+  //     registrationPrice,
+  //     numberOfParticipants,
+  //     accomodationType,
+  //     accomodationPrice,
+  //     checkinDate,
+  //     paymentType,
+  //   });
+  // };
 
   return (
     <>
@@ -71,11 +71,12 @@ function Register() {
         />
 
         <div className="overlay">
-          <h1 className="abstract-h1">Register</h1>
+          <h1 className="hero-h1">Register</h1>
         </div>
       </div>
+      <h1>Will Update soon</h1>
 
-      <div className="register-container">
+      {/* <div className="register-container">
         <form className="register-form" onSubmit={handleSubmit}>
           <h2 className="register-title">Personal Details</h2>
 
@@ -208,7 +209,7 @@ function Register() {
 
           <PaymentInfo />
         </form>
-      </div>
+      </div> */}
 
       <Footer />
     </>
