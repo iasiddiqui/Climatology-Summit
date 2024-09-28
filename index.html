@@ -12,5 +12,10 @@
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
+<script>
+  if (window.location.pathname !== "/") {
+    window.history.replaceState({}, "", "/");
+  }
+</script>
 
 </html>
