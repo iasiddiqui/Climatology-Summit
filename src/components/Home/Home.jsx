@@ -59,7 +59,7 @@ const Home = () => {
             animate={{ x: 0 }}
             transition={{ duration: 1, ease: "easeIn" }}
           >
-            <img src="public/pictures/environment-tree.png" alt="Tree" />
+            <img src="pictures/environment-tree.png" alt="Tree" />
           </motion.div>
         </div>
       </div>
