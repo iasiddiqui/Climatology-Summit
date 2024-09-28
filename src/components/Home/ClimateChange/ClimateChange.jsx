@@ -36,7 +36,7 @@ const ClimateChange = () => {
         <motion.img
           ref={ref}
           className="Climate-Change-img"
-          src="public/pictures/green_earth.png"
+          src="pictures/green_earth.png"
           alt="Climate Change"
           initial={{ opacity: 0 }}
           animate={controls}
@@ -95,7 +95,7 @@ const ClimateChange = () => {
           >
             <img
               className="target-audience-img-item"
-              src="public/pictures/green_earth.png"
+              src="pictures/green_earth.png"
               alt="Target Audience"
             />
           </motion.div>
