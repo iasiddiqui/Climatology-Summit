@@ -5,7 +5,7 @@ import SchoolIcon from '@mui/icons-material/School';
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 import RegistrationSectionData from "./RegistratinSectionData"; 
 import { Link } from "react-router-dom"; 
-import { motion } from "framer-motion"; // Import Framer Motion
+import { motion } from "framer-motion"; 
 
 const iconMap = {
   MicIcon: MicIcon,
@@ -14,26 +14,26 @@ const iconMap = {
 };
 
 const RegistrationSection = () => {
-  const [isVisible, setIsVisible] = useState(false); // State to track visibility
-  const sectionRef = useRef(null); // Reference to the section
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null); 
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true); // Set visibility to true when the section is in view
-          observer.disconnect(); // Stop observing after visibility is set
+          setIsVisible(true); 
+          observer.disconnect(); 
         }
       },
-      { threshold: 0.1 } // Trigger when 10% of the section is visible
+      { threshold: 0.1 } 
     );
 
     if (sectionRef.current) {
-      observer.observe(sectionRef.current); // Observe the section
+      observer.observe(sectionRef.current); 
     }
 
     return () => {
-      observer.disconnect(); // Cleanup observer on unmount
+      observer.disconnect(); 
     };
   }, []);
 
@@ -53,9 +53,9 @@ const RegistrationSection = () => {
               <motion.div
                 key={id}
                 className="registeration-card"
-                initial={{ opacity: 0, x: -100 }} // Start from the left
-                animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }} // Animate only if visible
-                transition={{ duration: 0.5, delay: isVisible ? index * 0.3 : 0 }} // Delay based on visibility
+                initial={{ opacity: 0, x: -100 }} 
+                animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
+                transition={{ duration: 0.5, delay: isVisible ? index * 0.3 : 0 }} 
               >
                 <div className="registeration-text">
                   <IconComponent className="registeration-icon" />

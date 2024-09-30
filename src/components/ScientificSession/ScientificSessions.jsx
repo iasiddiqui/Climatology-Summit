@@ -3,26 +3,23 @@ import "./ScientificSessions.css";
 import { ScientificSessionData } from "./ScientificSessionsData";
 import MicIcon from "@mui/icons-material/Mic";
 import RemoveIcon from "@mui/icons-material/Remove";
-import { useNavigate } from "react-router-dom"; // Optional, if using React Router
+import { useNavigate } from "react-router-dom"; 
 
 const ScientificSessions = () => {
-  const [openFaq, setOpenFaq] = useState([]); // Track two open FAQs at a time
-  const navigate = useNavigate(); // Optional, for client-side routing with React Router
+  const [openFaq, setOpenFaq] = useState([]);
+  const navigate = useNavigate(); 
 
   useEffect(() => {
-    setOpenFaq([0, 1]); // Open the first two FAQs by default
+    setOpenFaq([0, 1]); 
   }, []);
 
   const toggleFaq = (index) => {
     setOpenFaq((prevOpenFaq) => {
       if (prevOpenFaq.includes(index)) {
-        // If the clicked FAQ is already open, close it
         return prevOpenFaq.filter((i) => i !== index);
       } else {
-        // If less than two FAQs are open, add the new one
         const newOpenFaq = [...prevOpenFaq, index];
         if (newOpenFaq.length > 2) {
-          // If more than two are open, remove the first one (oldest)
           newOpenFaq.shift();
         }
         return newOpenFaq;
@@ -31,7 +28,7 @@ const ScientificSessions = () => {
   };
 
   const handleViewAllClick = () => {
-    navigate("/"); // Optional, if using React Router. Otherwise, stick with window.location.href
+    navigate("/"); 
   };
 
   return (
