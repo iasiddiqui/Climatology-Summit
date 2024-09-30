@@ -161,6 +161,7 @@
   color: #d7d7d7;
 }
 
+
 @media (min-width:768px) {
   .footer-content {
     flex-direction: row;
@@ -178,9 +179,7 @@
 
   }
 
-  .contact-info-p {
-    max-width: 100%;
-  }
+  
 
 
   .footer-link,

@@ -201,4 +201,13 @@ body {
         font-size: 1.5rem;
         width: 8rem;
     }
+    .content1-pic img{
+        display: none;
+    }
+    .rectangle {
+        width: 10%;
+        height: 25%;
+        
+    }
 }
+

@@ -46,22 +46,22 @@ const Footer = () => {
               {dropdownOpen && (
                 <ul className="footer-dropdown">
                   <li>
-                    <Link to="/event1">
+                    <Link to="/climate-change-conference">
                       Climate Change and Public Health Conference
                     </Link>
                   </li>
                   <li>
-                    <Link to="/event2">
+                    <Link to="/green-technologies-conference">
                       Green Technologies and Renewable Energy Conference
                     </Link>
                   </li>
                   <li>
-                    <Link to="/event3">
+                    <Link to="/ocean-health-conference">
                       Ocean Health and Climate Dynamics Conference
                     </Link>
                   </li>
                   <li>
-                    <Link to="/event4">
+                    <Link to="/biodiversity-conference">
                       Climate Change and Biodiversity Conference
                     </Link>
                   </li>

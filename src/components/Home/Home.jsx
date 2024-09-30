@@ -7,7 +7,7 @@ import ClimateChange from "./ClimateChange/ClimateChange";
 import MediaPartners from "./MediaPartners/MediaPartners";
 import Faqs from "./Faqs/Faqs";
 import Footer from "./Footer/Footer";
-// import ContentHero from "./ContentOfHero/ContentHero";
+
 import { Link } from "react-router-dom";
 
 const Home = () => {

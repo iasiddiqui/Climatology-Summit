@@ -13,7 +13,6 @@ body {
     z-index: 0;
 }
 
-
 .logo {
     position: absolute;
     z-index: 101;
@@ -38,7 +37,6 @@ body {
     box-shadow: none;
     color: black;
     transition: background-color 0.3s ease, border-bottom 0.3s ease;
-    /* Smooth transition */
 }
 
 .scrolled {
@@ -47,7 +45,6 @@ body {
     border-bottom: 1px solid black;
     box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.3);
 }
-
 
 .navbar ul {
     list-style: none;
@@ -72,7 +69,6 @@ body {
 .active-link {
     color: #ffffff !important;
     font-weight: bold;
-    /* border-bottom: 2px solid #9cdb3b; */
     background-color: #9cdb3b;
     height: 2rem;
     top: 0;
@@ -80,7 +76,6 @@ body {
     border-bottom-right-radius: 90%;
     border-bottom-left-radius: 90%;
 }
-
 
 .navbar ul li:hover {
     width: auto;
@@ -99,6 +94,7 @@ body {
     padding: 10px;
 }
 
+
 /* Dropdown Styling */
 .dropdown {
     position: relative;
@@ -110,7 +106,7 @@ body {
     background-color: #ffffff;
     z-index: 1;
     left: 0;
-    top: 30px;
+    top: 25px;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, color 0.3s ease;
@@ -135,7 +131,6 @@ body {
 .dropdown-content li a {
     display: block;
     padding: 10px 15px;
-    /* color: white; */
     text-decoration: none;
     align-items: center;
     display: flex;
@@ -172,7 +167,6 @@ body {
     color: #fff;
     border-radius: 3px;
     padding: 0.4rem 1rem;
-    border: none;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -185,37 +179,48 @@ body {
 
 
 @media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+    }
+
     .navbar ul {
         display: none;
         flex-direction: column;
-        cursor: pointer;
+        width: 100%;
         background-color: #fff;
+        padding: 0;
+        justify-content: center;
     }
 
     .navbar ul.active {
         display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .navbar ul li {
         width: 100%;
-        height: auto;
         text-align: center;
     }
 
     .navbar ul li a {
         padding: 10px;
         display: block;
+        align-items: center;
     }
 
     .dropdown-content {
         position: static;
-        width: 100vw;
-        height: auto;
+        width: 100%;
         border: none;
     }
 
     .dropdown-content li a {
-        padding: 15px;
+        padding: 1px;
+        width: 100%;
     }
 
     .menu-icon {
@@ -224,18 +229,28 @@ body {
         font-size: 2rem;
         color: rgb(0, 0, 0);
         margin: 5px;
-        display: flex;
         justify-content: flex-end;
+        align-self: flex-end;
         margin-right: 2rem;
+    }
+
+    .nav-links-container {
+        margin-left: 0rem;
     }
 
     .logo img {
         width: 6rem;
-        margin-left: 2rem;
-        margin-top: 0.5rem;
+        margin-left: 0;
+        align-items: left;
+        margin-top: 1.3rem;
     }
 
     .nav-register-button {
         display: none;
     }
+
 }
+
+
+
+

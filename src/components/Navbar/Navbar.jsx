@@ -7,17 +7,18 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   const handleScroll = () => {
-    if (window.scrollY > 0) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
+    setIsScrolled(window.scrollY > 0);
   };
 
   useEffect(() => {
@@ -37,63 +38,60 @@ const Navbar = () => {
         <div className="menu-icon" onClick={toggleMenu}>
           &#9776;
         </div>
-        <div className="nav-links-container"> {/* Add this container */}
+        <div className="nav-links-container">
           <ul className={isMenuOpen ? "active" : ""}>
             <li>
               <NavLink
                 to="/"
-                className={({ isActive }) =>
-                  isActive ? "nav active-link" : "nav"
-                }
+                className={({ isActive }) => (isActive ? "nav active-link" : "nav")}
               >
                 Home
               </NavLink>
             </li>
             <li className="dropdown">
-              <NavLink
-                to="/upcoming-event"
-                className={({ isActive }) =>
-                  isActive ? "nav active-link" : "nav"
-                }
+              <div
+                onClick={window.innerWidth <= 768 ? toggleDropdown : null}
+                onMouseEnter={window.innerWidth > 768 ? () => setIsDropdownOpen(true) : null}
+                onMouseLeave={window.innerWidth > 768 ? () => setIsDropdownOpen(false) : null}
+                style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}
               >
-                Upcoming Events
+                <NavLink
+                  to="/upcoming-event"
+                  className={({ isActive }) => (isActive ? "nav active-link" : "nav")}
+                >
+                  Upcoming Events
+                </NavLink>
                 <ArrowDropDownIcon />
-              </NavLink>
-              <ul className="dropdown-content">
-                <li>
-                  <NavLink
-                    className="dropdown-nav"
-                    to="/climate-change-conference"
-                  >
-                    Climate Change and Public Health Conference
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    className="dropdown-nav"
-                    to="/green-technologies-conference"
-                  >
-                    Green Technologies and Renewable Energy Conference
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink className="dropdown-nav" to="/ocean-health-conference">
-                    Ocean Health and Climate Dynamics Conference
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink className="dropdown-nav" to="/biodiversity-conference">
-                    Climate Change and Biodiversity Conference
-                  </NavLink>
-                </li>
-              </ul>
+              </div>
+              {(isDropdownOpen || window.innerWidth > 768) && (
+                <ul className="dropdown-content">
+                  <li>
+                    <NavLink className="dropdown-nav" to="/climate-change-conference">
+                      Climate Change and Public Health Conference
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink className="dropdown-nav" to="/green-technologies-conference">
+                      Green Technologies and Renewable Energy Conference
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink className="dropdown-nav" to="/ocean-health-conference">
+                      Ocean Health and Climate Dynamics Conference
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink className="dropdown-nav" to="/biodiversity-conference">
+                      Climate Change and Biodiversity Conference
+                    </NavLink>
+                  </li>
+                </ul>
+              )}
             </li>
             <li>
               <NavLink
                 to="/venue"
-                className={({ isActive }) =>
-                  isActive ? "nav active-link" : "nav"
-                }
+                className={({ isActive }) => (isActive ? "nav active-link" : "nav")}
               >
                 Venue
               </NavLink>
@@ -101,9 +99,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/awards"
-                className={({ isActive }) =>
-                  isActive ? "nav active-link" : "nav"
-                }
+                className={({ isActive }) => (isActive ? "nav active-link" : "nav")}
               >
                 Awards
               </NavLink>
@@ -111,9 +107,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/speaker-guidline"
-                className={({ isActive }) =>
-                  isActive ? "nav active-link" : "nav"
-                }
+                className={({ isActive }) => (isActive ? "nav active-link" : "nav")}
               >
                 Speaker Guidelines
               </NavLink>
@@ -121,9 +115,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/contact"
-                className={({ isActive }) =>
-                  isActive ? "nav active-link" : "nav"
-                }
+                className={({ isActive }) => (isActive ? "nav active-link" : "nav")}
               >
                 Contact
               </NavLink>
