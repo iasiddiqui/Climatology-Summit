@@ -1,7 +1,8 @@
 
 .scientific-sessions-container {
     font-family: Roboto Slab, serif;
-    text-align: center;
+    /* text-align: center; */
+    /* text-align: justify; */
     width: 70%;
     margin: 0 auto;
     /* background: linear-gradient(to bottom, rgba(224, 248, 189, 0) 0%, rgba(176, 239, 82, 0.096) 50%, rgba(255, 255, 255, 0) 100%); */
@@ -45,14 +46,16 @@
 
 .scientific-sessions-question {
     display: flex;
-    align-items: center;
+    align-items: left;
     color: #000;
     cursor: pointer;
+    /* white-space: nowrap; */
 }
 
 .scientific-sessions-answer {
     margin-top: 0.5rem;
     text-align: justify;
+    /* text-align: left; */
     color: #576542;
 }
 

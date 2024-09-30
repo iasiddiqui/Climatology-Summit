@@ -22,8 +22,8 @@ const HealthConference = () => {
       <VenueAttraction />
       <RegistrationSection />
       <GetInTouch />
-      <MediaPartners />
       <ContactUs />
+      <MediaPartners />
       <HealthConferenceFaq />
       <Footer />
     </>

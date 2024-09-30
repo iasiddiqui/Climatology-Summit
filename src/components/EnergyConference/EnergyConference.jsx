@@ -3,13 +3,13 @@ import Navbar from "../Navbar/Navbar";
 
 import Footer from "../Home/Footer/Footer";
 import EnergyConferenceHero from "./EnergyConfernceHero";
-import ScientificSessions from "../ScientificSession/ScientificSessions";
 import VenueAttraction from "../VenueAttraction/VenueAttraction";
 import RegistrationSection from "../RegistrationSection/RegistrationSection";
 import MediaPartners from "../Home/MediaPartners/MediaPartners";
 import ContactUs from "../ContactUsForm/ContactUs";
 import EnergyFaq from "./EnergyFaq";
 import AboutConference from "../AboutConference/AboutConference";
+import ScientificSessionEnergy from "../ScientificSession/ScientificSessionEnergy";
 
 const EnergyConference = () => {
   return (
@@ -17,11 +17,11 @@ const EnergyConference = () => {
       <Navbar />
       <EnergyConferenceHero />
       <AboutConference />
-      <ScientificSessions />
+      <ScientificSessionEnergy />
       <VenueAttraction />
       <RegistrationSection />
-      <MediaPartners />
       <ContactUs />
+      <MediaPartners />
       <EnergyFaq />
       <Footer />
     </div>

@@ -26,8 +26,8 @@ const DynamicsConference = () => {
       <VenueAttraction />
       <RegistrationSection />
       <GetInTouch />
-      <MediaPartners />
       <ContactUs />
+      <MediaPartners />
       <DynamicFaq />
       <Footer />
     </div>

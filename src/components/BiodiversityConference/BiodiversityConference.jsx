@@ -20,8 +20,8 @@ const BiodiversityConference = () => {
       <VenueAttraction />
       <RegistrationSection />
       <GetInTouch />
-      <MediaPartners />
       <ContactUs />
+      <MediaPartners />
       <Footer />
     </div>
   );

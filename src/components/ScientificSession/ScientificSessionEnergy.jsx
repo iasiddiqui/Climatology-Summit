@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./ScientificSessions.css";
-import { ScientificSessionData } from "./ScientificSessionsData";
+import { ScientificSessionEnergyData } from "./ScientificSessionEnergyData";
 import MicIcon from "@mui/icons-material/Mic";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { useNavigate } from "react-router-dom"; // Optional, if using React Router
 
-const ScientificSessions = () => {
+const ScientificSessionEnergy = () => {
   const [openFaq, setOpenFaq] = useState([]); // Track two open FAQs at a time
   const navigate = useNavigate(); // Optional, for client-side routing with React Router
 
@@ -42,7 +42,7 @@ const ScientificSessions = () => {
       </p>
 
       <div className="scientific-sessions-main">
-        {ScientificSessionData.map((item, index) => (
+        {ScientificSessionEnergyData.map((item, index) => (
           <div
             key={index}
             className={`scientific-sessions-item ${
@@ -76,4 +76,4 @@ const ScientificSessions = () => {
   );
 };
 
-export default ScientificSessions;
+export default ScientificSessionEnergy;
