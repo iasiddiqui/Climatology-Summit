@@ -10,7 +10,7 @@ const BioDiversityHero = () => {
     <div className="conference">
       <img
         className="conference-img"
-        src="public/pictures/BioDiversity.jpg"
+        src="pictures/BioDiversity.jpg"
         alt="Climate Change"
       />
       <div className="conference-box">

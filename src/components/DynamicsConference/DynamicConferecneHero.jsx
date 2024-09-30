@@ -9,7 +9,7 @@ const DynamicConferenceHero = () => {
     <div className="conference">
       <img
         className="conference-img"
-        src="public/pictures/Ocean Health and Climate Dynamics.avif"
+        src="pictures/Ocean Health and Climate Dynamics.avif"
         alt="Climate Change"
       />
       <div className="conference-box">
