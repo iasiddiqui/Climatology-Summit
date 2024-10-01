@@ -24,13 +24,13 @@ body {
     margin-left: 3rem;
     margin-top: 0.5rem;
     border-radius: 10px;
-    z-index: 101;
+    z-index: 1000;
 }
 
 .navbar {
     position: fixed;
     top: 0rem;
-    z-index: 100;
+    z-index: 200;
     width: 100%;
     background-color: rgba(255, 255, 255, 0);
     border-bottom: 1px solid transparent;

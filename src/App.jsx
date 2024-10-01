@@ -15,10 +15,11 @@ import AbstractSubmission from "./components/AbstractSubmission/AbstractSubmissi
 import PrivacyPolicy from "./components/Privacy-Policy/PrivacyPolicy";
 import TermsAndConditions from "./components/TermsAndConditions/TermsAndConditions";
 import CancellationPolicy from "./components/Cancellation-Policy/CancellationPolicy";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 const App = () => (
   <BrowserRouter>
-    {/* <Navbar />  */}
+    <ScrollToTop />
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/awards" element={<Awards/>} />

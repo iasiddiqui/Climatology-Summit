@@ -12,8 +12,9 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="home-main">
+    <>
       <Navbar />
+    <div className="home-main">
 
       {/* -------Content 1--------- */}
       <div className="video-content">
@@ -84,6 +85,7 @@ const Home = () => {
       {/* --------Footer------------ */}
       <Footer />
     </div>
+    </>
   );
 };
 

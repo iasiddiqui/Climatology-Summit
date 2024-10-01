@@ -33,7 +33,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 2;
+    z-index: 3;
 }
 
 /* Main content section */
@@ -52,7 +52,6 @@ body {
 .home-h1 {
     font-size: 4rem;
     color: #9cdb3b;
-    font-family: "Roboto Slab", serif;
     font-optical-sizing: auto;
     margin-bottom: 0;
     white-space: nowrap;
@@ -60,7 +59,6 @@ body {
 
 .home-h4 {
     font-size: 1.3rem;
-    font-family: "Roboto Slab", serif;
     margin-top: 0;
     color: #576542;
 }
@@ -146,19 +144,6 @@ body {
 
 
 
-/* @media (max-width:1640px) {
-    .content1-pic {
-        z-index: 0;
-    }
-
-    .content1-pic img {
-        height: auto; 
-        object-fit: contain;
-        width: 40rem;
-        transform: translateX(6.5rem);
-    }
-    
-} */
 
 
 /* Responsive styles for tablet */
