@@ -5,9 +5,9 @@ body {
 }
 
 /* Container for the video section */
-    * {
+* {
     font-family: 'Satoshi', "Satoshi Fallback", sans-serif;
-    }
+}
 
 .home-main {
     position: relative;
@@ -20,7 +20,7 @@ body {
 /* Video background styling */
 .video-bg {
     position: absolute;
-    
+
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -82,7 +82,7 @@ body {
     width: 30rem;
     height: 30rem;
     object-fit: cover;
-    transform: translateX(7.2rem);
+    transform: translateX(9.5rem);
     margin-top: -3rem;
 }
 
@@ -145,7 +145,7 @@ body {
 
 /* Responsive styles for tablet */
 @media screen and (max-width: 1024px) {
-  
+
     .content-1 {
         flex-direction: column;
         width: 90%;
@@ -157,40 +157,63 @@ body {
     }
 
     .content1-pic {
-        margin-top: 1rem;
+       
+        margin-top: -20rem;
+        /* margin-right: -30rem; */
+        z-index: 0;
     }
 
     .content1-pic img {
-        width: 12rem;
-        height: 12rem;
+        /* width: 30rem; */
+        height: auto;
+        z-index: 0;
+        /* object-fit: cover; */
+        transform: translateX(20rem);
+        /*
+     margin-top: -3rem; */
+    }
+    .content-1-details{
+        margin-left: -15rem;
     }
 
     .home-h1 {
         font-size: 3rem;
+        
     }
 
     .home-h4 {
         font-size: 1.25rem;
     }
-    .content1-p{
+
+    .content1-p {
         width: 100%;
+        z-index: 20;
+    }
+    .register-button {
+        margin-top: -7rem;
+        margin-left: -40rem;
     }
 }
 
 /* Responsive styles for mobile */
 @media screen and (max-width: 768px) {
+
+    .content-1-details{
+        margin-left: 0rem;
+        width: 90%;
+    }
     .home-h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         white-space: inherit;
-        margin-top: 3rem;
+        margin-top: 2rem;
     }
 
     .home-h4 {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
-
+    
     .content1-h2 {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .content1-p {
@@ -198,16 +221,32 @@ body {
     }
 
     .register-button button {
-        font-size: 1.5rem;
-        width: 8rem;
+        font-size: 1rem;
+        width: 6rem;
+        margin-top: 0rem;
+        margin-left: 20rem;
+        align-items: center;
+        margin: 0 auto;
     }
-    .content1-pic img{
+
+    .content1-pic img {
         display: none;
     }
+
     .rectangle {
         width: 10%;
         height: 25%;
-        
+
     }
 }
+@media screen and (min-width: 768px){
 
+    /* .register-button button {
+        font-size: 1rem;
+        width: 6rem;
+        margin-top: 0rem;
+        margin-left: 0rem;
+        align-items: center;
+        margin: 0 auto;
+    } */
+}
