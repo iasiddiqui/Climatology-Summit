@@ -142,6 +142,25 @@ body {
     text-align: justify;
 }
 
+
+
+
+
+/* @media (max-width:1640px) {
+    .content1-pic {
+        z-index: 0;
+    }
+
+    .content1-pic img {
+        height: auto; 
+        object-fit: contain;
+        width: 40rem;
+        transform: translateX(6.5rem);
+    }
+    
+} */
+
+
 /* Responsive styles for tablet */
 @media screen and (max-width: 1024px) {
 
