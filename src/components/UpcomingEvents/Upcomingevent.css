@@ -5,3 +5,23 @@
     white-space: nowrap;
 
 }
+.hero-h1-upcoming {
+    color: #9cdb3b;
+    white-space: inherit;
+    font-size: 3rem;
+    text-shadow: 0px 5px 4px #000000;
+}
+@media (max-width:768px) {
+    .hero-h1-upcoming{
+        font-size: 2rem;
+        margin-top: 5rem;
+    }
+    
+}
+@media (max-width:468px) {
+    .hero-h1-upcoming{
+        font-size: 1.2rem;
+        margin-top: 5rem;
+    }
+    
+}

@@ -16,7 +16,7 @@ const UpcomingEvent = () => {
           alt="Hero"
         />
         <div className="overlay">
-          <h1 className="home-h1-event">
+          <h1 className="hero-h1-upcoming">
             Climate Change and Environmental Science Speakers
           </h1>
         </div>
