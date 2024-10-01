@@ -152,8 +152,8 @@ body {
     }
 
     .content-1-details {
-        text-align: center;
-        margin-left: 0;
+        text-align: center  ;
+        margin-left: -15rem;
     }
 
     .content1-pic {
@@ -162,6 +162,9 @@ body {
     }
 
     .content1-pic img {
+        height: auto; 
+        object-fit: contain;
+        width: 24rem;
         transform: translateX(20rem);
     }
 
@@ -179,7 +182,7 @@ body {
     }
 
     .register-button {
-        margin-top: -7rem;
+        margin-top: -4rem;
         margin-left: 0;
     }
 }
@@ -189,6 +192,69 @@ body {
 
     .content-1-details {
         width: 90%;
+        margin-left: 0;
+    }
+
+    .home-h1 {
+        font-size: 3rem;
+        white-space: inherit;
+        margin-top: 2rem;
+    }
+
+    .home-h4 {
+        font-size: 1rem;
+    }
+
+    .content1-h2 {
+        font-size: 1.5rem;
+    }
+
+    .content1-p {
+        font-size: 1.3rem;
+    }
+
+    .register-button {
+        margin-top: -1rem;
+        margin-left: -5rem;
+    }
+
+    .register-button button {
+        font-size: 1rem;
+        width: 6rem;
+        margin-left: 8rem;
+        margin-top: -40rem;
+    }
+
+    .content1-pic {
+        margin-top: -2rem;
+        z-index: 0;
+    }
+
+    .content1-pic img {
+        height: auto; 
+        object-fit: contain;
+        width: 20rem;
+        transform: translateX(13.5rem);
+        margin-top: -3rem;
+        display: none;
+    }
+
+    .rectangle {
+        width: 10%;
+        display: none;
+    }
+
+    .home-main {
+        margin-bottom: 0;
+    }
+}
+
+/* Responsive styles for smaller mobile */
+@media screen and (max-width: 440px) {
+
+    .content-1-details {
+        width: 90%;
+        margin-left: 0;
     }
 
     .home-h1 {
@@ -208,40 +274,6 @@ body {
     .content1-p {
         font-size: 0.9rem;
     }
-
-    .register-button {
-        margin-top: -12rem;
-    }
-
-    .register-button button {
-        font-size: 1rem;
-        width: 6rem;
-        margin-left: 8rem;
-        margin-top: -40rem;
-    }
-
-    .content1-pic {
-        margin-top: -2rem;
-        z-index: 0;
-    }
-
-    .content1-pic img {
-        width: 20rem;
-        transform: translateX(13.5rem);
-        margin-top: -3rem;
-    }
-
-    .rectangle {
-        width: 10%;
-    }
-
-    .home-main {
-        margin-bottom: 0;
-    }
-}
-
-/* Responsive styles for smaller mobile */
-@media screen and (max-width: 440px) {
     .content1-pic img {
         display: none;
     }
