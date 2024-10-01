@@ -2,7 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    overflow-x: hidden;
 }
 
 .slider-container {
@@ -10,8 +10,8 @@ html, body {
     max-width: 500px; 
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
-    box-sizing: border-box; /* Include padding and borders in width calculation */
-    overflow: hidden; /* Prevent overflow */
+    box-sizing: border-box; 
+    overflow: hidden; 
 }
 
 .slider-container img {
@@ -20,7 +20,7 @@ html, body {
     object-fit: cover; 
     border-bottom-right-radius: 50px;
     border-top-left-radius: 50px;
-    margin: 0; /* Ensure there's no extra margin */
+    margin: 0; 
 }
 
 @media screen and (max-width: 768px) {

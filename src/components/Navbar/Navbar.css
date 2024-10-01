@@ -240,7 +240,7 @@ body {
 
     .logo img {
         width: 6rem;
-        margin-left: 0;
+        margin-left: -22rem;
         align-items: left;
         margin-top: 1.3rem;
     }
@@ -252,5 +252,11 @@ body {
 }
 
 
-
-
+@media (max-width: 468px) {
+    .logo img {
+      
+        margin-left: -10rem;
+        align-items: left;
+        margin-top: 1.3rem;
+    }
+}
