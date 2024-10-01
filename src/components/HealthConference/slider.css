@@ -24,11 +24,13 @@
 @media screen and (max-width: 768px) {
     .slider-container {
         width: 90%;
+        height: 50%;
     }
 }
 
 @media screen and (max-width: 480px) {
     .slider-container {
         width: 50%;
+        height: 0%;
     }
 }

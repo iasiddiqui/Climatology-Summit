@@ -1,48 +1,27 @@
-import React, { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React from "react";
 import "./climate.css";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 
 const ClimateChange = () => {
-  const controls = useAnimation();
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start({
-        opacity: 1,
-        x: 0, 
-        transition: { duration: 1 },
-      });
-    }
-  }, [controls, inView]);
-
   return (
     <div className="Climate-Change-main">
       <h1 className="Climate-Change-h1">Why Climate Change</h1>
-      <motion.p
-        className="Climate-Change-p"
-        ref={ref}
-        initial={{ opacity: 0, x: -100 }} 
-        animate={controls}
-      >
+
+      <p className="Climate-Change-p">
         Climate Change conference is designed to provide its attendees with an
         enriching experience that will enhance their academic work and an
         opportunity to collaborate and network with peers.
-      </motion.p>
+      </p>
 
       <div className="Climate-Change-content">
-        <motion.img
-          ref={ref}
+        <img
           className="Climate-Change-img"
           src="pictures/green_earth.png"
           alt="Climate Change"
-          initial={{ opacity: 0, x: 100 }} 
-          animate={controls}
         />
 
         <div className="Climate-Change-content-p">
+          {/* Content items with icons */}
           {[
             "Present your research, receive feedback from your peers, and get published in prestigious academic journals.",
             "Take the next step in your academic career by identifying new research opportunities and partners.",
@@ -50,20 +29,10 @@ const ClimateChange = () => {
             "Discover the beauty of Amsterdam and indulge in local cuisines."
           ].map((text, index) => (
             <div className="Climate-Change-content-item" key={index}>
-              <motion.div
-                ref={ref}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }} 
-                animate={controls}
-              >
+              <div>
                 <KeyboardDoubleArrowRightIcon />
-              </motion.div>
-              <motion.p
-                ref={ref}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }} 
-                animate={controls}
-              >
-                {text}
-              </motion.p>
+              </div>
+              <p>{text}</p>
             </div>
           ))}
         </div>
@@ -75,53 +44,33 @@ const ClimateChange = () => {
         <div className="target-audience-content">
           <div className="target-audience-text">
             <div className="target-audience-item">
-              <motion.div
-                ref={ref}
-                initial={{ opacity: 0, x: -100 }} 
-                animate={controls}
-              >
+              <div>
                 <KeyboardDoubleArrowRightIcon />
-              </motion.div>
-              <motion.p
-                ref={ref}
-                initial={{ opacity: 0, x: -100 }} 
-                animate={controls}
-              >
+              </div>
+              <p>
                 Researchers, Climate Scientists, Students, and Industrialists as
                 well as representatives of climate organizations, research
                 institutions, and government agencies.
-              </motion.p>
+              </p>
             </div>
             <div className="Climate-Change-content-item">
-              <motion.div
-                ref={ref}
-                initial={{ opacity: 0, x: 100 }} 
-                animate={controls}
-              >
+              <div>
                 <KeyboardDoubleArrowRightIcon />
-              </motion.div>
-              <motion.p
-                ref={ref}
-                initial={{ opacity: 0, x: 100 }} 
-                animate={controls}
-              >
+              </div>
+              <p>
                 Present your research, receive feedback from your peers, and get
                 published in prestigious academic journals.
-              </motion.p>
+              </p>
             </div>
           </div>
-          <motion.div
-            className="target-audience-img"
-            ref={ref}
-            initial={{ opacity: 0, x: 100 }} 
-            animate={controls}
-          >
+
+          <div className="target-audience-img">
             <img
               className="target-audience-img-item"
               src="pictures/green_earth.png"
               alt="Target Audience"
             />
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>
