@@ -13,6 +13,7 @@
 
 .terms-link-h1 {
     text-align: center;
+    font-size: 2rem;
 }
 
 .terms-link {
@@ -44,4 +45,11 @@
 .terms-span{
     margin-left: 1.5rem;
     margin-top: 10rem;
+}
+@media (max-width:468px) {
+    .terms-link-h1 {
+        font-size: 1rem;
+        white-space: inherit;
+    }
+    
 }

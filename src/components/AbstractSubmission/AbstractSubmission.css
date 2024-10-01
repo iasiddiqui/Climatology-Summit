@@ -1,11 +1,13 @@
 .abstract-h1 {
-    color: #fff;
+    color: #9cdb3b;
     font-size: 3rem;
     white-space: nowrap;
+    text-shadow: 0px 5px 4px #000000;
 }
 
 .abstract-h3 {
-    color: #fff;
+    color: #000000;
+    text-shadow: 0px 5px 4px #9cdb3b;
     font-size: 1.5rem;
 }
 
@@ -19,15 +21,15 @@
 }
 
 .abstract-hero-span {
-    color: #fff;
+    color: #000;
     text-decoration: underline;
     font-size: 2rem;
     margin-right: 10%;
 }
 
 .abstract-hero-btn {
-    color: black;
-    background-color: #fff;
+    color: rgb(255, 255, 255);
+    background-color: #3d7a00;
     border: none;
     font-size: 1.5rem;
     padding: 0.5rem;
@@ -38,9 +40,9 @@
 }
 
 .abstract-hero-btn:hover {
-    background-color: #ffffff00;
-    color: white;
-    border: 1px solid #fff;
+    background-color: #ffffff;
+    color: #3d7a00;
+    border: 1px solid #3d7a00;
 }
 
 /* Responsive styling */
@@ -61,7 +63,6 @@
     .abstract-hero-span {
         font-size: 1.5rem;
         margin-right: 0;
-        /* Center the span on smaller screens */
         margin-bottom: 1rem;
     }
 
@@ -74,8 +75,8 @@
 @media(max-width: 427px) {
     .abstract-h1 {
         font-size: 1rem;
-        margin-top: 4rem;
-        white-space: inherit;
+        margin-top: 5rem;
+        /* white-space: inherit; */
     }
 
     .abstract-h3 {
@@ -89,8 +90,6 @@
     .abstract-hero-span {
         font-size: 1rem;
         margin-right: 0;
-        /* Center the span on smaller screens */
-        /* margin-bottom: 1rem; */
     }
 
     .abstract-hero-btn {

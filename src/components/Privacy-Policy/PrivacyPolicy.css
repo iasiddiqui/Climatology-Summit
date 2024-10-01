@@ -27,3 +27,10 @@
 .privacy-policy-stripe-link:hover{
     color: #62c004;
 }
+@media (max-width:468px) {
+    .privacy-policy-link {
+        font-size: 1rem;
+        white-space: inherit;
+    }
+    
+}
