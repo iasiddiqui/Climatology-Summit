@@ -107,6 +107,7 @@
   padding: 0.5rem 1rem;
   color: #ffffff;
   text-decoration: none;
+  
   white-space: nowrap;
 }
 
@@ -172,6 +173,7 @@
     max-width: 20rem;
   }
 
+
   .footer-p {
     max-width: 30rem;
     margin-left: 1rem;
@@ -179,7 +181,7 @@
 
   }
 
-  
+
 
 
   .footer-link,
@@ -199,6 +201,20 @@
   .contact-h3 {
     margin-right: 10rem;
     width: 45%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  
+  .footer-left {
+    width: 100%;
+  }
+  .footer-dropdown a{
+    white-space: inherit;
+
+  }
+  .footer-bottom {
+    width: 100%;
   }
 }
 
