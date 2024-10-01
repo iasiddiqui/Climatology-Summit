@@ -1,10 +1,17 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
 
 .slider-container {
     width: 100%;
     max-width: 500px; 
-    /* border: 1px solid black;  */
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
+    box-sizing: border-box; /* Include padding and borders in width calculation */
+    overflow: hidden; /* Prevent overflow */
 }
 
 .slider-container img {
@@ -12,25 +19,18 @@
     height: 19rem; 
     object-fit: cover; 
     border-bottom-right-radius: 50px;
-    overflow: hidden;
     border-top-left-radius: 50px;
-}
-@media screen and (max-width: 768px) {
-    .slider-container {
-    width: 90%;
-    }
+    margin: 0; /* Ensure there's no extra margin */
 }
 
 @media screen and (max-width: 768px) {
     .slider-container {
         width: 90%;
-        height: 50%;
     }
 }
 
 @media screen and (max-width: 480px) {
     .slider-container {
-        width: 50%;
-        height: 0%;
+        width: 60%;
     }
 }

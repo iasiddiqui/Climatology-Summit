@@ -33,7 +33,9 @@ const Navbar = () => {
       <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
         <div className="nav-up-color"></div>
         <div className="logo">
-          <img src="pictures/ClimateLogo.png" alt="Event Logo" />
+          <NavLink to="/">
+            <img src="pictures/ClimateLogo.png" alt="Event Logo" />
+          </NavLink>{" "}
         </div>
         <div className="menu-icon" onClick={toggleMenu}>
           &#9776;
@@ -43,7 +45,9 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/"
-                className={({ isActive }) => (isActive ? "nav active-link" : "nav")}
+                className={({ isActive }) =>
+                  isActive ? "nav active-link" : "nav"
+                }
               >
                 Home
               </NavLink>
@@ -51,13 +55,25 @@ const Navbar = () => {
             <li className="dropdown">
               <div
                 onClick={window.innerWidth <= 768 ? toggleDropdown : null}
-                onMouseEnter={window.innerWidth > 768 ? () => setIsDropdownOpen(true) : null}
-                onMouseLeave={window.innerWidth > 768 ? () => setIsDropdownOpen(false) : null}
-                style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}
+                onMouseEnter={
+                  window.innerWidth > 768 ? () => setIsDropdownOpen(true) : null
+                }
+                onMouseLeave={
+                  window.innerWidth > 768
+                    ? () => setIsDropdownOpen(false)
+                    : null
+                }
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  cursor: "pointer",
+                }}
               >
                 <NavLink
                   to="/upcoming-event"
-                  className={({ isActive }) => (isActive ? "nav active-link" : "nav")}
+                  className={({ isActive }) =>
+                    isActive ? "nav active-link" : "nav"
+                  }
                 >
                   Upcoming Events
                 </NavLink>
@@ -66,22 +82,34 @@ const Navbar = () => {
               {(isDropdownOpen || window.innerWidth > 768) && (
                 <ul className="dropdown-content">
                   <li>
-                    <NavLink className="dropdown-nav" to="/climate-change-conference">
+                    <NavLink
+                      className="dropdown-nav"
+                      to="/climate-change-conference"
+                    >
                       Climate Change and Public Health Conference
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink className="dropdown-nav" to="/green-technologies-conference">
+                    <NavLink
+                      className="dropdown-nav"
+                      to="/green-technologies-conference"
+                    >
                       Green Technologies and Renewable Energy Conference
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink className="dropdown-nav" to="/ocean-health-conference">
+                    <NavLink
+                      className="dropdown-nav"
+                      to="/ocean-health-conference"
+                    >
                       Ocean Health and Climate Dynamics Conference
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink className="dropdown-nav" to="/biodiversity-conference">
+                    <NavLink
+                      className="dropdown-nav"
+                      to="/biodiversity-conference"
+                    >
                       Climate Change and Biodiversity Conference
                     </NavLink>
                   </li>
@@ -91,7 +119,9 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/venue"
-                className={({ isActive }) => (isActive ? "nav active-link" : "nav")}
+                className={({ isActive }) =>
+                  isActive ? "nav active-link" : "nav"
+                }
               >
                 Venue
               </NavLink>
@@ -99,7 +129,9 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/awards"
-                className={({ isActive }) => (isActive ? "nav active-link" : "nav")}
+                className={({ isActive }) =>
+                  isActive ? "nav active-link" : "nav"
+                }
               >
                 Awards
               </NavLink>
@@ -107,7 +139,9 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/speaker-guidline"
-                className={({ isActive }) => (isActive ? "nav active-link" : "nav")}
+                className={({ isActive }) =>
+                  isActive ? "nav active-link" : "nav"
+                }
               >
                 Speaker Guidelines
               </NavLink>
@@ -115,7 +149,9 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/contact"
-                className={({ isActive }) => (isActive ? "nav active-link" : "nav")}
+                className={({ isActive }) =>
+                  isActive ? "nav active-link" : "nav"
+                }
               >
                 Contact
               </NavLink>
