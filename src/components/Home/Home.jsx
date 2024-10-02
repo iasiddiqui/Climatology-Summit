@@ -80,7 +80,7 @@ const Home = () => {
       <MediaPartners />
 
       {/*--------- FAQ'S---------------- */}
-      <Faqs />
+      {/* <Faqs /> */}
 
       {/* --------Footer------------ */}
       <Footer />
