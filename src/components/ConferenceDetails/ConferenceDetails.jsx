@@ -4,7 +4,7 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import ConferenceData from "./ConferenceData";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 
 const HealthConferenceDetails = () => {
   return (
@@ -17,11 +17,10 @@ const HealthConferenceDetails = () => {
         />
         <div className="conference-box">
           <div className="conference-hero">
-            <h1 className="conference-hero-h1">
-              {ConferenceData.title}
-            </h1>
+            <h1 className="conference-hero-h1">{ConferenceData.title}</h1>
             <p className="conference-hero-p">
-              <strong>Theme: </strong>{ConferenceData.theme}
+              <strong>Theme: </strong>
+              {ConferenceData.theme}
             </p>
           </div>
           <div className="conference-hero-box">
@@ -40,24 +39,29 @@ const HealthConferenceDetails = () => {
           </div>
           <div className="conference-hero-box">
             <NotificationsIcon className="blinking-icon" />
-            <span className="blinking">
-              {ConferenceData.deadline}
-            </span>
+            <span className="blinking">{ConferenceData.deadline}</span>
           </div>
           <div className="conference-hero-box-button">
-            {ConferenceData.buttons.map((button, index) => (
-              button.link ? (
+            {ConferenceData.buttons.map((button, index) =>
+              button.isPDF ? (
+                <a
+                  key={index}
+                  href={button.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="conference-button">{button.text}</button>
+                </a>
+              ) : button.link ? (
                 <Link key={index} to={button.link}>
-                  <button className="conference-button">
-                    {button.text}
-                  </button>
+                  <button className="conference-button">{button.text}</button>
                 </Link>
               ) : (
                 <button key={index} className="conference-button" disabled>
                   {button.text}
                 </button>
               )
-            ))}
+            )}
           </div>
         </div>
       </div>

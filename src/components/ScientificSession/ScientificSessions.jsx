@@ -28,7 +28,7 @@ const ScientificSessions = () => {
   };
 
   const handleViewAllClick = () => {
-    navigate("/"); 
+    navigate("/climate-change-conference/scientific-sessions-health"); 
   };
 
   return (

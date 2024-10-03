@@ -19,10 +19,10 @@ const DynamicsConference = () => {
       <DynamicConferenceHero />
       <AboutConference />
       <DynamicsScientificConference />
-      <div className="dynamic-Conference-container">
+      {/* <div className="dynamic-Conference-container">
         <h1 className="dynamic-Conference-speaker-h1">Our Brilliant Speakers</h1>
         <p className="dynamic-Conference-speaker-p">No team members found</p>
-      </div>
+      </div> */}
       <VenueAttraction />
       <RegistrationSection />
       <GetInTouch />

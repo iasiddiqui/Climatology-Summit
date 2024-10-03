@@ -36,10 +36,7 @@ export const ScientificSessionEnergyData = [
       question:"Energy Storage Solutions and Battery Technologies",
       answer:`Focuses on innovations in battery technology, such as solid-state batteries, lithium-sulfur, and flow batteries. Discusses grid-scale energy storage solutions and the role of batteries in stabilizing renewable energy supply. Explores sustainable materials and recycling approaches for battery components. Examines the development of hybrid storage systems integrating batteries with other technologies.`,
     },
-    {
-      question:"",
-      answer:``,
-    },
+   
     
  
     

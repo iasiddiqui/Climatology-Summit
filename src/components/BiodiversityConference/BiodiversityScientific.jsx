@@ -21,7 +21,7 @@ const BioDiversiScientific = () => {
   };
 
   const handleViewAllClick = () => {
-    window.location.href = "/scientific-sessions"; // Update the URL as needed
+    window.location.href = "/biodiversity-conference/scientific-sessions-biodiversity"; // Update the URL as needed
   };
 
   return (

@@ -25,7 +25,7 @@ const DynamicsScientificConference = () => {
   };
 
   const handleViewAllClick = () => {
-    window.location.href = "/"; // Update the URL as needed
+    window.location.href = "/ocean-health-conference/scientific-sessions-dynamics"; // Update the URL as needed
   };
 
   return (
