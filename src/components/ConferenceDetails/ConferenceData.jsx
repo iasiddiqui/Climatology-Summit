@@ -7,8 +7,8 @@ const ConferenceData = {
     deadline:"Abstract Submission Opened",
     buttons: [
       { text: "Register Now", link: "/register" },
-      { text: "Abstract Submission", link: "/climate-change-abstract-submission" },
-      { text: "Brochure Download", link: "/green-technologies-brochure" },
+      { text: "Abstract Submission", link: "/climate-change-conference/abstract-submission" },
+      { text: "Brochure Download", link: "/climate-change-conference/brochure-download" },
       { text: "Tentative Program", link: "" },
     ],
   };

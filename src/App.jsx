@@ -32,8 +32,20 @@ const App = () => (
       <Route path="/green-technologies-conference" element={<EnergyConference/>} />
       <Route path="/ocean-health-conference" element={<DynamicsConference/>} />
       <Route path="/biodiversity-conference" element={<BiodiversityConference/>} />
-      <Route path="/green-technologies-brochure" element={<GreenTechnologyBrochure/>} />
-      <Route path="/climate-change-abstract-submission" element={<AbstractSubmission/>} />
+
+
+      {/* <Route path="/green-technologies-brochure" element={<GreenTechnologyBrochure/>} /> */}
+      <Route path="/biodiversity-conference/brochure-download" element={<GreenTechnologyBrochure/>} />
+      <Route path="/climate-change-conference/brochure-download" element={<GreenTechnologyBrochure/>} />
+      <Route path="/green-technologies-conference/brochure-download" element={<GreenTechnologyBrochure/>} />
+      <Route path="/ocean-health-conference/brochure-download" element={<GreenTechnologyBrochure/>} />
+
+      {/* <Route path="/climate-change-abstract-submission" element={<AbstractSubmission/>} /> */}
+      <Route path="/biodiversity-conference/submission" element={<AbstractSubmission/>} />
+      <Route path="/climate-change-conference/abstract-submission" element={<AbstractSubmission/>} />
+      <Route path="/green-technologies-conference/abstract-submission" element={<AbstractSubmission/>} />
+      <Route path="/ocean-health-conference/abstract-submission" element={<AbstractSubmission/>} />
+      
       <Route path= "/privacy-policy" element={<PrivacyPolicy />}/>
       <Route path= "/terms-and-conditions" element={<TermsAndConditions />}/>
       <Route path= "/cancellation-policy" element={<CancellationPolicy />}/>
