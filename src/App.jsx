@@ -39,7 +39,7 @@ const App = () => (
       <Route path="/biodiversity-conference" element={<BiodiversityConference/>} />
 
 
-      {/* <Route path="/green-technologies-brochure" element={<GreenTechnologyBrochure/>} /> */}
+      <Route path="/brochure-download" element={<GreenTechnologyBrochure/>} />
       <Route path="/climate-change-conference/brochure-download" element={<GreenTechnologyBrochure/>} />
       <Route path="/ocean-health-conference/brochure-download" element={<GreenTechnologyBrochure/>} />
       <Route path="/green-technologies-conference/brochure-download" element={<GreenTechnologyBrochure/>} />
