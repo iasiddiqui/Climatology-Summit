@@ -33,7 +33,7 @@ const Navbar = () => {
       <div className="nav-up-color"></div>
       <div className="logo">
         <NavLink to="/">
-          <img src="pictures/ClimateLogo.png" alt="Event Logo" />
+          <img src="/pictures/ClimateLogo.png" alt="Event Logo" />
         </NavLink>
       </div>
       <div className="menu-icon" onClick={toggleMenu}>
