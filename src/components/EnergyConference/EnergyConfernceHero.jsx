@@ -11,7 +11,7 @@ const EnergyConferenceHero = () => {
       <div className="conference">
         <img
           className="conference-img"
-          src="pictures/Energy Innovations.avif"
+          src="/pictures/Energy Innovations.avif"
           alt="Climate Change"
         />
         <div className="conference-box">
@@ -43,39 +43,33 @@ const EnergyConferenceHero = () => {
               {EnergyHeroData.open}
             </span>
           </div>
-          <div className="conference-hero-box">
+          {/* <div className="conference-hero-box">
             <NotificationsIcon className="blinking-icon" />
             <span className="blinking">
               {EnergyHeroData.deadline}
             </span>
-          </div>
+          </div> */}
 
         
-          <div className="conference-hero-box-button">
-            {EnergyHeroData.buttons.map((button, index) => (
-              button.link ? (
-                
-                button.link.startsWith("/") ? (
-                  <Link key={index} to={button.link}>
-                    <button className="conference-button">
-                      {button.text}
-                    </button>
-                  </Link>
-                ) : (
-            
-                  <a key={index} href={button.link} target="_blank" rel="noopener noreferrer">
-                    <button className="conference-button">
-                      {button.text}
-                    </button>
-                  </a>
-                )
-              ) : (
-                <button key={index} className="conference-button" disabled>
-                  {button.text}
-                </button>
-              )
-            ))}
-          </div>
+<div className="conference-hero-box-button">
+                    {EnergyHeroData.buttons.map((button, index) => (
+                        button.link ? (
+                            button.link.startsWith("/") ? (
+                                <Link key={index} to={button.link}>
+                                    <button className="conference-button">{button.text}</button>
+                                </Link>
+                            ) : (
+                                <a key={index} href={button.link} target="_blank" rel="noopener noreferrer">
+                                    <button className="conference-button">{button.text}</button>
+                                </a>
+                            )
+                        ) : (
+                            <button key={index} className="conference-button" disabled>
+                                {button.text}
+                            </button>
+                        )
+                    ))}
+                </div>
         </div>
       </div>
     </>
