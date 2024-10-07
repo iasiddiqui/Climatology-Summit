@@ -1,0 +1,60 @@
+
+
+.registration-section{
+    width: 20rem;
+    display: flex;
+    flex-direction: row;
+}
+.registration-table{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.registration-title {
+    color: #0f0f0f;
+}
+
+.registration-section,
+.sponsor-section {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.registration-subtitle {
+    color: #0056b3;
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin: 0;
+}
+
+.registration-table,
+.sponsor-table {
+    width: 100%;
+    border-spacing: 0;
+    margin-top: 10px;
+}
+
+.registration-row,
+.sponsor-row {
+    border: none; 
+}
+
+.registration-category,
+.sponsor-category {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.registration-option,
+.sponsor-price {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.registration-checkbox,
+.sponsor-checkbox {
+    margin-right: 10px;
+}

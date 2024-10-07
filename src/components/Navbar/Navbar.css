@@ -81,7 +81,9 @@ body {
     width: auto;
     color: #ffffff;
     background-color: #9cdb3b;
+   
 }
+
 
 .navbar ul li a:hover {
     color: #9cdb3b;
@@ -115,6 +117,7 @@ body {
     padding: 0;
     width: 14rem;
     border: 1px solid #9cdb3b   ;
+    border-radius: 5px;
     justify-content: center;
 }
 
@@ -123,7 +126,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1.5px solid #9cdb3b;
     padding: 0.5rem 1rem;
     margin: 0;
     padding: 0;

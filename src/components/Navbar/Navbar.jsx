@@ -51,35 +51,29 @@ const Navbar = () => {
               Home
             </NavLink>
           </li>
-          <li className="dropdown">
+          <li
+            className="dropdown"
+            onMouseEnter={() => setIsDropdownOpen(true)}
+            onMouseLeave={() => setIsDropdownOpen(false)}
+          >
             <div
-              onClick={window.innerWidth <= 768 ? toggleDropdown : null}
-              onMouseEnter={
-                window.innerWidth > 768 ? () => setIsDropdownOpen(true) : null
-              }
-              onMouseLeave={
-                window.innerWidth > 768
-                  ? () => setIsDropdownOpen(false)
-                  : null
-              }
+              onClick={toggleDropdown}
               style={{
                 display: "flex",
                 alignItems: "center",
                 cursor: "pointer",
+                gap: "0.2rem",
               }}
             >
-              <NavLink
-                to="/upcoming-event"
-                className={({ isActive }) =>
-                  isActive ? "nav active-link" : "nav"
-                }
-              >
-                Upcoming Events
-              </NavLink>
+              <span className="nav">Upcoming Events</span>
               <ArrowDropDownIcon />
             </div>
-            {(isDropdownOpen || window.innerWidth > 768) && (
-              <ul className="dropdown-content">
+            {isDropdownOpen && (
+              <ul
+                className="dropdown-content"
+                onMouseEnter={() => setIsDropdownOpen(true)}
+                onMouseLeave={() => setIsDropdownOpen(false)}
+              >
                 <li>
                   <NavLink
                     className="dropdown-nav"

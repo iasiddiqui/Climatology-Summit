@@ -48,9 +48,7 @@ const ClimateChange = () => {
                 <KeyboardDoubleArrowRightIcon />
               </div>
               <p>
-                Researchers, Climate Scientists, Students, and Industrialists as
-                well as representatives of climate organizations, research
-                institutions, and government agencies.
+              Researchers, Climate Scientists, Students and Industrialists as well as representatives of climate organizations, research institutions, and government agencies.
               </p>
             </div>
             <div className="Climate-Change-content-item">
@@ -58,8 +56,7 @@ const ClimateChange = () => {
                 <KeyboardDoubleArrowRightIcon />
               </div>
               <p>
-                Present your research, receive feedback from your peers, and get
-                published in prestigious academic journals.
+              You are guaranteed engaging discussions that bring diverse opinions under the common goal of advancing the future of the planet as communities around the world unite to combat climate change and global warming.
               </p>
             </div>
           </div>
