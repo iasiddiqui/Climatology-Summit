@@ -1,45 +1,45 @@
+.registration-type {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
 
+.registration-section {
+    flex: 1;
+    min-width: 20rem;
+}
 
-.registration-section{
+.registration-table {
+    width: 100%;
+    display: table;
+}
+
+.registration-section {
     width: 20rem;
     display: flex;
     flex-direction: row;
 }
-.registration-table{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
 
-}
+
 
 .registration-title {
     color: #0f0f0f;
 }
 
-.registration-section,
-.sponsor-section {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin-bottom: 20px;
-}
 
-.registration-subtitle {
-    color: #0056b3;
-    background-color: #f2f2f2;
-    padding: 10px;
-    margin: 0;
-}
+
+
 
 .registration-table,
 .sponsor-table {
     width: 100%;
     border-spacing: 0;
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
-.registration-row,
-.sponsor-row {
-    border: none; 
+.registration-row {
+    border: 1px solid black;
+    /* border:none; */
 }
 
 .registration-category,
@@ -57,4 +57,102 @@
 .registration-checkbox,
 .sponsor-checkbox {
     margin-right: 10px;
+}
+
+.registration-category-head {
+    background-color: #aaffac;
+    font-size: 1rem;
+}
+
+.registration-option-head {
+    background-color: #aaffac;
+    font-size: 0.9rem;
+}
+
+
+
+
+/* ----------------sponsor css---------------- */
+
+.sponsor-section {
+    /* padding: 10px; */
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+.sponsor-table {
+    width: 100%;
+
+}
+
+.sponsor-name,
+.sponsor-price {
+    border: 1px solid rgb(131, 131, 131);
+    padding: 10px;
+    vertical-align: middle;
+}
+
+/* .sponsor-category {
+    border: 1px solid rgb(155, 155, 155);
+} */
+
+.sponsor-name {
+    padding: 10px;
+    vertical-align: middle;
+    background-color: #aaffac;
+}
+
+.sponsor-price {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.sponsor-checkbox {
+    margin-right: 10px;
+}
+
+.sponsor-title {
+    color: #0f0f0f;
+    margin-bottom: 10px;
+}
+
+
+
+/* -----------------Accommodation ----------------------*/
+
+.accommodation {
+    margin-top: 3rem;
+    padding: 0;
+
+}
+
+.accommodation-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.accommodation-category-head,
+.accommodation-option-head {
+    background-color: #aaffac;
+    text-align: center;
+    padding: 12px;
+}
+
+.accommodation-row {
+    border: 1px solid #ddd;
+}
+
+.accommodation-category {
+    font-weight: bold;
+    padding: 12px;
+}
+
+.accommodation-option {
+    padding: 12px;
+    text-align: center;
+}
+
+.accommodation-checkbox {
+    margin-right: 5px;
 }
