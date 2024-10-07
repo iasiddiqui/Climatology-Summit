@@ -75,3 +75,82 @@
 .register-submit:hover {
   background-color: #0056b3;
 }
+
+
+
+/* Container for country and abstract category */
+.register-row.country-abstract-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.register-row.country-abstract-row .register-field {
+  flex: 1;
+}
+
+.register-country {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.register-field-country {
+  width: 100%;
+}
+
+.react-flags-select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.react-flags-select__button {
+  background-color: white !important;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.react-flags-select__button:hover {
+  border-color: #007bff;
+}
+
+.react-flags-select__options {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 5px;
+}
+
+.react-flags-select__option {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.react-flags-select__option:hover {
+  background-color: #f1f1f1;
+}
+
+.react-flags-select__option--selected {
+  background-color: #007bff;
+  color: white;
+}
+
+
+.register-abstract-select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}

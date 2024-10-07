@@ -4,6 +4,7 @@ import PaymentInfo from "./PaymentMethod/PaymentMethod";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Home/Footer/Footer";
 import RegistrationForm from "./RegistrationForm";
+import ReactFlagsSelect from "react-flags-select";
 
 function Register() {
   const [title, setTitle] = useState("");
@@ -21,6 +22,7 @@ function Register() {
   const [accomodationPrice, setAccomodationPrice] = useState(0);
   const [checkinDate, setCheckinDate] = useState("");
   const [paymentType, setPaymentType] = useState("");
+  const [selected, setSelected] = useState("");
 
   const handleRegistrationTypeChange = (event) => {
     setRegistrationType(event.target.value);
@@ -159,21 +161,19 @@ function Register() {
 
           <h2 className="register-title">Further Information</h2>
 
-          <div className="register-row">
+          <div className="register-row country-abstract-row">
             <div className="register-field">
-              <label className="register-label" htmlFor="country">
+              <label className="register-country">
                 Country:
+                <ReactFlagsSelect
+                  selected={selected}
+                  onSelect={(code) => setSelected(code)}
+                  placeholder="Select Country"
+                  searchable
+                  searchPlaceholder="Search countries"
+                  className="register-field-country"
+                />
               </label>
-              <select
-                className="register-select"
-                id="country"
-                value={country}
-                onChange={(e) => setCountry(e.target.value)}
-              >
-                <option value="">Select country</option>
-                <option value="India">India</option>
-                <option value="USA">USA</option>
-              </select>
             </div>
 
             <div className="register-field">
@@ -181,14 +181,16 @@ function Register() {
                 Abstract Category:
               </label>
               <select
-                className="register-select"
+                className="register-abstract-select"
                 id="abstractCategory"
                 value={abstractCategory}
                 onChange={(e) => setAbstractCategory(e.target.value)}
               >
                 <option value="">Select Category</option>
-                <option value="Technology">Technology</option>
-                <option value="Science">Science</option>
+                <option value="Technology">Poster</option>
+                <option value="Science">Oral</option>
+                <option value="Delegate">Delegate</option>
+                <option value="Other">Other</option>
               </select>
             </div>
           </div>
