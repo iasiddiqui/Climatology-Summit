@@ -49,7 +49,11 @@ const RegistrationForm = () => {
                   $699
                 </td>
                 <td className="registration-option">
-                  <input type="checkbox" className="registration-checkbox" />{" "}
+                  Business
+                  <input
+                    type="checkbox"
+                    className="registration-checkbox"
+                  />{" "}
                   $799
                 </td>
               </tr>
@@ -353,8 +357,107 @@ const RegistrationForm = () => {
           </tbody>
         </table>
       </div>
+      <div className="additional-info">
+        <div className="participants">
+          <label className="participants-label">No. Of Participants.</label>
+          <select className="participants">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+
+        <div className="checkin-date">
+          <label className="participants-date">Checkin Date:</label>
+          <input type="date" className="checkin-date" />
+        </div>
+      </div>
+
+      <div className="registration-details">
+        <table className="registration-details-table">
+          <tbody>
+            <tr className="registration-details">
+              <td className="registration-details-label">
+                Registration Price:
+              </td>
+              <td className="registration-details-value">$0</td>
+            </tr>
+
+            <tr className="registration-details">
+              <td className="registration-details-label">
+                No. Of Participants:
+              </td>
+              <td className="registration-details-value">1</td>
+            </tr>
+
+            <tr className="registration-details">
+              <td className="registration-details-label">
+                Total Registration Price:
+              </td>
+              <td className="registration-details-value">$0</td>
+            </tr>
+
+            <tr className="registration-details">
+              <td className="registration-details-label">
+                Accommodation Registration Price:
+              </td>
+              <td className="registration-details-value">$0</td>
+            </tr>
+
+            <tr className="registration-details">
+              <td className="registration-details-label">Total Price:</td>
+              <td className="registration-details-value">$0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div className="payment-type">
+      <h2>Payment Method</h2>
+      <label>
+        <input
+          type="radio"
+          name="paymentMethod"
+          value="paypal"
+          
+        />
+        PayPal
+        <br />
+        <input
+          type="radio"
+          name="paymentMethod"
+          value="stripe"
+        />
+        Stripe
+      </label>
+      </div>
+      <button className="registration-button" type="submit">Proceed to Payment</button>
     </div>
   );
 };
 
 export default RegistrationForm;
+
+{
+  /* <div className="registration-details">
+  <div className="payment-method">
+    <label className="payment-method-label">Payment Method:</label>
+    <select className="payment-method">
+      <option value="credit-card">Credit Card</option>
+      <option value="paypal">PayPal</option>
+      <option value="bitcoin">Bitcoin</option>
+    </select>
+  </div>
+
+  <div className="payment-amount">
+    <label className="payment-amount-label">Payment Amount:</label>
+    <input type="text" className="payment-amount" />
+  </div>
+</div> */
+}

@@ -130,13 +130,22 @@
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    border: 1px solid #ddd;
 }
 
 .accommodation-category-head,
 .accommodation-option-head {
     background-color: #aaffac;
-    text-align: center;
+    text-align: left;
     padding: 12px;
+    border: 1px solid rgb(110, 110, 110);
+}
+
+.accommodation-row,
+.accommodation-category,
+.accommodation-option {
+    border: 1px solid rgb(92, 92, 92);
+
 }
 
 .accommodation-row {
@@ -144,15 +153,104 @@
 }
 
 .accommodation-category {
-    font-weight: bold;
-    padding: 12px;
+    padding: 1rem;
 }
 
 .accommodation-option {
-    padding: 12px;
-    text-align: center;
+    padding: 1rem;
+    text-align: left;
 }
 
 .accommodation-checkbox {
     margin-right: 5px;
 }
+
+
+/* ------------------------------additional-info------------------------------------------ */
+
+.additional-info {
+    display: flex;
+    /* justify-content: space-between;  */
+    gap: 3rem;
+    margin-top: 20px;
+}
+
+.participants,
+.checkin-date {
+    display: flex;
+    flex-direction: column;
+    /* margin-right: 20px;  */
+}
+
+.participants-label,
+.participants-date {
+    margin-bottom: 10px;
+
+}
+
+.participants select,
+.checkin-date input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 30rem;
+
+}
+
+.participants select:focus,
+.checkin-date input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.checkin-date input {
+    max-width: 200px;
+}
+
+
+/* --------------Registration-Details----------- */
+
+.registration-details {
+    margin-top: 20px;
+}
+
+.registration-details-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.registration-details-label {
+    padding: 10px;
+    background-color: #f9f9f9;
+    text-align: left;
+}
+
+.registration-details-value {
+    padding: 10px;
+    text-align: right;
+    font-weight: bold;
+    color: #333;
+}
+
+.registration-details-label,
+.registration-details-value {
+    border: 1px solid rgb(110, 110, 110);
+}
+
+.registration-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.4rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .registration-button:hover {
+    transform: scale(1.1); 
+  }
+  
