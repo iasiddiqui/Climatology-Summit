@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./register.css";
-import PaymentInfo from "./PaymentMethod/PaymentMethod";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Home/Footer/Footer";
 import RegistrationForm from "./RegistrationForm";
@@ -15,32 +14,9 @@ function Register() {
   const [country, setCountry] = useState("");
   const [fullAddress, setFullAddress] = useState("");
   const [abstractCategory, setAbstractCategory] = useState("");
-  const [registrationType, setRegistrationType] = useState("");
-  const [registrationPrice, setRegistrationPrice] = useState(0);
-  const [numberOfParticipants, setNumberOfParticipants] = useState(1);
-  const [accomodationType, setAccomodationType] = useState("");
-  const [accomodationPrice, setAccomodationPrice] = useState(0);
-  const [checkinDate, setCheckinDate] = useState("");
-  const [paymentType, setPaymentType] = useState("");
   const [selected, setSelected] = useState("");
 
-  const handleRegistrationTypeChange = (event) => {
-    setRegistrationType(event.target.value);
-    const priceMap = {
-      "speaker-academia": 799,
-      "speaker-business": 699,
-    };
-    setRegistrationPrice(priceMap[event.target.value] || 0);
-  };
-
-  const handleAccomodationTypeChange = (event) => {
-    setAccomodationType(event.target.value);
-    const priceMap = {
-      "single-2": 400,
-      "single-3": 650,
-    };
-    setAccomodationPrice(priceMap[event.target.value] || 0);
-  };
+ 
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -53,13 +29,7 @@ function Register() {
       country,
       fullAddress,
       abstractCategory,
-      registrationType,
-      registrationPrice,
-      numberOfParticipants,
-      accomodationType,
-      accomodationPrice,
-      checkinDate,
-      paymentType,
+    
     });
   };
 
@@ -208,8 +178,6 @@ function Register() {
               />
             </div>
           </div>
-
-          {/* <PaymentInfo /> */}
           <RegistrationForm />
         </form>
       </div>

@@ -6,6 +6,8 @@ const RegistrationForm = () => {
   const [accommodationPrice, setAccommodationPrice] = useState(0);
   const [numParticipants, setNumParticipants] = useState(1);
 
+  
+
   const handleRegistrationChange = (price, checked) => {
     if (checked) {
       setRegistrationPrice((prev) => prev + price);
