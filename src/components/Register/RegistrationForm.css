@@ -229,15 +229,31 @@
 .registration-details-value {
     padding: 10px;
     text-align: right;
-    font-weight: bold;
+    font-weight: normal;
     color: #333;
     background-color: #fff;
 }
+.registration-details-value-total {
+    font-weight: bold;
+    padding: 10px;
+    text-align: right;
+    color: #333;
+    background-color: #fff;
+ }
 
 .registration-details-label,
 .registration-details-value {
     border: 1px solid rgb(110, 110, 110);
 }
+.registration-details-value-total,
+.registration-details-label-total
+ {
+    border: 1px solid rgb(110, 110, 110);
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-left: 0.5rem ;
+}
+
 
 .registration-button {
     background-color: #007bff;

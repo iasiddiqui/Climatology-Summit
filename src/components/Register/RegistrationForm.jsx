@@ -412,30 +412,15 @@ const RegistrationForm = () => {
             </tr>
 
             <tr className="registration-details">
-              <td className="registration-details-label">Total Price:</td>
-              <td className="registration-details-value">$0</td>
+              <td className="registration-details-label-total">Total Price:</td>
+              <td className="registration-details-value-total">$0</td>
             </tr>
           </tbody>
         </table>
       </div>
       <div className="payment-type">
       <h2>Payment Method</h2>
-      <label>
-        <input
-          type="radio"
-          name="paymentMethod"
-          value="paypal"
-          
-        />
-        PayPal
-        <br />
-        <input
-          type="radio"
-          name="paymentMethod"
-          value="stripe"
-        />
-        Stripe
-      </label>
+      <h3>Pay with Paypal</h3>
       </div>
       <button className="registration-button" type="submit">Proceed to Payment</button>
     </div>
@@ -443,21 +428,3 @@ const RegistrationForm = () => {
 };
 
 export default RegistrationForm;
-
-{
-  /* <div className="registration-details">
-  <div className="payment-method">
-    <label className="payment-method-label">Payment Method:</label>
-    <select className="payment-method">
-      <option value="credit-card">Credit Card</option>
-      <option value="paypal">PayPal</option>
-      <option value="bitcoin">Bitcoin</option>
-    </select>
-  </div>
-
-  <div className="payment-amount">
-    <label className="payment-amount-label">Payment Amount:</label>
-    <input type="text" className="payment-amount" />
-  </div>
-</div> */
-}
