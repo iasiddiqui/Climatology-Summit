@@ -1,7 +1,38 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./RegistrationForm.css";
 
 const RegistrationForm = () => {
+
+  const [registrationPrice, setRegistrationPrice] = useState(0);
+  const [accommodationPrice, setAccommodationPrice] = useState(0);
+  const [numParticipants, setNumParticipants] = useState(1);
+
+
+  const handleRegistrationChange = (price, checked) => {
+    if (checked) {
+      setRegistrationPrice((prev) => prev + price);
+    } else {
+      setRegistrationPrice((prev) => prev - price);
+    }
+  };
+
+  const handleAccommodationChange = (price, checked) => {
+    if (checked) {
+      setAccommodationPrice((prev) => prev + price);
+    } else {
+      setAccommodationPrice((prev) => prev - price);
+    }
+  };
+
+
+  const handleParticipantsChange = (e) => {
+    setNumParticipants(parseInt(e.target.value));
+  };
+
+  const totalPrice = (registrationPrice + accommodationPrice) * numParticipants;
+
+
+
   return (
     <div className="registration-container">
       <div className="registration-type">
@@ -24,6 +55,7 @@ const RegistrationForm = () => {
                   <input
                     type="checkbox"
                     className="registration-checkbox"
+                    onChange={(e) => handleRegistrationChange(799, e.target.checked)}
                   />{" "}
                   $799
                 </td>
@@ -33,6 +65,7 @@ const RegistrationForm = () => {
                   <input
                     type="checkbox"
                     className="registration-checkbox"
+                    onChange={(e) => handleRegistrationChange(699, e.target.checked)}
                   />{" "}
                   $699
                 </td>
@@ -45,6 +78,7 @@ const RegistrationForm = () => {
                   <input
                     type="checkbox"
                     className="registration-checkbox"
+                    onChange={(e) => handleRegistrationChange(699, e.target.checked)}
                   />{" "}
                   $699
                 </td>
@@ -53,6 +87,7 @@ const RegistrationForm = () => {
                   <input
                     type="checkbox"
                     className="registration-checkbox"
+                    onChange={(e) => handleRegistrationChange(799, e.target.checked)}
                   />{" "}
                   $799
                 </td>
@@ -60,28 +95,32 @@ const RegistrationForm = () => {
               <tr className="registration-row">
                 <td className="registration-category">Student</td>
                 <td className="registration-option" colSpan="2">
-                  <input type="checkbox" className="registration-checkbox" />{" "}
+                  <input type="checkbox" className="registration-checkbox"
+                  onChange={(e) => handleRegistrationChange(599, e.target.checked)} />{" "}
                   $599
                 </td>
               </tr>
               <tr className="registration-row">
                 <td className="registration-category">Poster Presentation</td>
                 <td className="registration-option" colSpan="2">
-                  <input type="checkbox" className="registration-checkbox" />{" "}
+                  <input type="checkbox" className="registration-checkbox" 
+                  onChange={(e) => handleRegistrationChange(499, e.target.checked)}/>{" "}
                   $499
                 </td>
               </tr>
               <tr className="registration-row">
                 <td className="registration-category">Online</td>
                 <td className="registration-option" colSpan="2">
-                  <input type="checkbox" className="registration-checkbox" />{" "}
+                  <input type="checkbox" className="registration-checkbox"
+                  onChange={(e) => handleRegistrationChange(200, e.target.checked)} />{" "}
                   $200
                 </td>
               </tr>
               <tr className="registration-row">
                 <td className="registration-category">Accompanying Person</td>
                 <td className="registration-option" colSpan="2">
-                  <input type="checkbox" className="registration-checkbox" />{" "}
+                  <input type="checkbox" className="registration-checkbox"
+                  onChange={(e) => handleRegistrationChange(300, e.target.checked)} />{" "}
                   $300
                 </td>
               </tr>
@@ -103,19 +142,23 @@ const RegistrationForm = () => {
               </tr>
               <tr className="registration-row">
                 <td className="registration-category">Speaker Registration</td>
+               
                 <td className="registration-option">
                   Academia
                   <input
                     type="checkbox"
                     className="registration-checkbox"
+                    onChange={(e) => handleRegistrationChange(899, e.target.checked)}
                   />{" "}
                   $899
                 </td>
+                
                 <td className="registration-option">
                   Business
                   <input
                     type="checkbox"
                     className="registration-checkbox"
+                    onChange={(e) => handleRegistrationChange(999, e.target.checked)}
                   />{" "}
                   $999
                 </td>
@@ -128,6 +171,7 @@ const RegistrationForm = () => {
                   <input
                     type="checkbox"
                     className="registration-checkbox"
+                    onChange={(e) => handleRegistrationChange(799, e.target.checked)}
                   />{" "}
                   $799
                 </td>
@@ -136,6 +180,7 @@ const RegistrationForm = () => {
                   <input
                     type="checkbox"
                     className="registration-checkbox"
+                    onChange={(e) => handleRegistrationChange(899, e.target.checked)}
                   />{" "}
                   $899
                 </td>
@@ -143,28 +188,32 @@ const RegistrationForm = () => {
               <tr className="registration-row">
                 <td className="registration-category">Student</td>
                 <td className="registration-option" colSpan="2">
-                  <input type="checkbox" className="registration-checkbox" />{" "}
+                  <input type="checkbox" className="registration-checkbox" 
+                  onChange={(e) => handleRegistrationChange(699, e.target.checked)}/>{" "}
                   $699
                 </td>
               </tr>
               <tr className="registration-row">
                 <td className="registration-category">Poster Presentation</td>
                 <td className="registration-option" colSpan="2">
-                  <input type="checkbox" className="registration-checkbox" />{" "}
+                  <input type="checkbox" className="registration-checkbox" 
+                  onChange={(e) => handleRegistrationChange(599, e.target.checked)}/>{" "}
                   $599
                 </td>
               </tr>
               <tr className="registration-row">
                 <td className="registration-category">Online</td>
                 <td className="registration-option" colSpan="2">
-                  <input type="checkbox" className="registration-checkbox" />{" "}
+                  <input type="checkbox" className="registration-checkbox"
+                  onChange={(e) => handleRegistrationChange(300, e.target.checked)} />{" "}
                   $300
                 </td>
               </tr>
               <tr className="registration-row">
                 <td className="registration-category">Accompanying Person</td>
                 <td className="registration-option" colSpan="2">
-                  <input type="checkbox" className="registration-checkbox" />{" "}
+                  <input type="checkbox" className="registration-checkbox" 
+                  onChange={(e) => handleRegistrationChange(350, e.target.checked)}/>{" "}
                   $350
                 </td>
               </tr>
@@ -192,6 +241,7 @@ const RegistrationForm = () => {
                   <input
                     type="checkbox"
                     className="registration-checkbox"
+                    onChange={(e) => handleRegistrationChange(999, e.target.checked)}
                   />{" "}
                   $999
                 </td>
@@ -200,6 +250,7 @@ const RegistrationForm = () => {
                   <input
                     type="checkbox"
                     className="registration-checkbox"
+                    onChange={(e) => handleRegistrationChange(1099, e.target.checked)}
                   />{" "}
                   $1099
                 </td>
@@ -212,6 +263,7 @@ const RegistrationForm = () => {
                   <input
                     type="checkbox"
                     className="registration-checkbox"
+                    onChange={(e) => handleRegistrationChange(899, e.target.checked)}
                   />{" "}
                   $899
                 </td>
@@ -220,6 +272,7 @@ const RegistrationForm = () => {
                   <input
                     type="checkbox"
                     className="registration-checkbox"
+                    onChange={(e) => handleRegistrationChange(999, e.target.checked)}
                   />{" "}
                   $999
                 </td>
@@ -227,28 +280,32 @@ const RegistrationForm = () => {
               <tr className="registration-row">
                 <td className="registration-category">Student</td>
                 <td className="registration-option" colSpan="2">
-                  <input type="checkbox" className="registration-checkbox" />{" "}
+                  <input type="checkbox" className="registration-checkbox" 
+                  onChange={(e) => handleRegistrationChange(799, e.target.checked)}/>{" "}
                   $799
                 </td>
               </tr>
               <tr className="registration-row">
                 <td className="registration-category">Poster Presentation</td>
                 <td className="registration-option" colSpan="2">
-                  <input type="checkbox" className="registration-checkbox" />{" "}
+                  <input type="checkbox" className="registration-checkbox"
+                  onChange={(e) => handleRegistrationChange(699, e.target.checked)} />{" "}
                   $699
                 </td>
               </tr>
               <tr className="registration-row">
                 <td className="registration-category">Online</td>
                 <td className="registration-option" colSpan="2">
-                  <input type="checkbox" className="registration-checkbox" />{" "}
+                  <input type="checkbox" className="registration-checkbox"
+                  onChange={(e) => handleRegistrationChange(400, e.target.checked)} />{" "}
                   $400
                 </td>
               </tr>
               <tr className="registration-row">
                 <td className="registration-category">Accompanying Person</td>
                 <td className="registration-option" colSpan="2">
-                  <input type="checkbox" className="registration-checkbox" />{" "}
+                  <input type="checkbox" className="registration-checkbox"
+                  onChange={(e) => handleRegistrationChange(400, e.target.checked)} />{" "}
                   $400
                 </td>
               </tr>
@@ -312,45 +369,54 @@ const RegistrationForm = () => {
             <tr className="accommodation-row">
               <td className="accommodation-category">For 2 Nights</td>
               <td className="accommodation-option">
-                <input type="checkbox" className="accommodation-checkbox" />{" "}
+                <input type="checkbox" className="accommodation-checkbox"
+                onChange={(e) => handleAccommodationChange(799, e.target.checked)} />{" "}
                 $799
               </td>
               <td className="accommodation-option">
-                <input type="checkbox" className="accommodation-checkbox" />{" "}
+                <input type="checkbox" className="accommodation-checkbox" 
+                onChange={(e) => handleAccommodationChange(699, e.target.checked)}/>{" "}
                 $699
               </td>
               <td className="accommodation-option">
-                <input type="checkbox" className="accommodation-checkbox" />{" "}
+                <input type="checkbox" className="accommodation-checkbox" 
+                onChange={(e) => handleAccommodationChange(599, e.target.checked)}/>{" "}
                 $599
               </td>
             </tr>
             <tr className="accommodation-row">
               <td className="accommodation-category">For 3 Nights</td>
               <td className="accommodation-option">
-                <input type="checkbox" className="accommodation-checkbox" />{" "}
+                <input type="checkbox" className="accommodation-checkbox" 
+                onChange={(e) => handleAccommodationChange(799, e.target.checked)}/>{" "}
                 $799
               </td>
               <td className="accommodation-option">
-                <input type="checkbox" className="accommodation-checkbox" />{" "}
+                <input type="checkbox" className="accommodation-checkbox" 
+                onChange={(e) => handleAccommodationChange(699, e.target.checked)}/>{" "}
                 $699
               </td>
               <td className="accommodation-option">
-                <input type="checkbox" className="accommodation-checkbox" />{" "}
+                <input type="checkbox" className="accommodation-checkbox"
+                onChange={(e) => handleAccommodationChange(599, e.target.checked)} />{" "}
                 $599
               </td>
             </tr>
             <tr className="accommodation-row">
               <td className="accommodation-category">For 5 Nights</td>
               <td className="accommodation-option">
-                <input type="checkbox" className="accommodation-checkbox" />{" "}
+                <input type="checkbox" className="accommodation-checkbox" 
+                onChange={(e) => handleAccommodationChange(799, e.target.checked)} />{" "}
                 $799
               </td>
               <td className="accommodation-option">
-                <input type="checkbox" className="accommodation-checkbox" />{" "}
+                <input type="checkbox" className="accommodation-checkbox" 
+                onChange={(e) => handleAccommodationChange(699, e.target.checked)}/>{" "}
                 $699
               </td>
               <td className="accommodation-option">
-                <input type="checkbox" className="accommodation-checkbox" />{" "}
+                <input type="checkbox" className="accommodation-checkbox"
+                onChange={(e) => handleAccommodationChange(599, e.target.checked)} />{" "}
                 $599
               </td>
             </tr>
@@ -360,7 +426,7 @@ const RegistrationForm = () => {
       <div className="additional-info">
         <div className="participants">
           <label className="participants-label">No. Of Participants.</label>
-          <select className="participants">
+          <select className="participants" onChange={handleParticipantsChange}>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -387,33 +453,33 @@ const RegistrationForm = () => {
               <td className="registration-details-label">
                 Registration Price:
               </td>
-              <td className="registration-details-value">$0</td>
+              <td className="registration-details-value">${registrationPrice}</td>
             </tr>
 
             <tr className="registration-details">
               <td className="registration-details-label">
                 No. Of Participants:
               </td>
-              <td className="registration-details-value">1</td>
+              <td className="registration-details-value">{numParticipants}</td>
             </tr>
 
             <tr className="registration-details">
               <td className="registration-details-label">
                 Total Registration Price:
               </td>
-              <td className="registration-details-value">$0</td>
+              <td className="registration-details-value">${registrationPrice}</td>
             </tr>
 
             <tr className="registration-details">
               <td className="registration-details-label">
                 Accommodation Registration Price:
               </td>
-              <td className="registration-details-value">$0</td>
+              <td className="registration-details-value">${registrationPrice}</td>
             </tr>
 
             <tr className="registration-details">
               <td className="registration-details-label-total">Total Price:</td>
-              <td className="registration-details-value-total">$0</td>
+              <td className="registration-details-value-total">${totalPrice}</td>
             </tr>
           </tbody>
         </table>
