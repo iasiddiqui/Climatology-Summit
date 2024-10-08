@@ -209,9 +209,9 @@ function Register() {
             </div>
           </div>
 
-        </form>
           {/* <PaymentInfo /> */}
           <RegistrationForm />
+        </form>
       </div>
 
       <Footer />
