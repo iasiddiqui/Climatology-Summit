@@ -1,35 +1,88 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 import "./RegistrationForm.css";
 
 const RegistrationForm = () => {
   const [registrationPrice, setRegistrationPrice] = useState(0);
   const [accommodationPrice, setAccommodationPrice] = useState(0);
+  const [sponsorshipPrice, setSponsorshipPrice] = useState(0);
   const [numParticipants, setNumParticipants] = useState(1);
+  const [totalPrice, setTotalPrice] = useState(0);
+  const navigate = useNavigate();
 
-  
+  // Calculate the total price dynamically based on user selections
+  useEffect(() => {
+    const total =
+      (registrationPrice + accommodationPrice + sponsorshipPrice) *
+      numParticipants;
+    setTotalPrice(total); // Update total price with the number of participants included
+  }, [
+    registrationPrice,
+    accommodationPrice,
+    sponsorshipPrice,
+    numParticipants,
+  ]);
 
-  const handleRegistrationChange = (price, checked) => {
-    if (checked) {
-      setRegistrationPrice((prev) => prev + price);
+  // Handling accommodation selection
+  const handleAccommodationChange = (price, isChecked) => {
+    if (isChecked) {
+      setAccommodationPrice(accommodationPrice + price);
     } else {
-      setRegistrationPrice((prev) => prev - price);
+      setAccommodationPrice(accommodationPrice - price);
     }
   };
 
-  const handleAccommodationChange = (price, checked) => {
-    if (checked) {
-      setAccommodationPrice((prev) => prev + price);
+  // Handling sponsorship selection
+  const handleSponsorshipChange = (price, isChecked) => {
+    if (isChecked) {
+      setSponsorshipPrice(sponsorshipPrice + price);
     } else {
-      setAccommodationPrice((prev) => prev - price);
+      setSponsorshipPrice(sponsorshipPrice - price);
     }
   };
 
+  // Handling registration selection
+  const handleRegistrationChange = (price, isChecked) => {
+    if (isChecked) {
+      setRegistrationPrice(price);
+    } else {
+      setRegistrationPrice(0);
+    }
+  };
+
+  // Handling participants change
   const handleParticipantsChange = (e) => {
     setNumParticipants(parseInt(e.target.value));
   };
 
-  const totalPrice = (registrationPrice + accommodationPrice) * numParticipants;
+  // Handle proceed to payment
+  const handleProceedToPayment = async (e) => {
+    e.preventDefault();
+    try {
+      // Send the registration, sponsorship, accommodation, and total price to the backend
+      const paymentData = {
+        total: totalPrice,
+        registrationPrice,
+        sponsorshipPrice,
+        accommodationPrice,
+        numParticipants,
+      };
 
+      const res = await axios.post(
+        "http://localhost:8000/payment",
+        paymentData
+      );
+
+      if (res && res.data) {
+        const approvalUrl = res.data.approvalUrl;
+        window.location.href = approvalUrl; // Redirect to PayPal
+      }
+    } catch (error) {
+      console.error("Error during the payment request", error);
+    }
+  };
   return (
     <div className="registration-container">
       <div className="registration-type">
@@ -394,6 +447,8 @@ const RegistrationForm = () => {
           </table>
         </div>
       </div>
+
+      {/* Sponsor Selection */}
       <div className="sponsor-div">
         <h2 className="sponsor-title">Sponsor Registration</h2>
         <div className="sponsor-section">
@@ -415,19 +470,43 @@ const RegistrationForm = () => {
               </tr>
               <tr className="sponsor-prices">
                 <td className="sponsor-price">
-                  <input type="checkbox" className="sponsor-checkbox" />
+                  <input
+                    type="checkbox"
+                    className="sponsor-checkbox"
+                    onChange={(e) =>
+                      handleSponsorshipChange(7500, e.target.checked)
+                    }
+                  />
                   <span className="price-amount">$7500</span>
                 </td>
                 <td className="sponsor-price">
-                  <input type="checkbox" className="sponsor-checkbox" />
+                  <input
+                    type="checkbox"
+                    className="sponsor-checkbox"
+                    onChange={(e) =>
+                      handleSponsorshipChange(6000, e.target.checked)
+                    }
+                  />
                   <span className="price-amount">$6000</span>
                 </td>
                 <td className="sponsor-price">
-                  <input type="checkbox" className="sponsor-checkbox" />
+                  <input
+                    type="checkbox"
+                    className="sponsor-checkbox"
+                    onChange={(e) =>
+                      handleSponsorshipChange(5000, e.target.checked)
+                    }
+                  />
                   <span className="price-amount">$5000</span>
                 </td>
                 <td className="sponsor-price">
-                  <input type="checkbox" className="sponsor-checkbox" />
+                  <input
+                    type="checkbox"
+                    className="sponsor-checkbox"
+                    onChange={(e) =>
+                      handleSponsorshipChange(3000, e.target.checked)
+                    }
+                  />
                   <span className="price-amount">$3000</span>
                 </td>
               </tr>
@@ -456,7 +535,7 @@ const RegistrationForm = () => {
                   onChange={(e) =>
                     handleAccommodationChange(799, e.target.checked)
                   }
-                />{" "}
+                />
                 $799
               </td>
               <td className="accommodation-option">
@@ -466,7 +545,7 @@ const RegistrationForm = () => {
                   onChange={(e) =>
                     handleAccommodationChange(699, e.target.checked)
                   }
-                />{" "}
+                />
                 $699
               </td>
               <td className="accommodation-option">
@@ -476,82 +555,18 @@ const RegistrationForm = () => {
                   onChange={(e) =>
                     handleAccommodationChange(599, e.target.checked)
                   }
-                />{" "}
+                />
                 $599
               </td>
             </tr>
-            <tr className="accommodation-row">
-              <td className="accommodation-category">For 3 Nights</td>
-              <td className="accommodation-option">
-                <input
-                  type="checkbox"
-                  className="accommodation-checkbox"
-                  onChange={(e) =>
-                    handleAccommodationChange(799, e.target.checked)
-                  }
-                />{" "}
-                $799
-              </td>
-              <td className="accommodation-option">
-                <input
-                  type="checkbox"
-                  className="accommodation-checkbox"
-                  onChange={(e) =>
-                    handleAccommodationChange(699, e.target.checked)
-                  }
-                />{" "}
-                $699
-              </td>
-              <td className="accommodation-option">
-                <input
-                  type="checkbox"
-                  className="accommodation-checkbox"
-                  onChange={(e) =>
-                    handleAccommodationChange(599, e.target.checked)
-                  }
-                />{" "}
-                $599
-              </td>
-            </tr>
-            <tr className="accommodation-row">
-              <td className="accommodation-category">For 5 Nights</td>
-              <td className="accommodation-option">
-                <input
-                  type="checkbox"
-                  className="accommodation-checkbox"
-                  onChange={(e) =>
-                    handleAccommodationChange(799, e.target.checked)
-                  }
-                />{" "}
-                $799
-              </td>
-              <td className="accommodation-option">
-                <input
-                  type="checkbox"
-                  className="accommodation-checkbox"
-                  onChange={(e) =>
-                    handleAccommodationChange(699, e.target.checked)
-                  }
-                />{" "}
-                $699
-              </td>
-              <td className="accommodation-option">
-                <input
-                  type="checkbox"
-                  className="accommodation-checkbox"
-                  onChange={(e) =>
-                    handleAccommodationChange(599, e.target.checked)
-                  }
-                />{" "}
-                $599
-              </td>
-            </tr>
+            {/* Add more rows for other accommodation options */}
           </tbody>
         </table>
       </div>
+
       <div className="additional-info">
         <div className="participants">
-          <label className="participants-label">No. Of Participants.</label>
+          <label className="participants-label">No. Of Participants</label>
           <select className="participants" onChange={handleParticipantsChange}>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -583,41 +598,34 @@ const RegistrationForm = () => {
                 ${registrationPrice}
               </td>
             </tr>
-
+            <tr className="registration-details">
+              <td className="registration-details-label">Sponsorship Price:</td>
+              <td className="registration-details-value">
+                ${sponsorshipPrice}
+              </td>
+            </tr>
+            <tr className="registration-details">
+              <td className="registration-details-label">
+                Accommodation Price:
+              </td>
+              <td className="registration-details-value">
+                ${accommodationPrice}
+              </td>
+            </tr>
             <tr className="registration-details">
               <td className="registration-details-label">
                 No. Of Participants:
               </td>
               <td className="registration-details-value">{numParticipants}</td>
             </tr>
-
             <tr className="registration-details">
-              <td className="registration-details-label">
-                Total Registration Price:
-              </td>
-              <td className="registration-details-value">
-                ${registrationPrice}
-              </td>
-            </tr>
-
-            <tr className="registration-details">
-              <td className="registration-details-label">
-                Accommodation Registration Price:
-              </td>
-              <td className="registration-details-value">
-                ${registrationPrice}
-              </td>
-            </tr>
-
-            <tr className="registration-details">
-              <td className="registration-details-label-total">Total Price:</td>
-              <td className="registration-details-value-total">
-                ${totalPrice}
-              </td>
+              <td className="registration-details-label">Total Price:</td>
+              <td className="registration-details-value">${totalPrice}</td>
             </tr>
           </tbody>
         </table>
       </div>
+
       <div className="payment-type">
         <h2>Payment Method</h2>
         <img
@@ -627,8 +635,14 @@ const RegistrationForm = () => {
         />
         <h3>Pay with Paypal</h3>
       </div>
+
+      
+      {/* Proceed to Payment */}
       <div className="registration-div">
-        <button className="registration-button" type="submit">
+        <button
+          className="registration-button"
+          onClick={handleProceedToPayment}
+        >
           Proceed to Payment
         </button>
       </div>

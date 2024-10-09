@@ -34,7 +34,7 @@ const Awards = () => {
       <div className="hero-section">
         <motion.img
           className="hero-picture"
-          src="pictures/awards.jpg"
+          src="/pictures/awards.jpg"
           alt="Hero"
           initial="hidden"
           animate="visible"
