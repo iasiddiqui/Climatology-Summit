@@ -4,6 +4,8 @@ import Navbar from "../Navbar/Navbar";
 import Footer from "../Home/Footer/Footer";
 import RegistrationForm from "./RegistrationForm";
 import ReactFlagsSelect from "react-flags-select";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 function Register() {
   const [title, setTitle] = useState("");
@@ -16,21 +18,31 @@ function Register() {
   const [abstractCategory, setAbstractCategory] = useState("");
   const [selected, setSelected] = useState("");
 
- 
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log({
-      title,
-      firstName,
-      lastName,
-      email,
-      phoneNumber,
-      country,
-      fullAddress,
-      abstractCategory,
-    
-    });
+    if (
+      title &&
+      firstName &&
+      lastName &&
+      email &&
+      phoneNumber &&
+      country &&
+      fullAddress &&
+      abstractCategory
+    ) {
+      console.log({
+        title,
+        firstName,
+        lastName,
+        email,
+        phoneNumber,
+        country,
+        fullAddress,
+        abstractCategory,
+      });
+    } else {
+      console.error("Please fill in all required fields.");
+    }
   };
 
   return (
@@ -64,9 +76,11 @@ function Register() {
                 onChange={(e) => setTitle(e.target.value)}
               >
                 <option value="">Select Any</option>
-                <option value="Mr.">Mr.</option>
-                <option value="Mrs.">Mrs.</option>
-                <option value="Ms.">Ms.</option>
+                <option value="Mr.">Mr</option>
+                <option value="Ms.">Ms</option>
+                <option value="Mrs.">Mrs</option>
+                <option value="Ms.">Prof</option>
+                <option value="Ms.">Dr</option>
               </select>
             </div>
 
@@ -114,44 +128,60 @@ function Register() {
               />
             </div>
 
-            <div className="register-field">
+            <div className="register-field phone-input-container">
               <label className="register-label" htmlFor="phoneNumber">
                 Phone Number:
               </label>
-              <input
-                className="register-input"
+              <PhoneInput
+                country={"in"}
+                className="register-input-phone"
                 type="tel"
                 id="phoneNumber"
                 value={phoneNumber}
-                onChange={(e) => setPhoneNumber(e.target.value)}
-                required
+                onChange={(value) => setPhoneNumber(value)} 
+                inputProps={{
+                  name: "phoneNumber",
+                  required: true,
+                }}
               />
             </div>
           </div>
 
-          <h2 className="register-title">Further Information</h2>
+          <h2 className="register-further-information-title">
+            Further Information
+          </h2>
 
-          <div className="register-row country-abstract-row">
-            <div className="register-field">
-              <label className="register-country">
+          <div className="register-further-information-row">
+            <div className="register-further-information-field">
+              <label className="register-further-information-country">
                 Country:
-                <ReactFlagsSelect
-                  selected={selected}
-                  onSelect={(code) => setSelected(code)}
-                  placeholder="Select Country"
-                  searchable
-                  searchPlaceholder="Search countries"
-                  className="register-field-country"
-                />
+                <div
+                  style={{
+                    backgroundColor: "white",
+                    borderRadius: "0 !important",
+                  }}
+                >
+                  <ReactFlagsSelect
+                    selected={selected}
+                    onSelect={(code) => setSelected(code)}
+                    placeholder="Select Country"
+                    searchable
+                    searchPlaceholder="Search countries"
+                    className="register-further-information-field-country"
+                  />
+                </div>
               </label>
             </div>
 
-            <div className="register-field">
-              <label className="register-label" htmlFor="abstractCategory">
+            <div className="register-further-information-field">
+              <label
+                className="register-further-information-label"
+                htmlFor="abstractCategory"
+              >
                 Abstract Category:
               </label>
               <select
-                className="register-abstract-select"
+                className="register-further-information-abstract-select"
                 id="abstractCategory"
                 value={abstractCategory}
                 onChange={(e) => setAbstractCategory(e.target.value)}
@@ -165,21 +195,19 @@ function Register() {
             </div>
           </div>
 
-          <div className="register-row">
-            <div className="register-field">
-              <label className="register-label" htmlFor="fullAddress">
-                Full Postal Address:
-              </label>
-              <textarea
-                className="register-textarea"
-                id="fullAddress"
-                value={fullAddress}
-                onChange={(e) => setFullAddress(e.target.value)}
-              />
-            </div>
+          <div className="register-field">
+            <label className="register-label" htmlFor="fullAddress">
+              Full Postal Address:
+            </label>
+            <textarea
+              className="register-address-textarea"
+              id="fullAddress"
+              value={fullAddress}
+              onChange={(e) => setFullAddress(e.target.value)}
+            />
           </div>
-          <RegistrationForm />
         </form>
+        <RegistrationForm />
       </div>
 
       <Footer />

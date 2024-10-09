@@ -1,3 +1,28 @@
+.accommodation-category-head,
+.registration-category-head {
+    background-color: #9cdb3b;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.registration-option-head {
+    background-color: #9cdb3b;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+}
+.accommodation-option-head {
+    background-color: #aae94c;
+    text-align: left;
+    padding: 12px;
+    border: 1px solid rgb(110, 110, 110);
+}
+
+.sponsor-name {
+    padding: 10px;
+    vertical-align: middle;
+    background-color: #9cdb3b;
+}
+
 .registration-type {
     display: flex;
     flex-direction: row;
@@ -56,17 +81,7 @@
     margin-right: 10px;
 }
 
-.registration-category-head {
-    background-color: #aaffac;
-    font-size: 1rem;
-    padding: 0.5rem;
-}
 
-.registration-option-head {
-    background-color: #aaffac;
-    font-size: 0.9rem;
-    padding: 0.5rem;
-}
 .registration-option-head,
 .registration-category-head{
     border: 1px solid rgb(131, 131, 131);
@@ -98,11 +113,7 @@
     border: 1px solid rgb(155, 155, 155);
 } */
 
-.sponsor-name {
-    padding: 10px;
-    vertical-align: middle;
-    background-color: #aaffac;
-}
+
 
 .sponsor-price {
     padding: 10px;
@@ -133,13 +144,7 @@
     border: 1px solid #ddd;
 }
 
-.accommodation-category-head,
-.accommodation-option-head {
-    background-color: #aaffac;
-    text-align: left;
-    padding: 12px;
-    border: 1px solid rgb(110, 110, 110);
-}
+
 
 .accommodation-row,
 .accommodation-category,
