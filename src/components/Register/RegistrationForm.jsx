@@ -95,7 +95,7 @@ const RegistrationForm = () => {
                 </td>
 
                 <td className="registration-option-head" colSpan="2">
-                  Early Bird On/Before September 25, 2024
+                  Early Bird On/Before September <br/>25, 2024
                 </td>
               </tr>
               <tr className="registration-row">
@@ -215,7 +215,8 @@ const RegistrationForm = () => {
                 </td>
 
                 <td className="registration-option-head" colSpan="2">
-                  Next Round Registration Date: August 29, 2024
+                  Next Round Registration Date: <br />
+                  August 29, 2024
                 </td>
               </tr>
               <tr className="registration-row">
@@ -336,7 +337,8 @@ const RegistrationForm = () => {
                 </td>
 
                 <td className="registration-option-head" colSpan="2">
-                  Spot Registrations on July 14, 2024
+                  Spot Registrations on: <br />
+                  July 14, 2024
                 </td>
               </tr>
               <tr className="registration-row">
@@ -515,6 +517,8 @@ const RegistrationForm = () => {
         </div>
       </div>
 
+      {/* accommodation */}
+
       <div className="accommodation">
         <table className="accommodation-table">
           <tbody>
@@ -626,6 +630,7 @@ const RegistrationForm = () => {
         </table>
       </div>
 
+      {/* Proceed to Payment */}
       <div className="payment-type">
         <h2>Payment Method</h2>
         <img
@@ -633,11 +638,7 @@ const RegistrationForm = () => {
           src="/pictures/paypal-img.png"
           alt=""
         />
-        <h3>Pay with Paypal</h3>
       </div>
-
-      
-      {/* Proceed to Payment */}
       <div className="registration-div">
         <button
           className="registration-button"

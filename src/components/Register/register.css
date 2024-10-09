@@ -3,10 +3,10 @@
 .register-container {
   max-width: 80%;
   margin: auto;
-  padding: 20px;
+  padding: 1.25rem;  /* 20px in rem */
   background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;  /* 8px in rem */
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);  /* 2px 10px */
 }
 
 .register-form {
@@ -16,25 +16,25 @@
 
 .register-title {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;  /* 20px in rem */
 }
 
 .register-field {
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;  /* 15px in rem */
 }
 
 .register-label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;  /* 5px in rem */
 }
 
 .register-input,
 .register-select,
 .register-textarea {
   width: 80%;
-  padding: 10px;
+  padding: 0.625rem;  /* 10px in rem */
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 0.25rem;  /* 4px in rem */
 }
 
 .register-input[type="number"] {
@@ -45,30 +45,31 @@
 .register-row {
   display: flex;
   justify-content: space-between;
-  gap: 10px;
+  gap: 0.625rem;  /* 10px in rem */
 }
+
 .register-row .register-field {
   flex: 1;
 }
 
 .register-summary {
-  margin-top: 20px;
-  padding: 10px;
+  margin-top: 1.25rem;  /* 20px in rem */
+  padding: 0.625rem;  /* 10px in rem */
   background-color: #e9ecef;
-  border-radius: 4px;
+  border-radius: 0.25rem;  /* 4px in rem */
 }
 
 .register-price,
 .register-total {
-  margin: 5px 0;
+  margin: 0.3125rem 0;  /* 5px 0 */
 }
 
 .register-submit {
-  padding: 10px 15px;
+  padding: 0.625rem 0.9375rem;  /* 10px 15px */
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 0.25rem;  /* 4px in rem */
   cursor: pointer;
 }
 
@@ -76,13 +77,11 @@
   background-color: #0056b3;
 }
 
-
-
 /* Container for country and abstract category */
 .register-row.country-abstract-row {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 1.25rem;  /* 20px in rem */
 }
 
 .register-row.country-abstract-row .register-field {
@@ -91,7 +90,7 @@
 
 .register-country {
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;  /* 15px in rem */
 }
 
 .register-field-country {
@@ -100,18 +99,18 @@
 
 .react-flags-select {
   width: 100%;
-  padding: 10px;
+  padding: 0.625rem;  /* 10px in rem */
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 0.25rem;  /* 4px in rem */
   cursor: pointer;
 }
 
 .react-flags-select__button {
   background-color: white !important;
   border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 4px;
-  font-size: 16px;
+  padding: 0.625rem;  /* 10px in rem */
+  border-radius: 0.25rem;  /* 4px in rem */
+  font-size: 1rem;  /* 16px in rem */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -124,15 +123,15 @@
 .react-flags-select__options {
   background-color: white;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 0.25rem;  /* 4px in rem */
   width: 100%;
-  max-height: 200px;
+  max-height: 12.5rem;  /* 200px in rem */
   overflow-y: auto;
-  margin-top: 5px;
+  margin-top: 0.3125rem;  /* 5px in rem */
 }
 
 .react-flags-select__option {
-  padding: 10px;
+  padding: 0.625rem;  /* 10px in rem */
   cursor: pointer;
 }
 
@@ -145,12 +144,105 @@
   color: white;
 }
 
-
 .register-abstract-select {
   width: 100%;
-  padding: 10px;
+  padding: 0.625rem;  /* 10px in rem */
   border: 1px solid #ccc;
   background-color: #fff;
-  border-radius: 4px;
+  border-radius: 0.25rem;  /* 4px in rem */
   cursor: pointer;
+}
+
+/* Responsive adjustments for register page */
+@media (max-width: 768px) {
+  .register-container {
+    max-width: 100%;
+    padding: 0.625rem;  /* 10px in rem */
+  }
+
+  .register-form {
+    flex-direction: column;
+  }
+
+  .register-field {
+    margin-bottom: 0.625rem;  /* 10px in rem */
+  }
+
+  .register-input,
+  .register-select,
+  .register-textarea {
+    width: 100%;  /* Make form fields take full width */
+    padding: 0.5rem;  /* 8px in rem */
+  }
+
+  .register-row {
+    flex-direction: column;
+    gap: 0.625rem;  /* 10px in rem */
+  }
+
+  .register-row .register-field {
+    flex: none;
+  }
+
+  .register-summary {
+    margin-top: 0.625rem;  /* 10px in rem */
+    padding: 0.5rem;  /* 8px in rem */
+  }
+
+  .register-submit {
+    padding: 0.625rem;
+    font-size: 1.2rem;
+    width: 100%;  /* Make submit button full width */
+  }
+
+  .register-row.country-abstract-row {
+    flex-direction: column;
+    gap: 0.625rem;  /* 10px in rem */
+  }
+
+  .react-flags-select__button {
+    width: 100%;
+    padding: 0.625rem;  /* 10px in rem */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .register-container {
+    max-width: 90%;
+    padding: 0.9375rem;  /* 15px in rem */
+  }
+
+  .register-form {
+    flex-direction: column;
+  }
+
+  .register-input,
+  .register-select,
+  .register-textarea {
+    width: 100%;
+    padding: 0.625rem;  /* 10px in rem */
+  }
+
+  .register-row {
+    flex-direction: row;
+    gap: 0.9375rem;  /* 15px in rem */
+  }
+
+  .register-row .register-field {
+    flex: 1;
+  }
+
+  .register-submit {
+    width: auto;
+    padding: 0.625rem 0.9375rem;  /* 10px 15px in rem */
+  }
+
+  .register-row.country-abstract-row {
+    gap: 0.9375rem;  /* 15px in rem */
+  }
+
+  .react-flags-select__button {
+    width: 100%;
+    padding: 0.75rem;  /* 12px in rem */
+  }
 }

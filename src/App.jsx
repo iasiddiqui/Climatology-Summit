@@ -21,45 +21,90 @@ import ScientificPageEnergy from "./components/ScientificSessionsPages/Scientifi
 import ScientificPageBiodiversity from "./components/ScientificSessionsPages/ScientificSessionsBiodiversity/ScientificPageBiodiversity";
 import ScientificPageHealth from "./components/ScientificSessionsPages/ScientificSessionsHealth/ScientificPageHealth";
 import ScientificPageDynamics from "./components/ScientificSessionsPages/ScientificSessionsDynamics/ScientificPageDynamics";
+import FailedPage from "./components/Register/FailedPage";
+import SuccessPage from "./components/Register/SucceessPage";
 
 const App = () => (
   <BrowserRouter>
     <ScrollToTop />
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/awards" element={<Awards/>} />
-      <Route path="/contact" element={<Contact/>} />
-      <Route path="/speaker-guidline" element={<SpeakerGuidline/>} />
-      <Route path="/upcoming-event" element={<UpcomingEvent/>} />
-      <Route path="/venue" element={<Venue/>} />
-      <Route path="/register" element={<Register/>} />
-      <Route path="/climate-change-conference" element={<HealthConference/>} />
-      <Route path="/green-technologies-conference" element={<EnergyConference/>} />
-      <Route path="/ocean-health-conference" element={<DynamicsConference/>} />
-      <Route path="/biodiversity-conference" element={<BiodiversityConference/>} />
+      <Route path="/awards" element={<Awards />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/speaker-guidline" element={<SpeakerGuidline />} />
+      <Route path="/upcoming-event" element={<UpcomingEvent />} />
+      <Route path="/venue" element={<Venue />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/climate-change-conference" element={<HealthConference />} />
+      <Route
+        path="/green-technologies-conference"
+        element={<EnergyConference />}
+      />
+      <Route path="/ocean-health-conference" element={<DynamicsConference />} />
+      <Route
+        path="/biodiversity-conference"
+        element={<BiodiversityConference />}
+      />
 
-
-      <Route path="/brochure-download" element={<GreenTechnologyBrochure/>} />
-      <Route path="/climate-change-conference/brochure-download" element={<GreenTechnologyBrochure/>} />
-      <Route path="/ocean-health-conference/brochure-download" element={<GreenTechnologyBrochure/>} />
-      <Route path="/green-technologies-conference/brochure-download" element={<GreenTechnologyBrochure/>} />
-      <Route path="/biodiversity-conference/brochure-download" element={<GreenTechnologyBrochure/>} />
+      <Route path="/brochure-download" element={<GreenTechnologyBrochure />} />
+      <Route
+        path="/climate-change-conference/brochure-download"
+        element={<GreenTechnologyBrochure />}
+      />
+      <Route
+        path="/ocean-health-conference/brochure-download"
+        element={<GreenTechnologyBrochure />}
+      />
+      <Route
+        path="/green-technologies-conference/brochure-download"
+        element={<GreenTechnologyBrochure />}
+      />
+      <Route
+        path="/biodiversity-conference/brochure-download"
+        element={<GreenTechnologyBrochure />}
+      />
 
       {/* <Route path="/climate-change-abstract-submission" element={<AbstractSubmission/>} /> */}
-      <Route path="/climate-change-conference/abstract-submission" element={<AbstractSubmission/>} />
-      <Route path="/green-technologies-conference/abstract-submission" element={<AbstractSubmission/>} />
-      <Route path="/ocean-health-conference/abstract-submission" element={<AbstractSubmission/>} />
-      <Route path="/biodiversity-conference/submission" element={<AbstractSubmission/>} />
-      
-      <Route path= "/climate-change-conference/scientific-sessions-health" element={<ScientificPageHealth />}/>
-      <Route path= "/green-technologies-conference/scientific-eessions-energy" element={<ScientificPageEnergy />}/>
-      <Route path= "/ocean-health-conference/scientific-sessions-dynamics" element={<ScientificPageDynamics />}/>
-      <Route path= "/biodiversity-conference/scientific-sessions-biodiversity" element={<ScientificPageBiodiversity />}/>
+      <Route
+        path="/climate-change-conference/abstract-submission"
+        element={<AbstractSubmission />}
+      />
+      <Route
+        path="/green-technologies-conference/abstract-submission"
+        element={<AbstractSubmission />}
+      />
+      <Route
+        path="/ocean-health-conference/abstract-submission"
+        element={<AbstractSubmission />}
+      />
+      <Route
+        path="/biodiversity-conference/submission"
+        element={<AbstractSubmission />}
+      />
 
+      <Route
+        path="/climate-change-conference/scientific-sessions-health"
+        element={<ScientificPageHealth />}
+      />
+      <Route
+        path="/green-technologies-conference/scientific-eessions-energy"
+        element={<ScientificPageEnergy />}
+      />
+      <Route
+        path="/ocean-health-conference/scientific-sessions-dynamics"
+        element={<ScientificPageDynamics />}
+      />
+      <Route
+        path="/biodiversity-conference/scientific-sessions-biodiversity"
+        element={<ScientificPageBiodiversity />}
+      />
 
-      <Route path= "/privacy-policy" element={<PrivacyPolicy />}/>
-      <Route path= "/terms-and-conditions" element={<TermsAndConditions />}/>
-      <Route path= "/cancellation-policy" element={<CancellationPolicy />}/>
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+      <Route path="/cancellation-policy" element={<CancellationPolicy />} />
+
+      <Route path="/register/success" element={<SuccessPage />} />
+      <Route path="/register/failed" element={<FailedPage />} />
     </Routes>
   </BrowserRouter>
 );
