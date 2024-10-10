@@ -49,19 +49,26 @@ const BioDiversityHero = () => {
 
         {/* Correctly handling the buttons as links */}
         <div className="conference-hero-box-button">
-          {BioDiversityHeroData.buttons.map((button, index) => (
-            button.link ? (
+          {BioDiversityHeroData.buttons.map((button, index) =>
+            button.isPDF ? (
+              <a
+                key={index}
+                href={button.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="conference-button">{button.text}</button>
+              </a>
+            ) : button.link ? (
               <Link key={index} to={button.link}>
-                <button className="conference-button">
-                  {button.text}
-                </button>
+                <button className="conference-button">{button.text}</button>
               </Link>
             ) : (
               <button key={index} className="conference-button" disabled>
                 {button.text}
               </button>
             )
-          ))}
+          )}
         </div>
       </div>
     </div>

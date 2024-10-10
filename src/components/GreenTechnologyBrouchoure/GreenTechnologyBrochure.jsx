@@ -3,11 +3,10 @@ import "./GreenTechnologyBrochure.css";
 
 import BrochureForm from "./BrochureForm/BrochureForm";
 import GetInTouch from "../GetInTouch/GetInTouch";
-import ContactUs from "../ContactUsForm/ContactUs";
 import Footer from "../Home/Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 
-const GreenTechnologyBrochure = () => {
+const GreenTechnologyBrochure = ({ title }) => {
   return (
     <>
       <Navbar />
@@ -19,15 +18,14 @@ const GreenTechnologyBrochure = () => {
             alt="Hero"
           />
           <div className="overlay">
-            <h1 className="brochure-h1">
-              Green Technologies Brochure Download
-            </h1>
+            <h1 className="brochure-h1">{title}</h1>
+            <h3>Feel free to let me know if there’s anything else you need help with!
+</h3>
           </div>
         </div>
       </div>
       <BrochureForm />
       <GetInTouch />
-      <ContactUs />
       <Footer />
     </>
   );

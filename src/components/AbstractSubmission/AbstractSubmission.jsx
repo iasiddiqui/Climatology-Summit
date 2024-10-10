@@ -6,37 +6,36 @@ import GetInTouch from "../GetInTouch/GetInTouch";
 import ContactUs from "../ContactUsForm/ContactUs";
 import Footer from "../Home/Footer/Footer";
 
-
 const AbstractSubmission = () => {
   return (
     <>
       <Navbar />
       <div className="hero-section">
-        <img
-          className="hero-picture"
-          src="pictures\awards.jpg"
-          alt="Hero"
-        />
-  
-          <div className="overlay">
-            <h1 className="abstract-h1">
-              Climate Change Abstract Submission Form
-            </h1>
-            <h1 className="abstract-h3">
-              Feel free to let me know if there’s anything else you need help
-              with!
-            </h1>
+        <img className="hero-picture" src="pictures\awards.jpg" alt="Hero" />
+
+        <div className="overlay">
+          <h1 className="abstract-h1">
+            Climate Change Abstract Submission Form
+          </h1>
+          <h1 className="abstract-h3">
+            Feel free to let me know if there’s anything else you need help
+            with!
+          </h1>
           <div className="abstract-hero">
             <span className="abstract-hero-span">Abstract Template</span>
-            <button className="abstract-hero-btn">Download Here</button>
-          </div>
+            <a
+              href="/public/pictures/Sample_Abstract_Template_ (1).docx"
+              download
+            >
+              <button className="abstract-hero-btn">Download Here</button>
+            </a>
           </div>
         </div>
-        <AbstractForm />
-        <GetInTouch />
-        <ContactUs />
-        <Footer />
-
+      </div>
+      <AbstractForm />
+      <GetInTouch />
+      <ContactUs />
+      <Footer />
     </>
   );
 };

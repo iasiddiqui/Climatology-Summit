@@ -9,7 +9,7 @@ const DynamicHeroData = {
       { text: "Register Now", link: "/register" },
       { text: "Abstract Submission", link: "/ocean-health-conference/abstract-submission" },
       { text: "Brochure Download", link: "/ocean-health-conference/brochure-download" },
-      { text: "Tentative Program", link: "" },
+      { text: "Tentative Program", link: "pictures/Ocean-Health-and-Climate-Dynamics_tentative-form_-min.pdf", isPDF: true  },
     ],
   };
   

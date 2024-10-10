@@ -7,12 +7,9 @@ import {
   Bookmark,
 } from "@mui/icons-material";
 import { Link } from "react-router-dom";
-import aboutConferenceData from "./AboutConferenceData";
 import { motion } from "framer-motion";
 
-const AboutConference = () => {
-  const { conferenceDetails, aboutConference } = aboutConferenceData;
-
+const AboutConference = ({ conferenceDetails, aboutConference }) => {
   return (
     <div className="conference-page">
       <section className="details-section">

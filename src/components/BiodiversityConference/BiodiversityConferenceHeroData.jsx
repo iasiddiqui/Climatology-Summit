@@ -9,7 +9,7 @@ const BioDiversityHeroData = {
       { text: "Register Now", link: "/register" },
       { text: "Abstract Submission", link: "/biodiversity-conference/abstract-submission" },
       { text: "Brochure Download", link: "/biodiversity-conference/brochure-download" },
-      { text: "Tentative Program", link: "" },
+      { text: "Tentative Program", link: "pictures/Climate-Change-and-Biodiversity_tentative-form-min.pdf", isPDF: true  },
     ],
   };
   

@@ -1,13 +1,40 @@
-import React from 'react'
+import React from 'react';
 
 const FailedPage = () => {
-  return (
-    <div>
-      <h1>Payment Failed</h1>
-      <p>There was an issue with your payment. Please try again.</p>
-      <a href="/register">Return to Register Page</a>
-    </div>
-  )
-}
+  const pageStyle = {
+    textAlign: 'center',
+    marginTop: '50px',
+  };
 
-export default FailedPage
+  const headingStyle = {
+    fontSize: '36px',
+    color: 'red',
+  };
+
+  const paragraphStyle = {
+    fontSize: '18px',
+    color: '#333',
+    marginTop: '20px',
+  };
+
+  const linkStyle = {
+    display: 'inline-block',
+    marginTop: '30px',
+    padding: '10px 20px',
+    fontSize: '16px',
+    color: '#fff',
+    backgroundColor: '#007bff',
+    textDecoration: 'none',
+    borderRadius: '5px',
+  };
+
+  return (
+    <div style={pageStyle}>
+      <h1 style={headingStyle}>Payment Failed</h1>
+      <p style={paragraphStyle}>There was an issue with your payment. Please try again.</p>
+      <a style={linkStyle} href="/register">Return to Register Page</a>
+    </div>
+  );
+};
+
+export default FailedPage;

@@ -181,7 +181,7 @@ const AbstractForm = () => {
         </div>
         <div className="presentation-forum-link">
           <a
-            href="/climate-change-abstract-submission"
+            // href="/climate-change-conference/abstract-submission"
             className="presentation-forum-a"
           >
             Journal Publications <span>Go to Publications Page.</span>

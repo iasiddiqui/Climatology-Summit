@@ -16,7 +16,7 @@ import PrivacyPolicy from "./components/Privacy-Policy/PrivacyPolicy";
 import TermsAndConditions from "./components/TermsAndConditions/TermsAndConditions";
 import CancellationPolicy from "./components/Cancellation-Policy/CancellationPolicy";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
-import ScientificSessionsEnergy from "./components/ScientificSessionsPages/ScientificSessionsEnergy/ScientificPageEnergy";
+// import ScientificSessionsEnergy from "./components/ScientificSessionsPages/ScientificSessionsEnergy/ScientificPageEnergy";
 import ScientificPageEnergy from "./components/ScientificSessionsPages/ScientificSessionsEnergy/ScientificPageEnergy";
 import ScientificPageBiodiversity from "./components/ScientificSessionsPages/ScientificSessionsBiodiversity/ScientificPageBiodiversity";
 import ScientificPageHealth from "./components/ScientificSessionsPages/ScientificSessionsHealth/ScientificPageHealth";
@@ -49,19 +49,19 @@ const App = () => (
       <Route path="/brochure-download" element={<GreenTechnologyBrochure />} />
       <Route
         path="/climate-change-conference/brochure-download"
-        element={<GreenTechnologyBrochure />}
+        element={<GreenTechnologyBrochure title={"Climate Change Brochure Download"}/>}
       />
       <Route
         path="/ocean-health-conference/brochure-download"
-        element={<GreenTechnologyBrochure />}
+        element={<GreenTechnologyBrochure title={"Ocean Health and Climate Dynamics Brochure Download"} />}
       />
       <Route
         path="/green-technologies-conference/brochure-download"
-        element={<GreenTechnologyBrochure />}
+        element={<GreenTechnologyBrochure title={"Green Technologies Brochure Download"}/>}
       />
       <Route
         path="/biodiversity-conference/brochure-download"
-        element={<GreenTechnologyBrochure />}
+        element={<GreenTechnologyBrochure title={"Climate Change and Biodiversity Brochure Downloa"}/>}
       />
 
       {/* <Route path="/climate-change-abstract-submission" element={<AbstractSubmission/>} /> */}
