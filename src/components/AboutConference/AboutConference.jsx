@@ -56,7 +56,7 @@ const AboutConference = ({ conferenceDetails, aboutConference }) => {
             <div className="card-content">
               <CloudDownload />
               <h3>Brochure Download</h3>
-              <Link to="/brochure-download">
+              <Link to="/brochure-download" >
                 <button>Download Here</button>
               </Link>
             </div>

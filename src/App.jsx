@@ -61,7 +61,7 @@ const App = () => (
       />
       <Route
         path="/biodiversity-conference/brochure-download"
-        element={<GreenTechnologyBrochure title={"Climate Change and Biodiversity Brochure Downloa"}/>}
+        element={<GreenTechnologyBrochure ti/>}
       />
 
       {/* <Route path="/climate-change-abstract-submission" element={<AbstractSubmission/>} /> */}
